@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap');
+
 :root {
 
   /*? website colors */
@@ -5,12 +7,14 @@
   --clr-lime: #a3e635;
   --clr-lime600: #65a30d;
   --clr-slate: #f8fafc;
-  --clr-slate300: ##cbd5e1;
+  --clr-slate300: #cbd5e1;
+
+  /*slate rgb(203, 213, 225) */
 
   /*? website font sizes */
   --size-xxs: 0.5rem;
   --size-xs: 0.75rem;
-  --size-sm: 0.0875rem;
+  --size-sm: 0.875rem;
   --size-base: 1rem;
   --size-lg: 1.125rem;
   --size-xl: 1.25rem;
@@ -25,8 +29,8 @@
   --size-10xl: 10rem;
 
   /*? website fonts */
-  --font-primary: font-family: 'Syne', sans-serif;
-  --font-secondary: font-family: 'Golos Text', sans-serif;
+  --font-primary: 'Syne', sans-serif;
+  --font-secondary: 'Golos Text', sans-serif;
 }
 
 * {

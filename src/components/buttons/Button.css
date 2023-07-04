@@ -1,6 +1,28 @@
 
-.btn {
+.rlbtn {
   display: inline-block;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.05em;
+  background-color: var(--clr-slate);
+  color: #65a30d;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(163, 230, 53, 0.5),
+    0 6px 6px	rgba(163, 230, 53, 0.5), 0 0 100px -10px var(--clr-lime);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rlbtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(163, 230, 53, 0.25),
+    0 10px 10px	rgb(163, 230, 53, 0.22), 0 0 120px -10px var(--clr-lime);
+}
+
+.rdbtn {
+  display: inline-block;
+  font-family: var(--font-secondary);
   font-weight: 600;
   text-decoration: none;
   letter-spacing: -0.05em;
@@ -13,7 +35,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn:hover {
+.rdbtn:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 28px rgba(163, 230, 53, 0.25),
     0 10px 10px	rgb(163, 230, 53, 0.22), 0 0 120px -10px var(--clr-lime);
