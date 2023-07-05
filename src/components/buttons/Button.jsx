@@ -3,20 +3,10 @@ import './Button.css';
 
 
 //* Round Button
-export const RlButton = ({buttonClick, displayText = 'Submit'}) => {
+export const RButton = ({buttonClick, displayText = 'Submit'}) => {
   return (
     <button 
-      className='rlbtn'
-      onClick={buttonClick}>
-        {displayText}
-    </button>
-  )
-}
-
-export const RdButton = ({buttonClick, displayText = 'Submit'}) => {
-  return (
-    <button 
-      className='rdbtn'
+      className='rbtn'
       onClick={buttonClick}>
         {displayText}
     </button>

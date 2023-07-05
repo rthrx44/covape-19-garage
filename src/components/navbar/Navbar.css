@@ -42,13 +42,20 @@
     height: 4rem;
   }
 
-  .header__menu,
+  .header__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+  }
+
   .header__btns {
     display: flex;
     align-items: center;
     list-style: none;
     padding: 0;
-    gap: 1.5rem;
+    gap: .5rem;
   }
   
   .header__link {

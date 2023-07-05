@@ -1,14 +1,14 @@
 import React from 'react'
 import './Navbar.css';
-import { RdButton, RlButton } from '../buttons/Button';
+import { RButton } from '../buttons/Button';
 import { FaBars } from "react-icons/fa";
 import Cvlogo from '../assets/Cvlogo.png';
 
 export default function Navbar () {
   return (
-    <header className='header container'>
+    <header id='home' className='header container'>
       <nav className='header__wrapper'>
-        <img id='#home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' />
+        <img className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' />
         <ul className='header__menu'>
           <li>
             <a className='header__link' href='#home'> Home </a>
@@ -21,8 +21,7 @@ export default function Navbar () {
           </li>
         </ul>
         <ul className='header__btns'>
-          <li className='header__login'> <RlButton displayText = 'Login'/></li>
-          <li className='header__login'> <RdButton displayText = 'Sign Up'/> </li>
+          <li className='header__login'> <RButton displayText = 'Login'/></li>
         </ul>
         <button className='header__bars'><FaBars/></button>
       </nav>
@@ -51,8 +50,8 @@ export const DashNavbar = () => {
           </li>
         </ul>
         <ul className='header__btns'>
-          <li className='header__login'> <RdButton displayText = 'Login'/></li>
-          <li className='header__login'> <RdButton displayText = 'Logout'/> </li>
+          <li className='header__login'> <RButton displayText = 'Login'/></li>
+          <li className='header__login'> <RButton displayText = 'Logout'/> </li>
         </ul>
         <button className='header__bars'><FaBars/></button>
       </nav>
