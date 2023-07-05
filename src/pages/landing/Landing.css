@@ -14,18 +14,18 @@
 }
 
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
   text-align: center;
 }
 
 .about__wrapper {
-  border: 1px solid blue;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
   margin-bottom: 3rem;
+  gap: 10px;
+}
+
+.about__con-wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .about__title {
@@ -39,9 +39,35 @@
   color: var(--clr-slate);
 }
 
-.header__footer {
+.header__about{
+  display: none;
+}
+
+.contact {
+  display: grid;
+}
+
+.contact__wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contact__title {
+  font-size: var(--size-xs);
+  color: var(--clr-slime600);
+}
+
+.contact__link {
+  padding: 0.6rem;
+  font-size: var(--size-xs);
+  color: var(--clr-slate300);
+  text-decoration: none;
+}
+
+.contact__link:hover {
+  color: var(--clr-slime600);
 }
 
 .footer {
@@ -49,6 +75,7 @@
   font-family: var(--font-secondary);
   font-size: var(--size-xs);
   color: var(--clr-slate300);
+  margin-top: 5rem;
 }
 
 /* xs */
@@ -62,6 +89,14 @@
   }
   
   .about__description {
+    font-size: var(--size-xs);
+  }
+
+  .contact__title {
+    font-size: var(--size-xs);
+  }
+  
+  .contact__link {
     font-size: var(--size-xs);
   }
 }
@@ -79,10 +114,52 @@
   .about__description {
     font-size: var(--size-sm);
   }
+
+  .about__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-template-areas: 
+    'content1 image1';
+    margin-bottom: 2rem;
+  }
+
+  .about__image1 {
+    grid-area: image1;
+  }
+
+  .about__content1 {
+    grid-area: content1;
+  }
+
+  .contact {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* md */
-/* @media (min-width: 768px) {} */
+@media (min-width: 768px) {
+  .header__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+  }
+  
+  .about__menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    gap: 1.25rem;
+  }
+  
+  .line {
+    border: 1px solid var(--clr-slate);
+    border-radius: 1rem;
+  }
+}
 
 /* lg */
 @media (min-width: 1024px) {
@@ -97,6 +174,10 @@
   
   .about__description {
     font-size: var(--size-base);
+  }
+
+  .contact__wrapper {
+    margin-top: 3rem;
   }
 }
 
