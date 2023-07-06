@@ -3,6 +3,7 @@ import './styles/App.css';
 import './styles/Utils.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Landing from './pages/landing/Landing';
+import Register from './pages/register/Register';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Landing/>}/>
+        {/* <Route path='/' element={<Landing/>}/> */}
+        <Route path='/' element={<Register/>}/>
       </Routes>
     </BrowserRouter>
     </>
