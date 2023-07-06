@@ -71,3 +71,17 @@ a {
   color: var(--clr-lime);
 }
 
+/*? Scrollbar */
+html::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--clr-dark);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--clr-lime);
+  border-radius: 0.3rem;
+}
+
