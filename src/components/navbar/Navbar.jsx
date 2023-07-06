@@ -10,7 +10,6 @@ export default function Navbar () {
 
   const handletoggle = () => {
     const body = document.querySelector('body')
-    const mobileLinks = document.querySelectorAll('.mobile__link');
 
     if (toggleMenu) {
       setToggleMenu(false)
@@ -19,14 +18,18 @@ export default function Navbar () {
       setToggleMenu(true)
       body.style.overflowY = 'hidden'
     };
+  }
 
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        setToggleMenu(false)
-        document.body.style.overflowY = 'hidden';
-      });
-      console.log(mobileLinks);
-    });
+  const handleClick = () => {
+    const mobileLinks = [document.querySelectorAll('.mobile__link')]
+    const body = document.querySelector('body')
+
+    if (mobileLinks) {
+      setToggleMenu(false)
+      body.style.overflowY = 'auto'
+    } else {
+      alert ('Error')
+    }
   }
 
   return (
@@ -35,13 +38,13 @@ export default function Navbar () {
         <nav className='mobile__wrapper'>
           <ul className='mobile__menu'>
             <li>
-              <a className='mobile__link' href='#home'> Home </a>
+              <a className='mobile__link' href='#home' onClick={handleClick}> Home </a>
             </li>
             <li>
-              <a className='mobile__link' href='#about'> About Us </a>
+              <a className='mobile__link' href='#about' onClick={handleClick}> About Us </a>
             </li>
             <li>
-              <a className='mobile__link' href='#contact'> Contact Us </a>
+              <a className='mobile__link' href='#contact' onClick={handleClick}> Contact Us </a>
             </li>
             <li className='mobile__link-line'></li>
             <li className='mobile__login'> <RButton displayText = 'Login'/></li>
