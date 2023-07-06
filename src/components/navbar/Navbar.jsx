@@ -3,6 +3,7 @@ import './Navbar.css';
 import { RButton } from '../buttons/Button';
 import { FaBars } from "react-icons/fa";
 import Cvlogo from '../assets/Cvlogo.png'; 
+import { Link } from 'react-router-dom';
 
 export default function Navbar () {
 
@@ -47,7 +48,7 @@ export default function Navbar () {
               <a className='mobile__link' href='#contact' onClick={handleClick}> Contact Us </a>
             </li>
             <li className='mobile__link-line'></li>
-            <li className='mobile__login'> <RButton displayText = 'Login'/></li>
+            <Link className='mobile__login' to='/login'> <RButton displayText = 'Login'/></Link>
           </ul>
         </nav>
       }
@@ -66,7 +67,7 @@ export default function Navbar () {
             </li>
           </ul>
           <ul className='header__btns'>
-            <li className='header__login'> <RButton displayText = 'Login'/></li>
+            <Link className='header__login' to='/login'> <RButton displayText = 'Login'/></Link>
           </ul>
           <button className='header__bars' onClick={handletoggle}><FaBars/></button>
         </nav>
