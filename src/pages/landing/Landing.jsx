@@ -6,9 +6,8 @@ import Juice from '../../components/assets/Juice.jpg';
 import Pastry from '../../components/assets/Pastry.jpg';
 import Vape from '../../components/assets/Vape.jpg';
 
-
-
 function Landing() {
+
   return (
     <>
       <Navbar/>
