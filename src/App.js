@@ -11,9 +11,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Landing/>}/>
-        <Route path='/home' element={<Landing/>}/>
-        <Route path='/about' element={<Landing/>}/>
-        <Route path='/contact' element={<Landing/>}/>
       </Routes>
     </BrowserRouter>
     </>
