@@ -50,7 +50,7 @@ export default function Navbar () {
             <li className='mobile__login'> <RButton displayText = 'Login'/></li>
           </ul>
         </nav>
-        }
+      }
       <header id='home' className='header container'>
         <nav className='header__wrapper'>
           <img className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' />

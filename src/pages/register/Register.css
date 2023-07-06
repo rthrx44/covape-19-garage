@@ -1,0 +1,151 @@
+.register {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register__wrapper1 {
+  display: flex;
+  place-items: center;
+  background-color: var(--clr-lime);
+  border-radius: 5px;
+  padding: 0.5rem;
+  height: 31.25rem;
+}
+
+.register__wrapper2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-slate);
+  height: 30rem;
+}
+
+.register__logo {
+  width: 3rem;
+  height: 3rem; 
+  margin-bottom: 0.5rem;
+}
+
+.register__title {
+  font-family: var(--font-secondary);
+  font-size: var(--size-xl);
+  color: var(--clr-dark);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.register__form-textarea {
+  border: 1px solid var(--clr-slate300);
+  border-radius: 4px;
+  padding: 0.625rem;
+  height: 1rem;
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-secondary);
+  font-size: var(--size-xxs);
+  font-weight: 300;
+}
+
+.register__description {
+  margin-top: 1rem;
+  font-family: var(--font-secondary);
+  font-size: var(--size-xxs);
+  color: var(--clr-slate300);
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+@media (min-width: 640px) {
+  .register__wrapper1 {
+    height: 31.875rem;
+    width: 25rem;
+  }
+  
+  .register__wrapper2 {
+    height: 30.625rem;
+    width: 23.75rem;
+  }
+  
+  .register__title {
+    font-size: var(--size-2xl);
+  }
+  
+  .register__form-textarea {
+    width: 11.25rem;
+  }
+}
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+@media (min-width: 1024px) {
+  .register__wrapper1 {
+    height: 32.5rem;
+    width: 25.625rem;
+  }
+  
+  .register__wrapper2 {
+    height: 31.25rem;
+    width: 24.375rem;
+  }
+  
+  .register__logo {
+    width: 3.5rem;
+    height: 3.5rem; 
+  }
+  
+  .register__title {
+    font-size: var(--size-3xl);
+  }
+  
+  .register__form-textarea {
+    width: 13.75rem;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .register__wrapper1 {
+    height: 33.125rem;
+    width: 26.25rem;
+  }
+  
+  .register__wrapper2 {
+    height: 31.875rem;
+    width: 25rem;
+  }
+  
+  .register__logo {
+    width: 3.5rem;
+    height: 3.5rem; 
+  }
+  
+  .register__title {
+    font-size: var(--size-4xl);
+  }
+  
+  .register__form-textarea {
+    width: 15.625rem;
+    font-size: var(--size-xs);
+  }
+  
+  .register__description {
+    font-size: var(--size-xs);
+  }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
