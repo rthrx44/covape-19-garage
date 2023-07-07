@@ -13,10 +13,12 @@
   height: 53.13rem;
 }
 
+
 .shop {
   display: grid;
   text-align: center;
 }
+
 
 .shop__wrapper {
   margin-bottom: 3rem;
@@ -28,6 +30,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 
 .shop__title {
   font-size: var(--size-base);

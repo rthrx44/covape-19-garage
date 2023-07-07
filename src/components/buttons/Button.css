@@ -1,11 +1,11 @@
 
 .rbtn {
+  background-color: transparent;
   display: inline-block;
   font-family: var(--font-secondary);
   font-weight: 600;
   text-decoration: none;
   letter-spacing: -0.05em;
-  background-color: transparent;
   color: var(--clr-lime);
   padding: 0.5em 1em;
   border: 1px solid var(--clr-lime);
@@ -17,3 +17,61 @@
   background-color: var(--clr-lime);
   color: var(--clr-dark);
 }
+
+.lbtn {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  color: #000000;
+  height: 1.5rem;
+  font-family: 'Golos Text', sans-serif;
+  font-size: var(--size-xs);
+  font-weight: 800;
+  margin-bottom: 5px;
+  transition: ease-in-out .2s;
+  cursor: pointer;
+}
+
+.lbtn:hover {
+  border: 1px solid var(--clr-slate300);
+  background-color: var(--clr-lime);
+  transition: ease-in-out .2s;
+}
+
+.nbtn {
+  background-color: transparent;
+  border: none;
+  font-family: 'Golos Text', sans-serif;
+  font-size: var(--size-xxs);
+  color: var(--clr-blue400);
+  cursor: pointer;
+}
+
+.nbtn:hover {
+  text-decoration: underline;
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+@media (min-width: 1280px) {
+  .lbtn {
+  font-size: var(--size-sm);
+  }
+
+  .nbtn {
+    font-size: var(--size-xs);
+  }
+}
+/* 2xl */
+/* @media (min-width: 1536px) {} */

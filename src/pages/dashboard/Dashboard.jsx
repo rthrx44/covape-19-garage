@@ -67,7 +67,7 @@ function Dashboard() {
               <a className='header__link' href='#home'> Home </a>
             </li>
             <li>
-              <a className='header__link' href='#about'> About Us </a>
+              <a className='header__link' href='#shop'> Shop </a>
             </li>
             <li>
               <a className='header__link' href='#contact'> Contact Us </a>
@@ -100,3 +100,4 @@ function Dashboard() {
 }
 
 export default Dashboard
+
