@@ -1,5 +1,5 @@
 import React from 'react'
-import './Landing.css';
+import './Dashboard.css';
 import Navbar from '../../components/navbar/Navbar';
 import Candy from '../../components/assets/Candy.jpg';
 import Juice from '../../components/assets/Juice.jpg';
@@ -15,14 +15,14 @@ function Landing() {
         <section className='hero container section'>
           <h1 className='hero__title'>Discover the Ultimate <br></br>Vaping Experience.</h1>
         </section>
-        <section id='about' className='about container section'>
+        <section id='shop' className='about container section'>
           {/* slide 1 */}
             <div className='about__wrapper'>
               <div className='about__img-wrapper'>
                 <img className='about__image1' src={Vape} alt='Vape Devices' />
               </div>
               <div className='about__con-wrapper about__content1'>
-                <h3 className='about__title'>Vape Devices</h3>
+                <h3 id='device' className='about__title'>Vape Devices</h3>
                 <p className='about__description'>Get ready to experience an unrivaled selection of vape devices, <br></br>from sleek pen-style devices to powerful box mods.</p>
               </div>
             </div>
@@ -33,7 +33,7 @@ function Landing() {
                 <img src={Juice} alt='Vape Juice' />
               </div>
               <div className='about__con-wrapper'>
-                <h3 className='about__title'>High-Quality E-Juices</h3>
+                <h3 id='juice' className='about__title'>High-Quality E-Juices</h3>
                 <p className='about__description'>Choose from a stunning range of premium vape juice flavors, <br></br>expertly crafted to satisfy even the most discerning palate.</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ function Landing() {
                 <img src={Pastry} alt='Pastries' />
               </div>
               <div className='about__con-wrapper'>
-                <h3 className='about__title'>Customize Your Clouds</h3>
+                <h3 id='accessories' className='about__title'>Customize Your Clouds</h3>
                 <p className='about__description'>Mix and match your favorite flavors for a truly unique, personalized vaping experience.</p>
               </div>
             </div>
@@ -67,7 +67,7 @@ function Landing() {
               <a className='header__link' href='#home'> Home </a>
             </li>
             <li>
-              <a className='header__link' href='#about'> About Us </a>
+              <a className='header__link' href='#shop'> Shop </a>
             </li>
             <li>
               <a className='header__link' href='#contact'> Contact Us </a>

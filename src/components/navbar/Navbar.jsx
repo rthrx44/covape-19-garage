@@ -42,13 +42,13 @@ export default function Navbar () {
               <a className='mobile__link' href='#home' onClick={handleClick}> Home </a>
             </li>
             <li>
-              <a className='mobile__link' href='#about' onClick={handleClick}> About Us </a>
+              <a className='mobile__link' href='#shop' onClick={handleClick}> Shop </a>
             </li>
             <li>
               <a className='mobile__link' href='#contact' onClick={handleClick}> Contact Us </a>
             </li>
             <li className='mobile__link-line'></li>
-            <Link className='mobile__login' to='/login'> <RButton displayText = 'Login'/></Link>
+            <Link className='mobile__login' to='/login'> <RButton displayText = 'Logout'/></Link>
           </ul>
         </nav>
       }
@@ -60,14 +60,14 @@ export default function Navbar () {
               <a className='header__link' href='#home'> Home </a>
             </li>
             <li>
-              <a className='header__link' href='#about'> About Us </a>
+              <a className='header__link' href='#shop'> Shop </a>
             </li>
             <li>
               <a className='header__link' href='#contact'> Contact Us </a>
             </li>
           </ul>
           <ul className='header__btns'>
-            <Link className='header__login' to='/login'> <RButton displayText = 'Login'/></Link>
+            <Link className='header__login' to='/login'> <RButton displayText = 'Logout'/></Link>
           </ul>
           <button className='header__bars' onClick={handletoggle}><FaBars/></button>
         </nav>
