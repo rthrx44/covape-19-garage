@@ -13,33 +13,34 @@
   height: 53.13rem;
 }
 
-.about {
+.shop {
   display: grid;
   text-align: center;
 }
 
-.about__wrapper {
+.shop__wrapper {
   margin-bottom: 3rem;
   gap: 10px;
 }
 
-.about__con-wrapper {
+.shop__con-wrapper {
+  margin-top: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.about__title {
+.shop__title {
   font-size: var(--size-base);
   margin-bottom: 0.5rem;
 }
 
-.about__description {
+.shop__description {
   font-family: var(--font-secondary);
   font-size: var(--size-xs);
   color: var(--clr-slate);
 }
 
-.header__about{
+.header__shop{
   display: none;
 }
 
@@ -84,11 +85,11 @@
     font-size: var(--size-4xl);
   }
 
-  .about__title {
+  .shop__title {
     font-size: var(--size-base);
   }
   
-  .about__description {
+  .shop__description {
     font-size: var(--size-xs);
   }
 
@@ -107,15 +108,15 @@
     font-size: var(--size-5xl);
   }
 
-  .about__title {
+  .shop__title {
     font-size: var(--size-lg);
   }
   
-  .about__description {
+  .shop__description {
     font-size: var(--size-sm);
   }
 
-  .about__wrapper {
+  .shop__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
@@ -124,11 +125,11 @@
     margin-bottom: 2rem;
   }
 
-  .about__image1 {
+  .shop__image1 {
     grid-area: image1;
   }
 
-  .about__content1 {
+  .shop__content1 {
     grid-area: content1;
   }
 
@@ -139,14 +140,14 @@
 
 /* md */
 @media (min-width: 768px) {
-  .header__about {
+  .header__shop {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.9rem;
   }
   
-  .about__menu {
+  .shop__menu {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -168,11 +169,11 @@
     height: 49.38rem;
   }
 
-  .about__title {
+  .shop__title {
     font-size: var(--size-xl);
   }
   
-  .about__description {
+  .shop__description {
     font-size: var(--size-base);
   }
 
@@ -187,11 +188,11 @@
     font-size: var(--size-7xl);
   }
 
-  .about__title {
+  .shop__title {
     font-size: var(--size-2xl);
   }
   
-  .about__description {
+  .shop__description {
     font-size: var(--size-lg);
   }
 }
