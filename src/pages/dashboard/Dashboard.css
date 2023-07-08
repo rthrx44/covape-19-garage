@@ -22,7 +22,6 @@
 
 .shop__wrapper {
   margin-bottom: 3rem;
-  gap: 10px;
 }
 
 .shop__con-wrapper {
@@ -49,13 +48,14 @@
 
 .contact {
   display: grid;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .contact__wrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 1rem;
 }
 
 .contact__title {
@@ -76,10 +76,24 @@
 
 .footer {
   text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  font-size: var(--size-2xl);
+  color: var(--clr-lime600);
+  gap: 1rem;
+}
+
+.footer__text {
   font-family: var(--font-secondary);
   font-size: var(--size-xs);
   color: var(--clr-slate300);
-  margin-top: 5rem;
 }
 
 /* xs */
@@ -145,6 +159,7 @@
 @media (min-width: 768px) {
   .header__shop {
     display: flex;
+    padding-top: 1.5rem;
     flex-direction: column;
     justify-content: center;
     gap: 0.9rem;

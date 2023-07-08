@@ -9,7 +9,7 @@
 .Login__wrapper1 {
   display: flex;
   place-items: center;
-  background-color: var(--clr-slate);
+  background-color: var(--clr-lime);
   border-radius: 5px;
   padding: 0.5rem;
   height: 31.25rem;
@@ -17,10 +17,10 @@
 
 .Login__wrapper2 {
   display: flex;
+  background: var(--clr-lightdark);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--clr-lime);
   height: 30rem;
 }
 
@@ -33,7 +33,7 @@
 .Login__title {
   font-family: var(--font-secondary);
   font-size: var(--size-xl);
-  color: var(--clr-dark);
+  color: var(--clr-slate);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
