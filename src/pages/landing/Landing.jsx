@@ -3,7 +3,7 @@ import './Landing.css'
 import { Link } from 'react-router-dom'
 import { RButton } from '../../components/buttons/Button'
 import { BsCart4, BsEmojiHeartEyes } from "react-icons/bs";
-import { BiLogoFacebook, BiLogoTiktok } from "react-icons/bi";
+import { BiLogoFacebook } from "react-icons/bi";
 import { LuSunMoon } from "react-icons/lu";
 import Cvlogo from '../../components/assets/Cvlogo.png'
 import Device1 from '../../components/assets/Device1.png';
@@ -40,8 +40,10 @@ function Landing() {
         </section>
         <section className='landing__choose container section'>
           <h1 className='landing__title'>Why Choose Us</h1>
-          <div>
+          <div className='choose__wrapper img'>
             <img className='landing__choose-pic' src={Shop} alt='Vape Shop' />
+          </div>
+          <div className='choose__wrapper subtitle'>
             <h5 className='landing__subtitle'>Premium Selection</h5>
             <p className='landing__description'>Experience the finest quality vaping products handpicked by vaping enthusiasts.</p>
             <h5 className='landing__subtitle'>Expert Advice</h5>
@@ -75,7 +77,6 @@ function Landing() {
         <footer className='landing__footer container section'>
           <div className='landing__social'>
             <BiLogoFacebook/>
-            <BiLogoTiktok/>
           </div>
           <h6 className='landing__footer-text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
         </footer>
