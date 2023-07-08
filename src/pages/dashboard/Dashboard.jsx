@@ -1,5 +1,6 @@
 import React from 'react'
 import './Dashboard.css';
+import { BiLogoFacebook, BiLogoTiktok } from "react-icons/bi";
 import Navbar from '../../components/navbar/Navbar';
 import Candy from '../../components/assets/Candy.jpg';
 import Juice from '../../components/assets/Juice.jpg';
@@ -93,7 +94,13 @@ function Dashboard() {
             <a className='contact__link' href="#accessories">Accessories</a>
           </div>
         </section>
-        <footer className='footer container section'>© 2023 Covape-19 Garage. All rights reserved.</footer>
+        <footer className='footer container section'>
+          <div className='footer__social'>
+            <BiLogoFacebook/>
+            <BiLogoTiktok/>
+          </div>
+          <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
+        </footer>
       </main>
     </>
   )
