@@ -25,7 +25,6 @@
 }
 
 .landing__product-wrapper {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,9 +61,20 @@
   color: var(--clr-slate);
 }
 
+.choose__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.img {
+  place-items: center;
+}
+
 .landing__choose-pic {
+  width: 22.5rem;
   border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .landing__customer-wrapper {
@@ -163,6 +173,18 @@
   .img4 {
     grid-area: img4;
   }
+
+  .landing__choose-pic {
+    width: 25rem;
+  }
+
+  .landing__subtitle {
+    font-size: var(--size-base);
+  }
+  
+  .landing__description {
+    font-size: var(--size-sm);
+  }
 }
 
 /* md */
@@ -190,6 +212,13 @@
     height: 15rem;
     grid-area: img3;
   }
+
+  .landing__customer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 /* lg */
@@ -214,6 +243,47 @@
 
   .landing__product-pic {
     height: 14rem;
+  }
+
+  .landing__choose{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'title title'
+    'subtitle img';
+  }
+
+  .subtitle {
+    padding: 0.5rem;
+    grid-area: subtitle;
+  }
+
+  .img {
+    grid-area: img;
+  }
+
+  .landing__choose-pic {
+    width: 28rem;
+  }
+
+  .landing__subtitle {
+    font-size: var(--size-lg);
+  }
+  
+  .landing__description {
+    font-size: var(--size-base);
+  }
+
+  .landing__customer {
+    grid-template-columns: 30% 30% 30%;
+    place-content: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .landing__customer-wrapper{
+    height: 18rem;
+    width: 14rem;
   }
 }
 
@@ -254,11 +324,45 @@
   .landing__product-pic {
     height: 18rem;
   }
+
+  .landing__choose-pic {
+    width: 34rem;
+  }
+
+  .landing__subtitle {
+    font-size: var(--size-lg);
+  }
+  
+  .landing__description {
+    font-size: var(--size-base);
+  }
+
+  .landing__customer {
+    grid-template-columns: 25% 25% 25%;
+  }
+
+  .landing__customer-wrapper{
+    height: 20rem;
+    width: 14rem;
+  }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
   .landing__product-wrapper {
     grid-template-columns: 20% 20%;
+  }
+
+  .landing__choose-pic {
+    width: 38rem;
+  }
+
+  .landing__customer {
+    grid-template-columns: 21% 21% 21%;
+  }
+
+  .landing__customer-wrapper{
+    height: 20rem;
+    width: 14rem;
   }
 }

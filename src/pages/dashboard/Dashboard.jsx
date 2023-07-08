@@ -1,6 +1,6 @@
 import React from 'react'
 import './Dashboard.css';
-import { BiLogoFacebook, BiLogoTiktok } from "react-icons/bi";
+import { BiLogoFacebook } from "react-icons/bi";
 import Navbar from '../../components/navbar/Navbar';
 import Candy from '../../components/assets/Candy.jpg';
 import Juice from '../../components/assets/Juice.jpg';
@@ -83,21 +83,19 @@ function Dashboard() {
             <a className='contact__link' href="#contact">Contact</a>
           </div>
           <div className='contact__wrapper'>
-            <h5 className='contact__title'>Social</h5>
-            <a className='contact__link' href="#facebook">Facebook</a>
-            <a className='contact__link' href="#tiktok">Tiktok</a>
-          </div>
-          <div className='contact__wrapper'>
             <h5 className='contact__title'>Shop</h5>
             <a className='contact__link' href="#device">Devices</a>
             <a className='contact__link' href="#juice">E-Juice</a>
             <a className='contact__link' href="#accessories">Accessories</a>
           </div>
+          <div className='contact__wrapper'>
+            <h5 className='contact__title'>Social</h5>
+            <a className='contact__link' href="#facebook">Facebook</a>
+          </div>
         </section>
         <footer className='footer container section'>
           <div className='footer__social'>
             <BiLogoFacebook/>
-            <BiLogoTiktok/>
           </div>
           <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
         </footer>
