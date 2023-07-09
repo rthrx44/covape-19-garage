@@ -6,6 +6,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Landing from './pages/landing/Landing';
+import Loading from './components/loading/Loading';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Landing/>}/>
+        <Route path='/' element={<Loading/>}/>
+        {/* <Route path='/' element={<Landing/>}/> */}
         <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>

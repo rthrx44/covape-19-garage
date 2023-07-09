@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Navbar.css';
 import { RButton } from '../buttons/Button';
 import { FaBars } from "react-icons/fa";
+import { useNavigate, Link } from 'react-router-dom';
 import Cvlogo from '../assets/Cvlogo.png'; 
-import { Link } from 'react-router-dom';
+import Loading from '../loading/Loading';
 
 export default function Navbar () {
 
   const [toggleMenu, setToggleMenu] = useState(false);
+  const navigate = useNavigate();
+  const [showLoading, setShowLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowLoading(false)
+    }, 3000);
+  });
 
   const handletoggle = () => {
     const body = document.querySelector('body')
@@ -33,8 +42,18 @@ export default function Navbar () {
     }
   }
 
+  const handleLogout = () => {
+    const body = document.querySelector('body')
+
+    localStorage.removeItem('loggedUser')
+    setToggleMenu(false)
+    body.style.overflowY = 'auto'
+    navigate('/')
+  }
+
   return (
     <>
+      {showLoading && <Loading />}
       {toggleMenu && 
         <nav className='mobile__wrapper'>
           <ul className='mobile__menu'>
@@ -48,7 +67,7 @@ export default function Navbar () {
               <a className='mobile__link' href='#contact' onClick={handleClick}> Contact Us </a>
             </li>
             <li className='mobile__link-line'></li>
-            <Link className='mobile__login' to='/'> <RButton buttonClick={handleClick} displayText = 'Logout'/></Link>
+            <Link className='mobile__login' to='/'> <RButton buttonClick={handleLogout} displayText = 'Logout'/></Link>
           </ul>
         </nav>
       }
