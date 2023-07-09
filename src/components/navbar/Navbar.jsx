@@ -1,22 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './Navbar.css';
 import { RButton } from '../buttons/Button';
 import { FaBars } from "react-icons/fa";
 import { useNavigate, Link } from 'react-router-dom';
 import Cvlogo from '../assets/Cvlogo.png'; 
-import Loading from '../loading/Loading';
 
 export default function Navbar () {
 
   const [toggleMenu, setToggleMenu] = useState(false);
   const navigate = useNavigate();
-  const [showLoading, setShowLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowLoading(false)
-    }, 3000);
-  });
 
   const handletoggle = () => {
     const body = document.querySelector('body')
@@ -53,7 +45,6 @@ export default function Navbar () {
 
   return (
     <>
-      {showLoading && <Loading />}
       {toggleMenu && 
         <nav className='mobile__wrapper'>
           <ul className='mobile__menu'>
@@ -86,7 +77,7 @@ export default function Navbar () {
             </li>
           </ul>
           <ul className='header__btns'>
-            <Link className='header__login' to='/'> <RButton displayText = 'Logout'/></Link>
+            <Link className='header__login' to='/'> <RButton buttonClick={handleLogout} displayText = 'Logout'/></Link>
           </ul>
           <button className='header__bars' onClick={handletoggle}><FaBars/></button>
         </nav>

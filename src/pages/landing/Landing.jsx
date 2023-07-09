@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Landing.css'
 import { Link } from 'react-router-dom'
 import { RButton } from '../../components/buttons/Button'
@@ -11,7 +11,7 @@ import Device3 from '../../components/assets/Device3.png';
 import Pod1 from '../../components/assets/Pod1.png';
 import Pod2 from '../../components/assets/Pod2.png';
 import Shop from '../../components/assets/Shop.png';
-import Loading from '../../components/loading/Loading';
+import Loading from "../../components/loading/Loading";
 
 function Landing() {
 
@@ -19,10 +19,10 @@ function Landing() {
 
   useEffect(() => {
     setTimeout(() => {
-      setShowLoading(false)
+      setShowLoading(false);
     }, 3000);
   });
-  
+
   return (
     <>
       {showLoading && <Loading />}

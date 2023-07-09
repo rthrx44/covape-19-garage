@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
-import Cvlogo from "../../components/assets/Cvlogo.png";
 import { LButton, NButton } from "../../components/buttons/Button";
 import { useNavigate, Link } from "react-router-dom";
+import Cvlogo from "../../components/assets/Cvlogo.png";
 import Loading from "../../components/loading/Loading";
 
 function Login() {

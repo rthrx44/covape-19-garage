@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Dashboard.css';
 import { BiLogoFacebook } from "react-icons/bi";
 import Navbar from '../../components/navbar/Navbar';
@@ -6,11 +6,21 @@ import Candy from '../../components/assets/Candy.jpg';
 import Juice from '../../components/assets/Juice.jpg';
 import Pastry from '../../components/assets/Pastry.jpg';
 import Vape from '../../components/assets/Vape.jpg';
+import Loading from '../../components/loading/Loading';
 
 function Dashboard() {
+  
+  const [showLoading, setShowLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowLoading(false);
+    }, 3000);
+  });
 
   return (
     <>
+      {showLoading && <Loading />}
       <Navbar/>
       <main>
         <section className='hero container section'>
