@@ -1,10 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Register.css";
 import Cvlogo from "../../components/assets/Cvlogo.png";
 import { LButton, NButton } from "../../components/buttons/Button";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Register() {
+  
+  const navigate = useNavigate();
+  const [formValues, setFormValues] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    let user = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+    const findUser = user.find(obj => (obj.email === formValues.email || obj.username === formValues.username));
+    if (!formValues.username || !formValues.email || !formValues.password) {
+        alert('Please fill up required fields!');
+    } else if (findUser !== undefined) {
+        alert('"User" or "Email" is already exist');
+    } else {
+        user.push(formValues);
+        localStorage.setItem("registeredUsers", JSON.stringify(user));
+        navigate('/login');
+    }
+  }
+
   return (
     <>
       <main className="register container">
@@ -18,24 +49,33 @@ function Register() {
             <h1 className="register__title">
               Sign up to <br></br>Covape-19 Garage
             </h1>
-            <form className="register__form">
+            <form 
+              className="register__form"
+              onSubmit={handleRegister}
+            >
               <input
                 className="register__form-textarea"
                 type="text"
-                name="name"
+                name="username"
                 placeholder="Username"
+                value={formValues.username}
+                onChange={handleChange}
               />
               <input
                 className="register__form-textarea"
                 type="email"
                 name="email"
                 placeholder="E-mail"
+                value={formValues.email}
+                onChange={handleChange}
               />
               <input
                 className="register__form-textarea"
                 type="password"
                 name="password"
                 placeholder="Password"
+                value={formValues.password}
+                onChange={handleChange}
               />
               <LButton displayText="Continue" />
             </form>
