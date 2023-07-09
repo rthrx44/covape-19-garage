@@ -2,7 +2,7 @@ import React from 'react';
 import './Loading.css'
 
 const Loading = () => (
-  <div className="svg__con container">
+  <div className="svg__con">
     <svg 
       id="liquid-loading" 
       xmlns="http://www.w3.org/2000/svg" 
