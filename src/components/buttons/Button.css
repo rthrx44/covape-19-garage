@@ -28,6 +28,7 @@
   font-family: 'Golos Text', sans-serif;
   font-size: var(--size-xs);
   font-weight: 800;
+  margin-top: 0.5rem;
   margin-bottom: 5px;
   transition: ease-in-out .2s;
   cursor: pointer;
