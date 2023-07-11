@@ -61,6 +61,7 @@ function Register() {
                 value={formValues.username}
                 onChange={handleChange}
               />
+              <span className="error">Error</span>
               <input
                 className="register__form-textarea"
                 type="email"
@@ -69,6 +70,7 @@ function Register() {
                 value={formValues.email}
                 onChange={handleChange}
               />
+              <span className="error">Error</span>
               <input
                 className="register__form-textarea"
                 type="password"
@@ -77,6 +79,7 @@ function Register() {
                 value={formValues.password}
                 onChange={handleChange}
               />
+              <span className="error">Error</span>
               <LButton displayText="Continue" />
             </form>
             <p className="register__description">

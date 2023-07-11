@@ -50,7 +50,6 @@
   padding: 0.625rem;
   height: 1rem;
   width: 9.38rem;
-  margin-bottom: 0.5rem;
   font-family: var(--font-secondary);
   font-size: var(--size-xxs);
   font-weight: 300;
@@ -62,6 +61,17 @@
   font-size: var(--size-xxs);
   font-family: 500;
   color: var(--clr-neutral);
+}
+
+.error {
+  text-align: left;
+  line-height: 13px;
+  padding-left: 0.5rem;
+  height: 0.8rem;
+  font-family: var(--font-secondary);
+  font-size: var(--size-xxs);
+  font-weight: 500;
+  color: var(--clr-red);
 }
 
 /* xs */
