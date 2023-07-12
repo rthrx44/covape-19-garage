@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Register.css";
-import Cvlogo from "../../components/assets/Cvlogo.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { LButton, NButton } from "../../components/buttons/Button";
 import { useNavigate, Link } from "react-router-dom";
+import Cvlogo from "../../components/assets/Cvlogo.png";
 
 function Register() {
   
@@ -26,13 +28,34 @@ function Register() {
     let user = JSON.parse(localStorage.getItem('registeredUsers')) || [];
     const findUser = user.find(obj => (obj.email === formValues.email || obj.username === formValues.username));
     if (!formValues.username || !formValues.email || !formValues.password) {
-        alert('Please fill up required fields!');
+      toast.error('Please fill up required fields!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+        className: "errors",
+        });
     } else if (findUser !== undefined) {
-        alert('"User" or "Email" is already exist');
+        toast.error('"User" or "Email" is already exist', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "light",
+          className: "errors",
+          });
     } else {
         user.push(formValues);
         localStorage.setItem("registeredUsers", JSON.stringify(user));
         navigate('/login');
+
     }
   }
 
@@ -61,7 +84,6 @@ function Register() {
                 value={formValues.username}
                 onChange={handleChange}
               />
-              <span className="error">Error</span>
               <input
                 className="register__form-textarea"
                 type="email"
@@ -70,7 +92,6 @@ function Register() {
                 value={formValues.email}
                 onChange={handleChange}
               />
-              <span className="error">Error</span>
               <input
                 className="register__form-textarea"
                 type="password"
@@ -79,8 +100,8 @@ function Register() {
                 value={formValues.password}
                 onChange={handleChange}
               />
-              <span className="error">Error</span>
               <LButton displayText="Continue" />
+              <ToastContainer limit={2}/>
             </form>
             <p className="register__description">
               Already using Covape-19 Garage?

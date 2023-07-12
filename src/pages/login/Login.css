@@ -64,6 +64,11 @@
   color: var(--clr-neutral);
 }
 
+.errors {
+  background-color: var(--clr-lightdark);
+  color: var(--clr-slate);
+}
+
 /* xs */
 /* @media (min-width: 475px) {} */
 
