@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { LButton, NButton } from "../../components/buttons/Button";
 import { useNavigate, Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Cvlogo from "../../components/assets/Cvlogo.png";
 import Loading from "../../components/loading/Loading";
 
@@ -30,12 +32,32 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const getUser = JSON.parse(localStorage.getItem('registeredUsers'));
+    const getUser = JSON.parse(localStorage.getItem('registeredUsers')) || [];
     const filteredUser = getUser.filter(obj => (obj.email === formValues.email))
     if (!formValues.email || !formValues.password) {
-        alert('Please fill up required fields!');
+      toast.error('Please fill up required fields!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+        className: "errors",
+        });
     } else if (filteredUser.length === 0) {
-        alert('Invalid details!');
+      toast.error('Invalid details! Please create an account.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+        className: "errors",
+        });
     } else {
         localStorage.setItem("loggedUser", JSON.stringify(filteredUser));
         setTimeout(3000, navigate('/dashboard'));
@@ -78,6 +100,7 @@ function Login() {
                 onChange={handleChange}
               />
               <LButton displayText="Login" />
+              <ToastContainer limit={2}/>
             </form>
             <p className="Login__description">
               New to Covape-19 Garage?

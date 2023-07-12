@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap');
 
 :root {
-
   /*? website colors */
   --clr-dark: #000;
   --clr-lightdark: #27272a;
@@ -11,8 +10,6 @@
   --clr-slate300: #9ca3af;
   --clr-neutral: #a3a3a3;
   --clr-blue400: #818cf8;
-  --clr-red: #f87171;
-
 
   /*slate rgb(203, 213, 225) */
 
@@ -89,4 +86,3 @@ html::-webkit-scrollbar-thumb {
   background: var(--clr-lime);
   border-radius: 0.3rem;
 }
-
