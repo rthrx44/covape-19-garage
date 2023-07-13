@@ -67,6 +67,7 @@
 .errors {
   background-color: var(--clr-lightdark);
   color: var(--clr-slate);
+  font-family: var(--font-secondary);
 }
 
 /* xs */
