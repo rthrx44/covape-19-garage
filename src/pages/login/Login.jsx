@@ -33,7 +33,7 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     const getUser = JSON.parse(localStorage.getItem('registeredUsers')) || [];
-    const filteredUser = getUser.filter(obj => (obj.email === formValues.email))
+    const filteredUser = getUser.filter(obj => (obj.email === formValues.email && obj.password === formValues.password))
     if (!formValues.email || !formValues.password) {
       toast.error('Please fill up required fields!', {
         position: "top-center",
@@ -47,7 +47,7 @@ function Login() {
         className: "errors",
         });
     } else if (filteredUser.length === 0) {
-      toast.error('Invalid details! Please create an account.', {
+      toast.error('Invalid details!', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
