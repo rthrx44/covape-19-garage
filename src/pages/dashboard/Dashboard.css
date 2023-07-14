@@ -13,33 +13,9 @@
   height: 53.13rem;
 }
 
-
 .shop {
   display: grid;
   text-align: center;
-}
-
-
-.shop__wrapper {
-  margin-bottom: 3rem;
-}
-
-.shop__con-wrapper {
-  margin-top: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-
-.shop__title {
-  font-size: var(--size-base);
-  margin-bottom: 0.5rem;
-}
-
-.shop__description {
-  font-family: var(--font-secondary);
-  font-size: var(--size-xs);
-  color: var(--clr-slate);
 }
 
 .header__shop{
@@ -102,14 +78,6 @@
     font-size: var(--size-4xl);
   }
 
-  .shop__title {
-    font-size: var(--size-base);
-  }
-  
-  .shop__description {
-    font-size: var(--size-xs);
-  }
-
   .contact__title {
     font-size: var(--size-xs);
   }
@@ -123,31 +91,6 @@
 @media (min-width: 640px) {
   .hero__title {
     font-size: var(--size-5xl);
-  }
-
-  .shop__title {
-    font-size: var(--size-lg);
-  }
-  
-  .shop__description {
-    font-size: var(--size-sm);
-  }
-
-  .shop__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    grid-template-areas: 
-    'content1 image1';
-    margin-bottom: 2rem;
-  }
-
-  .shop__image1 {
-    grid-area: image1;
-  }
-
-  .shop__content1 {
-    grid-area: content1;
   }
 
   .contact {
@@ -187,14 +130,6 @@
     height: 49.38rem;
   }
 
-  .shop__title {
-    font-size: var(--size-xl);
-  }
-  
-  .shop__description {
-    font-size: var(--size-base);
-  }
-
   .contact__wrapper {
     margin-top: 3rem;
   }
@@ -204,14 +139,6 @@
 @media (min-width: 1280px) {
   .hero__title {
     font-size: var(--size-7xl);
-  }
-
-  .shop__title {
-    font-size: var(--size-2xl);
-  }
-  
-  .shop__description {
-    font-size: var(--size-lg);
   }
 }
 
