@@ -4,7 +4,7 @@ import { LButton, NButton } from "../../components/buttons/Button";
 import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Cvlogo from "../../components/assets/Cvlogo.png";
+import Cvlogo from '../../components/assets/Image/Cvlogo.png'
 import Loading from "../../components/loading/Loading";
 
 function Login() {

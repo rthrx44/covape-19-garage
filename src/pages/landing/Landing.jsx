@@ -5,12 +5,12 @@ import { RButton } from '../../components/buttons/Button'
 import { BsCart4, BsEmojiHeartEyes } from "react-icons/bs";
 import { BiLogoFacebook } from "react-icons/bi";
 import { LuSunMoon } from "react-icons/lu";
-import Cvlogo from '../../components/assets/Cvlogo.png'
-import Device1 from '../../components/assets/Device1.png';
-import Device3 from '../../components/assets/Device3.png';
-import Pod1 from '../../components/assets/Pod1.png';
-import Pod2 from '../../components/assets/Pod2.png';
-import Shop from '../../components/assets/Shop.png';
+import Cvlogo from '../../components/assets/Image/Cvlogo.png'
+import Device1 from '../../components/assets/Image/Device1.png';
+import Device3 from '../../components/assets/Image/Device3.png';
+import Pod1 from '../../components/assets/Image/Pod1.png';
+import Pod2 from '../../components/assets/Image/Pod2.png';
+import Shop from '../../components/assets/Image/Shop.png';
 import Loading from "../../components/loading/Loading";
 
 function Landing() {

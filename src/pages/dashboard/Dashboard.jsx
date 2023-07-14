@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './Dashboard.css';
 import { BiLogoFacebook } from "react-icons/bi";
 import Navbar from '../../components/navbar/Navbar';
-import Candy from '../../components/assets/Candy.jpg';
-import Juice from '../../components/assets/Juice.jpg';
-import Pastry from '../../components/assets/Pastry.jpg';
-import Vape from '../../components/assets/Vape.jpg';
+import Candy from '../../components/assets/Image/Candy.jpg';
+import Juice from '../../components/assets/Image/Juice.jpg';
+import Pastry from '../../components/assets/Image/Pastry.jpg';
+import Vape from '../../components/assets/Image/Vape.jpg';
 import Loading from '../../components/loading/Loading';
 
 function Dashboard() {

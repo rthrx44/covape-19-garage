@@ -3,7 +3,7 @@ import './Navbar.css';
 import { RButton } from '../buttons/Button';
 import { FaBars } from "react-icons/fa";
 import { useNavigate, Link } from 'react-router-dom';
-import Cvlogo from '../assets/Cvlogo.png'; 
+import Cvlogo from '../../components/assets/Image/Cvlogo.png'
 
 export default function Navbar () {
 
