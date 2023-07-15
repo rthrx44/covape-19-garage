@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 
 import Navbar from '../../components/navbar/Navbar';
 import Loading from '../../components/loading/Loading';
+import Juice01 from '../../components/assets/Image/Juice01.png'
 import Device01 from '../../components/assets/Image/Device01.png'
 import Device12 from '../../components/assets/Image/Device12.png'
 import Device15 from '../../components/assets/Image/Device15.png'
@@ -55,6 +56,32 @@ function Dashboard() {
           <h1 className='hero__title'>Discover the Ultimate <br></br>Vaping Experience.</h1>
         </section>
         <section id='shop' className='shop container section'>
+          <h1 className="shop__header">E-Juice</h1>
+          <Swiper
+            grabCursor={true}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            modules={[Pagination, Navigation]}
+            breakpoints={{
+              768: {slidesPerView: 2},
+              1024: {slidesPerView: 3},
+              1280: {slidesPerView: 4}
+            }}
+          >
+            <SwiperSlide>
+              <div className='grid__item'>
+                <img className='item__img' src={Juice01} alt='E-juice' />
+                <div className="item__con">
+                  <h1 className="item__brand">Puting Usok</h1>
+                  <h2 className="item__name">Espesyal Vapors</h2>
+                </div>
+                <p className="item__price">&#8369; 200</p>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </section>
+        <section id='device' className='shop container section'>
           <h1 className="shop__header">Mods & Kits</h1>
           <Swiper
             grabCursor={true}
@@ -110,7 +137,7 @@ function Dashboard() {
             </SwiperSlide>
           </Swiper>
         </section>
-        <section id='shop' className='shop container section'>
+        <section className='shop container section'>
           <h1 className="shop__header">Pod System</h1>
           <Swiper
             grabCursor={true}
@@ -146,7 +173,7 @@ function Dashboard() {
             </SwiperSlide>
           </Swiper>
         </section>
-        <section id='shop' className='shop container section'>
+        <section id='atomizer' className='shop container section'>
           <h1 className="shop__header">Atomizers</h1>
           <Swiper
             grabCursor={true}
@@ -202,7 +229,7 @@ function Dashboard() {
             </SwiperSlide>
           </Swiper>
         </section>
-        <section id='shop' className='shop container section'>
+        <section id='accessories' className='shop container section'>
           <h1 className="shop__header">Cottons & Batteries</h1>
           <Swiper
             grabCursor={true}
@@ -278,7 +305,7 @@ function Dashboard() {
             </SwiperSlide>
           </Swiper>
         </section>
-        <section id='shop' className='shop container section'>
+        <section className='shop container section'>
           <h1 className="shop__header">Accessories</h1>
           <Swiper
             grabCursor={true}
