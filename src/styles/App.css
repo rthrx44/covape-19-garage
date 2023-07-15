@@ -11,6 +11,8 @@
   --clr-neutral: #a3a3a3;
   --clr-blue400: #818cf8;
 
+  --swiper-navigation-color:#a3e635;
+
   /*slate rgb(203, 213, 225) */
 
   /*? website font sizes */
@@ -35,9 +37,12 @@
   --font-secondary: 'Golos Text', sans-serif;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   line-height: calc(1em + 0.5rem);
+  list-style-type: none;
 }
 
 html {
