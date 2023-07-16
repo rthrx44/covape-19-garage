@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Dashboard.css';
 import { BiLogoFacebook } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 //? Swiper Tool
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -77,6 +78,9 @@ function Dashboard() {
                   <h2 className="item__name">Espesyal Vapors</h2>
                 </div>
                 <p className="item__price">&#8369; 200</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -103,6 +107,9 @@ function Dashboard() {
                   <h2 className="item__name">Aegis Legend 2</h2>
                 </div>
                 <p className="item__price">&#8369; 2,200</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -113,6 +120,9 @@ function Dashboard() {
                   <h2 className="item__name">Manto Beast</h2>
                 </div>
                 <p className="item__price">&#8369; 1,300</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -123,6 +133,9 @@ function Dashboard() {
                   <h2 className="item__name">Jellybox Kit</h2>
                 </div>
                 <p className="item__price">&#8369; 2,600</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -133,6 +146,9 @@ function Dashboard() {
                   <h2 className="item__name">MVP</h2>
                 </div>
                 <p className="item__price">&#8369; 1,400</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -159,6 +175,9 @@ function Dashboard() {
                   <h2 className="item__name">XLIM Limited Edition</h2>
                 </div>
                 <p className="item__price">&#8369; 1,400</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -169,6 +188,9 @@ function Dashboard() {
                   <h2 className="item__name">XLIM</h2>
                 </div>
                 <p className="item__price">&#8369; 1,300</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -195,6 +217,9 @@ function Dashboard() {
                   <h2 className="item__name">Digiflavor Drop RDA V2</h2>
                 </div>
                 <p className="item__price">&#8369; 500</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -205,6 +230,9 @@ function Dashboard() {
                   <h2 className="item__name">Fat Rabbit RDA</h2>
                 </div>
                 <p className="item__price">&#8369; 400</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -215,6 +243,9 @@ function Dashboard() {
                   <h2 className="item__name">Zues X RTA</h2>
                 </div>
                 <p className="item__price">&#8369; 400</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -225,6 +256,9 @@ function Dashboard() {
                   <h2 className="item__name">Arbiter RTA</h2>
                 </div>
                 <p className="item__price">&#8369; 500</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -251,6 +285,9 @@ function Dashboard() {
                   <h2 className="item__name">Vipers Cotton</h2>
                 </div>
                 <p className="item__price">&#8369; 100</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -261,6 +298,9 @@ function Dashboard() {
                   <h2 className="item__name">Cotton Bacon</h2>
                 </div>
                 <p className="item__price">&#8369; 100</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -271,6 +311,9 @@ function Dashboard() {
                   <h2 className="item__name">Feather Cotton</h2>
                 </div>
                 <p className="item__price">&#8369; 100</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -281,6 +324,9 @@ function Dashboard() {
                   <h2 className="item__name">Firebolt Cotton</h2>
                 </div>
                 <p className="item__price">&#8369; 100</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -291,6 +337,9 @@ function Dashboard() {
                   <h2 className="item__name">Battery</h2>
                 </div>
                 <p className="item__price">&#8369; 300</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -301,6 +350,9 @@ function Dashboard() {
                   <h2 className="item__name">Battery</h2>
                 </div>
                 <p className="item__price">&#8369; 250</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -327,6 +379,9 @@ function Dashboard() {
                   <h2 className="item__name">MC4</h2>
                 </div>
                 <p className="item__price">&#8369; 500</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -337,6 +392,9 @@ function Dashboard() {
                   <h2 className="item__name">MC2</h2>
                 </div>
                 <p className="item__price">&#8369; 250</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -347,6 +405,9 @@ function Dashboard() {
                   <h2 className="item__name">MC1</h2>
                 </div>
                 <p className="item__price">&#8369; 150</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -357,6 +418,9 @@ function Dashboard() {
                   <h2 className="item__name">Vape Toolkit</h2>
                 </div>
                 <p className="item__price">&#8369; 350</p>
+                <div className='item__link'>
+                  <Link className='link__products' to='./items'>VIEW</Link>
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
