@@ -1,7 +1,14 @@
 import React from 'react'
+import './Products.css'
+import Navbar from '../navbar/Navbar'
 
-export const Products = () => {
+export default function Products () {
   return (
-    <div>Products</div>
+    <div>
+      <Navbar/>
+      <section className='product__info container section'>
+        Product
+      </section>
+    </div>
   )
 }

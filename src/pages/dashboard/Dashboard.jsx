@@ -59,7 +59,6 @@ function Dashboard() {
         <section id='shop' className='shop container section'>
           <h1 className="shop__header">E-Juice</h1>
           <Swiper
-            grabCursor={true}
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
@@ -79,7 +78,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 200</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <Link className='link__products' to='./putingusok'>VIEW</Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -91,7 +90,7 @@ function Dashboard() {
             grabCursor={true}
             slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}
+            pagination={{ clickable: false }}
             modules={[Pagination, Navigation]}
             breakpoints={{
               768: {slidesPerView: 2},
@@ -108,7 +107,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 2,200</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <Link className='link__products' to='./products'>VIEW</Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -448,8 +447,9 @@ function Dashboard() {
           </div>
           <div className='contact__wrapper'>
             <h5 className='contact__title'>Shop</h5>
-            <a className='contact__link' href="#device">Devices</a>
             <a className='contact__link' href="#juice">E-Juice</a>
+            <a className='contact__link' href="#device">Devices</a>
+            <a className='contact__link' href="#juice">Atomizer</a>
             <a className='contact__link' href="#accessories">Accessories</a>
           </div>
           <div className='contact__wrapper'>

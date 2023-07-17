@@ -89,18 +89,7 @@
   font-family: var(--font-secondary);
   font-size: var(--size-sm);
   text-decoration: none;
-}
-
-.swiper-pagination {
-  position: relative;
-}
-
-.swiper-pagination .swiper-pagination-bullet {
-  background: rgb(163, 230, 53);
-}
-
-.swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--clr-lime);
+  cursor: pointer;
 }
 
 .header__shop{

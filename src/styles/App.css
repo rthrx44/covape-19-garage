@@ -91,3 +91,29 @@ html::-webkit-scrollbar-thumb {
   background: var(--clr-lime);
   border-radius: 0.3rem;
 }
+
+
+/*? Swiper */
+.swiper-pagination .swiper-pagination-bullet {
+  background: rgb(163, 230, 53);
+  height: 0.2rem;
+  width: 0.2rem;
+}
+
+.swiper-button-next {
+  right: 0;
+  visibility: hidden;
+}
+
+.swiper:hover .swiper-button-next {
+  visibility: visible;
+}
+
+.swiper-button-prev {
+  left: 0;
+  visibility: hidden;
+}
+
+.swiper:hover .swiper-button-prev {
+  visibility: visible;
+}
