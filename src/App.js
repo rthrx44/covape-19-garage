@@ -6,6 +6,8 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Landing from './pages/landing/Landing';
+import Products from './components/products/Products';
+import Putingusok from './components/products/Putingusok'
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
+        <Route path='dashboard/products' element={<Products/>}/>
+        <Route path='dashboard/putingusok' element={<Putingusok/>}/>
       </Routes>
     </BrowserRouter>
     </>
