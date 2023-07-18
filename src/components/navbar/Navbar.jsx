@@ -52,7 +52,7 @@ export default function Navbar () {
               <a className='mobile__link' href='#home' onClick={handleClick}> Home </a>
             </li>
             <li>
-              <a className='mobile__link' href='#shop' onClick={handleClick}> Shop </a>
+              <a className='mobile__link' href='#products' onClick={handleClick}> Products </a>
             </li>
             <li>
               <a className='mobile__link' href='#contact' onClick={handleClick}> Contact Us </a>
@@ -70,7 +70,7 @@ export default function Navbar () {
               <a className='header__link' href='#home'> Home </a>
             </li>
             <li>
-              <a className='header__link' href='#shop'> Shop </a>
+              <a className='header__link' href='#products'> Products </a>
             </li>
             <li>
               <a className='header__link' href='#contact'> Contact Us </a>

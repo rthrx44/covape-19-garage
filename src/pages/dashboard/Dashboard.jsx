@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Dashboard.css';
 import { BiLogoFacebook } from "react-icons/bi";
-import { Link } from 'react-router-dom';
 
 //? Swiper Tool
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,6 +13,7 @@ import 'swiper/css/navigation';
 import Navbar from '../../components/navbar/Navbar';
 import Loading from '../../components/loading/Loading';
 import Juice01 from '../../components/assets/Image/Juice01.png'
+import Juice03 from '../../components/assets/Image/Juice03.png'
 import Device01 from '../../components/assets/Image/Device01.png'
 import Device12 from '../../components/assets/Image/Device12.png'
 import Device15 from '../../components/assets/Image/Device15.png'
@@ -56,8 +56,8 @@ function Dashboard() {
         <section className='hero container section'>
           <h1 className='hero__title'>Discover the Ultimate <br></br>Vaping Experience.</h1>
         </section>
-        <section id='shop' className='shop container section'>
-          <h1 className="shop__header">E-Juice</h1>
+        <section id='products' className='shop container section'>
+          <h1 id='juice' className="shop__header">E-Juice</h1>
           <Swiper
             slidesPerView={1}
             navigation
@@ -74,11 +74,24 @@ function Dashboard() {
                 <img className='item__img' src={Juice01} alt='E-juice' />
                 <div className="item__con">
                   <h1 className="item__brand">Puting Usok</h1>
-                  <h2 className="item__name">Espesyal Vapors</h2>
+                  <h2 className="item__name">Espesyal Vapors 100ML (Pastry)</h2>
                 </div>
                 <p className="item__price">&#8369; 200</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./putingusok'>VIEW</Link>
+                  <a className='link__products' href='dashboard/putingusok'>VIEW</a>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='grid__item'>
+                <img className='item__img' src={Juice03} alt='E-juice' />
+                <div className="item__con">
+                  <h1 className="item__brand">Puting Usok</h1>
+                  <h2 className="item__name">Espesyal Vapors 100ML (Menthol)</h2>
+                </div>
+                <p className="item__price">&#8369; 200</p>
+                <div className='item__link'>
+                  <a className='link__products' href='dashboard/putingusok'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -107,7 +120,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 2,200</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./products'>VIEW</Link>
+                  <a className='link__products' href='dashboard/products'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -120,7 +133,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 1,300</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -133,7 +146,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 2,600</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -146,7 +159,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 1,400</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -175,7 +188,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 1,400</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -188,7 +201,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 1,300</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -217,7 +230,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 500</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -230,7 +243,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 400</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -243,7 +256,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 400</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -256,7 +269,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 500</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -285,7 +298,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 100</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -298,7 +311,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 100</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -311,7 +324,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 100</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -324,7 +337,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 100</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -337,7 +350,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 300</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -350,7 +363,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 250</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -379,7 +392,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 500</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -392,7 +405,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 250</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -405,7 +418,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 150</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -418,7 +431,7 @@ function Dashboard() {
                 </div>
                 <p className="item__price">&#8369; 350</p>
                 <div className='item__link'>
-                  <Link className='link__products' to='./items'>VIEW</Link>
+                  <a className='link__products' href='dashboard/items'>VIEW</a>
                 </div>
               </div>
             </SwiperSlide>
