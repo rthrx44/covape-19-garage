@@ -86,7 +86,7 @@ export default function Putingusok () {
           <SwiperSlide className='small__img-con'>
             <img className="item__img-small" src={Juice01} alt="Espesyal Juice" />
           </SwiperSlide>
-          <SwiperSlide className='small__img-con2'>
+          <SwiperSlide className='small__img-con'>
             <img className="item__img-small" src={Juice02} alt="Espesyal Juice" />
           </SwiperSlide>
           <SwiperSlide className='small__img-con'>

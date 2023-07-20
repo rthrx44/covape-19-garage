@@ -6,10 +6,10 @@ import { BsCart4, BsEmojiHeartEyes } from "react-icons/bs";
 import { BiLogoFacebook } from "react-icons/bi";
 import { LuSunMoon } from "react-icons/lu";
 import Cvlogo from '../../components/assets/Image/Cvlogo.png'
-import Device1 from '../../components/assets/Image/Device1.png';
-import Device3 from '../../components/assets/Image/Device3.png';
-import Pod1 from '../../components/assets/Image/Pod1.png';
-import Pod2 from '../../components/assets/Image/Pod2.png';
+import Device01 from '../../components/assets/Image/Device01.png';
+import Device02 from '../../components/assets/Image/Device02.png';
+import Pod01 from '../../components/assets/Image/Pod01.png';
+import Pod02 from '../../components/assets/Image/Pod02.png';
 import Shop from '../../components/assets/Image/Shop.png';
 import Loading from "../../components/loading/Loading";
 
@@ -36,16 +36,16 @@ function Landing() {
           <h1 className='landing__title'>Top Products</h1>
           <div className='landing__product-wrapper'>
             <div className='img__wrapper img1'>
-              <img className='landing__product-pic1' src={Pod1} alt='Vape Devices' />
+              <img className='landing__product-pic1' src={Pod01} alt='Vape Devices' />
             </div>
             <div className='img__wrapper img2'>
-              <img className='landing__product-pic' src={Device1} alt='Vape Juice' />
+              <img className='landing__product-pic' src={Device01} alt='Vape Juice' />
             </div>
             <div className='img__wrapper img3'>
-              <img className='landing__product-pic' src={Device3} alt='Candies' />
+              <img className='landing__product-pic' src={Device02} alt='Candies' />
             </div>
             <div className='img__wrapper img4'>
-              <img className='landing__product-pic1' src={Pod2} alt='Pastries' />
+              <img className='landing__product-pic1' src={Pod02} alt='Pastries' />
             </div>
           </div>
         </section>
