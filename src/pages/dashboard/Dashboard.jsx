@@ -6,7 +6,7 @@ import Loading from '../../components/loading/Loading';
 import Item from '../../components/utils/item/Item';
 
 function Dashboard({endpoint: {items}}) {
-  console.log(items);  
+  
   const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
@@ -25,7 +25,9 @@ function Dashboard({endpoint: {items}}) {
         </section>
         <section id='products' className='shop container section'>
           <h1 id='juice' className="shop__header">Products</h1>
-          {items?.map((item, i) => (<Item {...item} key={i}/>))}
+          <div className='grid'>
+            {items?.map((item, i) => (<Item {...item} key={i}/>))}
+          </div>
         </section>
         <section className='header__shop container section'>
           <hr className='line'></hr>
