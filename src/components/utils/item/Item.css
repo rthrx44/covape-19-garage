@@ -1,5 +1,4 @@
 .grid__item {
-  outline: 1px solid red;
   padding-top: 0.4rem;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
@@ -76,6 +75,27 @@
   font-size: var(--size-sm);
   text-decoration: none;
   cursor: pointer;
+}
+
+.item__img-main {
+  height: 13rem;
+  width: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item__img-small {
+  height: 5rem;
+  width: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small__img-con:active {
+  cursor: pointer;
+  border: 1px solid var(--clr-lime);
 }
 
 /* xs */

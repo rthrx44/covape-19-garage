@@ -3,7 +3,7 @@ import './Dashboard.css';
 import { BiLogoFacebook } from "react-icons/bi";
 import Navbar from '../../components/navbar/Navbar';
 import Loading from '../../components/loading/Loading';
-import Item from '../../components/utils/item/Item';
+import { Item } from '../../components/utils/item/Item';
 
 function Dashboard({endpoint: {items}}) {
   

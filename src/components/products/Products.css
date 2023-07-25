@@ -9,24 +9,8 @@
   -webkit-user-select: none;
 }
 
-.item__img-main {
-  height: 13rem;
-  width: 6rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .swiper__con {
   height: 10rem;
-}
-
-.item__img-small {
-  height: 5rem;
-  width: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .product__description-con {
@@ -75,6 +59,7 @@
 }
 
 .product__name {
+  position: relative;
   font-size: var(--size-2xl);
 }
 
