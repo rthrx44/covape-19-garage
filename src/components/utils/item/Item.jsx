@@ -1,10 +1,8 @@
 import React from 'react'
 import './Item.css'
 
-const Item = (props) => {
-
+export const Item = (props) => {
   const { id, img, brand, name, price } = props
-
   return (
     <div className='grid__item'>
       <img className='item__img' src={img} alt={id} />
@@ -20,4 +18,20 @@ const Item = (props) => {
   )
 }
 
-export default Item
+export const ProductBigImg = (props) => {
+  const { id, img } = props
+  return (
+    <>
+      <img className="item__img-main" src={img} alt={id} />
+    </>
+  )
+}
+
+export const ProductSmallImg = (props) => {
+  const { id, img } = props
+  return (
+    <>
+      <img className="item__img-small" src={img} alt={id} />
+    </>
+  )
+}
