@@ -15,19 +15,8 @@
 .item__img {
   height: 8rem;
   margin: auto;
-}
-
-.item__img2 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  height: 6rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.item__con {
-  padding: 0.3rem;
-  margin-top: 0.4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .item__brand {
@@ -42,7 +31,7 @@
 
 .item__price {
   font-size: var(--size-sm);
-  padding-bottom: 0.4rem;
+  padding-bottom: 1.5rem;
 }
 
 .item__link {
@@ -113,15 +102,7 @@
 }
 
 /* md */
-@media (min-width: 768px) {
-  .grid__item {
-    width: 11rem;
-  }
-
-  .item__img {
-    height: 10rem;
-  }
-}
+/* @media (min-width: 768px) {} */
 
 /* lg */
 /* @media (min-width: 1024px) {} */

@@ -24,7 +24,7 @@ function Dashboard({endpoint: {items}}) {
           <h1 className='hero__title'>Discover the Ultimate <br></br>Vaping Experience.</h1>
         </section>
         <section id='products' className='shop container section'>
-          <h1 id='juice' className="shop__header">Products</h1>
+          <h1 id='products' className="shop__header">Products</h1>
           <div className='grid'>
             {items?.map((item, i) => (<Item {...item} key={i}/>))}
           </div>
@@ -36,7 +36,7 @@ function Dashboard({endpoint: {items}}) {
               <a className='header__link' href='#home'> Home </a>
             </li>
             <li>
-              <a className='header__link' href='#shop'> Shop </a>
+              <a className='header__link' href='#products'> Products </a>
             </li>
             <li>
               <a className='header__link' href='#contact'> Contact Us </a>
@@ -51,7 +51,7 @@ function Dashboard({endpoint: {items}}) {
             <a className='contact__link' href="#contact">Contact</a>
           </div>
           <div className='contact__wrapper'>
-            <h5 className='contact__title'>Shop</h5>
+            <h5 className='contact__title'>Products</h5>
             <a className='contact__link' href="#juice">E-Juice</a>
             <a className='contact__link' href="#device">Devices</a>
             <a className='contact__link' href="#atomizer">Atomizer</a>

@@ -20,8 +20,9 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/dashboard' element={<Dashboard endpoint={products}/>}/>
-        <Route path='dashboard/products' element={<Products/>}/>
-        <Route path='dashboard/putingusok' element={<Putingusok endpoint={productInfo}/>}/>
+          <Route path='products' element={<Products/>}/>
+          <Route path='putingusok' element={<Putingusok endpoint={productInfo}/>}/>
+        <Route/>
       </Routes>
     </BrowserRouter>
     </>
