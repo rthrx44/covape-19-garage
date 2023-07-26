@@ -12,7 +12,7 @@ export const Item = (props) => {
       </div>
       <p className="item__price">&#8369; {price}</p>
       <div className='item__link'>
-        <a className='link__products' href='dashboard/putingusok'>VIEW</a>
+        <a className='link__products' href='./putingusok'>VIEW</a>
       </div>
     </div>
   )

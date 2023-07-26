@@ -226,14 +226,14 @@ const products = {
       id: 'P019',
       img: Juice01,
       brand: 'Puting Usok',
-      name: 'Espesyal Vapors 100ML (Pastry)',
+      name: 'Espesyal Vapors (Pastry)',
       price: '200',
     },
     {
       id: 'P020',
       img: Juice03,
       brand: 'Puting Usok',
-      name: 'Espesyal Vapors 100ML (Menthol)',
+      name: 'Espesyal Vapors (Menthol)',
       price: '200',
     },
     {
@@ -288,6 +288,34 @@ const productInfo = {
       img: Juice04,
       brand: 'Espesyal Vapors',
       name: 'New York Cheesecake',
+      productOption: [
+        {
+          low: '200.00',
+          med: '220.00',
+          high: '250.00',
+          high12: '270.00',
+        }
+      ]
+    },
+    {
+      id: 'EVJP304',
+      img: Juice06,
+      brand: 'Espesyal Vapors',
+      name: 'Coffee',
+      productOption: [
+        {
+          low: '200.00',
+          med: '220.00',
+          high: '250.00',
+          high12: '270.00',
+        }
+      ]
+    },
+    {
+      id: 'EVJP304',
+      img: Juice06,
+      brand: 'Espesyal Vapors',
+      name: 'Coffee',
       productOption: [
         {
           low: '200.00',
