@@ -5,6 +5,13 @@ import Navbar from '../../components/navbar/Navbar';
 import Loading from '../../components/loading/Loading';
 import { Item } from '../../components/utils/item/Item';
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import "swiper/css/autoplay"
+
 function Dashboard({endpoint: {items}}) {
   
   const [showLoading, setShowLoading] = useState(true);
@@ -24,10 +31,31 @@ function Dashboard({endpoint: {items}}) {
           <h1 className='hero__title'>Discover the Ultimate <br></br>Vaping Experience.</h1>
         </section>
         <section id='products' className='shop container section'>
-          <h1 id='products' className="shop__header">Products</h1>
-          <div className='grid'>
-            {items?.map((item, i) => (<Item {...item} key={i}/>))}
-          </div>
+          <h1 id='products' className="shop__header">Top Products</h1>
+          <Swiper
+            autoplay= {{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            slidesPerView={1}
+            slidesPerGroup={1}
+            navigation
+            pagination= {{ clickable: false }}
+            modules={[Pagination, Navigation, Autoplay]}
+            breakpoints={{
+              640: {slidesPerView:2},
+              768: {slidesPerView: 3},
+              1024: {slidesPerView: 4},
+              1280: {slidesPerView: 5}
+              }}
+            className="swiper__dashboard-con"
+          >
+            {items?.map((item, i) => (
+              <SwiperSlide key={i}>
+                <Item {...item}/>
+              </SwiperSlide>))}
+          </Swiper>
         </section>
         <section className='header__shop container section'>
           <hr className='line'></hr>
