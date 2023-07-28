@@ -18,20 +18,16 @@ export const Item = (props) => {
   )
 }
 
-export const ProductBigImg = (props) => {
-  const { id, img } = props
+export const ProductInfo = (props) => {
+  const { id, img, brand, name, price } = props
   return (
     <>
       <img className="item__img-main" src={img} alt={id} />
-    </>
-  )
-}
-
-export const ProductSmallImg = (props) => {
-  const { id, img } = props
-  return (
-    <>
-      <img className="item__img-small" src={img} alt={id} />
+      <div className="product__description-con">
+          <h4 className="product__brand">{brand}</h4>
+          <h2 className="product__name">{name}</h2>
+          <h3 className="product__price">&#8369; {price}</h3>
+        </div>
     </>
   )
 }

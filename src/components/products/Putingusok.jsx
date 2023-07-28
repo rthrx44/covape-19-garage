@@ -1,47 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Products.css";
 import { BiLogoFacebook } from "react-icons/bi";
 import { useNavigate } from 'react-router-dom';
 import { RButton } from "../buttons/Button";
-import { ProductBigImg, ProductSmallImg } from "../utils/item/Item";
+import { ProductInfo } from "../utils/item/Item";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Thumbs } from 'swiper/modules';
-import "swiper/css";
-import "swiper/css/pagination"
-import "swiper/css/navigation"
-import "swiper/css/thumbs"
-
-
-
-export default function Putingusok ({endpoint: {productData, productJPrice}}) {
+export default function Putingusok ({endpoint: {productJPrice}}) {
   
   const navigate = useNavigate(); 
-  const [activeThumb, setActiveThumb] = useState()
-  const handleBack = () => {navigate('/dashboard')}
-  console.log(activeThumb);
+  const handleBack = () => {navigate('/products')}
+
   return (
     <div>
       <section className="back__btn container section">
         <RButton displayText="Back" buttonClick={handleBack}/>
       </section>
       <section className="product__main-img container section">
-        <Swiper 
-          slidesPerView={1}
-          allowTouchMove={false}
-          modules={[ Thumbs ]}
-          thumbs={{ swiper : activeThumb}}
-        >
-          {productData?.map((item, i) => (
-            <SwiperSlide key={i}>
-              <ProductBigImg {...item}/>
-            </SwiperSlide>))}
-        </Swiper>
-        <div className="product__description-con">
-          <h4 className="product__brand">Espesyal Vapors</h4>
-          <h2 className="product__name"> Almond RY4 </h2>
-          <h3 className="product__price">&#8369; 200.00</h3>
-        </div>
+        <ProductInfo/>
         <form className="product__selection">
           <div className="selections">
             <label className="selection-header">Options</label>

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import './Dashboard.css';
 import { BiLogoFacebook } from "react-icons/bi";
-import Navbar from '../../components/navbar/Navbar';
-import Loading from '../../components/loading/Loading';
 import { Item } from '../../components/utils/item/Item';
 import { RButton } from '../../components/buttons/Button';
+import Navbar from '../../components/navbar/Navbar';
+import Loading from '../../components/loading/Loading';
+import Juice01 from '../../components/assets/Image/Juice01.png'
+import Device01 from '../../components/assets/Image/Device01.png'
+import Pod15 from '../../components/assets/Image/Pod15.png'
+import Atomizer19 from '../../components/assets/Image/Atomizer19.png'
+import Access06 from '../../components/assets/Image/Access06.png'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay, Grid } from 'swiper/modules';
@@ -14,11 +19,7 @@ import "swiper/css/navigation"
 import "swiper/css/autoplay"
 import "swiper/css/grid"
 
-import Juice01 from '../../components/assets/Image/Juice01.png'
-import Device01 from '../../components/assets/Image/Device01.png'
-import Pod15 from '../../components/assets/Image/Pod15.png'
-import Atomizer19 from '../../components/assets/Image/Atomizer19.png'
-import Access06 from '../../components/assets/Image/Access06.png'
+
 
 function Dashboard({endpoint: {items}}) {
   
@@ -72,16 +73,16 @@ function Dashboard({endpoint: {items}}) {
               </SwiperSlide>))}
           </Swiper>
         </section>
-        <section id='juice' className='products container section'>
+        <section className='products container section'>
           <div className='products__con'>
-            <h1 className="shop__header">E-Juice</h1>
-            <RButton displayText='View All'/>
+            <h1 id='juice' className="shop__header">E-Juice</h1>
+            <a href='/products'><RButton displayText='View All'/></a>
             <div className='juice__con'>
                 <img className='juice_pic' src={Juice01} alt="Vape Juice" />
             </div>
           </div>
           <div className='products__con'>
-            <h1 className="shop__header">Mods & Kits</h1>
+            <h1 id='device' className="shop__header">Mods & Kits</h1>
             <RButton displayText='View All'/>
             <div className='juice__con'>
                 <img className='juice_pic' src={Device01} alt="Vape Juice" />
@@ -95,14 +96,14 @@ function Dashboard({endpoint: {items}}) {
             </div>
           </div>
           <div className='products__con'>
-            <h1 className="shop__header">Atomizers</h1>
+            <h1 id='atomizer' className="shop__header">Atomizers</h1>
             <RButton displayText='View All'/>
             <div className='juice__con'>
                 <img className='juice_pic' src={Atomizer19} alt="Vape Juice" />
             </div>
           </div>
           <div className='products__con'>
-            <h1 className="shop__header">Accessories</h1>
+            <h1 id='accessories' className="shop__header">Accessories</h1>
             <RButton displayText='View All'/>
             <div className='juice__con'>
                 <img className='juice_pic' src={Access06} alt="Vape Juice" />
@@ -143,9 +144,7 @@ function Dashboard({endpoint: {items}}) {
           </div>
         </section>
         <footer className='footer container section'>
-          <div className='footer__social'>
-            <BiLogoFacebook/>
-          </div>
+          <div className='footer__social'><BiLogoFacebook/></div>
           <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
         </footer>
       </main>

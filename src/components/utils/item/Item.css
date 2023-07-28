@@ -73,18 +73,16 @@
   margin-right: auto;
 }
 
-.item__img-small {
-  height: 5rem;
-  width: 2rem;
+.product__description-con {
   margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 }
 
-.small__img-con:active {
-  cursor: pointer;
-  border: 1px solid var(--clr-lime);
+.product__brand,
+.product__price {
+  color: var(--clr-slate);
+  font-family: var(--font-secondary);
+  font-size: var(--size-base);
 }
 
 /* xs */

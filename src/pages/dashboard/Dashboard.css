@@ -16,17 +16,19 @@
 .products {
   display: grid;
   grid-template-columns: 1fr;
+  margin-bottom: 4rem;
 }
 
 .products__con {
   /* outline: 1px solid red; */
-  margin: 2rem;
+  margin-top: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   width: 16rem;
   background-color: var(--clr-lightdark);
+  text-align: center;
 }
 
 .shop__header {
@@ -59,10 +61,6 @@
 
 .swiper__dashboard-con {
   height: 100%;
-}
-
-.products {
-  text-align: center;
 }
 
 .contact {
