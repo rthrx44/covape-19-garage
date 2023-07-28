@@ -4,13 +4,21 @@ import { BiLogoFacebook } from "react-icons/bi";
 import Navbar from '../../components/navbar/Navbar';
 import Loading from '../../components/loading/Loading';
 import { Item } from '../../components/utils/item/Item';
+import { RButton } from '../../components/buttons/Button';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay, Grid } from 'swiper/modules';
 import "swiper/css";
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import "swiper/css/autoplay"
+import "swiper/css/grid"
+
+import Juice01 from '../../components/assets/Image/Juice01.png'
+import Device01 from '../../components/assets/Image/Device01.png'
+import Pod15 from '../../components/assets/Image/Pod15.png'
+import Atomizer19 from '../../components/assets/Image/Atomizer19.png'
+import Access06 from '../../components/assets/Image/Access06.png'
 
 function Dashboard({endpoint: {items}}) {
   
@@ -31,23 +39,30 @@ function Dashboard({endpoint: {items}}) {
           <h1 className='hero__title'>Discover the Ultimate <br></br>Vaping Experience.</h1>
         </section>
         <section id='products' className='shop container section'>
-          <h1 id='products' className="shop__header">Top Products</h1>
+          <h1 className="shop__header">Top Products</h1>
           <Swiper
+            modules={[Pagination, Navigation, Autoplay, Grid]}
             autoplay= {{
-              delay: 3000,
+              delay: 2000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true
             }}
-            loop={true}
             slidesPerView={1}
-            slidesPerGroup={1}
             navigation
             pagination= {{ clickable: false }}
-            modules={[Pagination, Navigation, Autoplay]}
+            grid={{
+              rows: 2,
+              fill: "row"
+            }}
             breakpoints={{
-              640: {slidesPerView:2},
-              768: {slidesPerView: 3},
-              1024: {slidesPerView: 4},
-              1280: {slidesPerView: 5}
+              640: {slidesPerView:2,
+                    grid: {rows:2, fill:"row"}},
+              768: {slidesPerView: 3,
+                    grid: {rows:2, fill:"row"}},
+              1024: {slidesPerView: 4,
+                    grid: {rows:2, fill:"row"}},
+              1280: {slidesPerView: 5,
+                    grid: {rows:2, fill:"row"}}
               }}
             className="swiper__dashboard-con"
           >
@@ -57,17 +72,54 @@ function Dashboard({endpoint: {items}}) {
               </SwiperSlide>))}
           </Swiper>
         </section>
+        <section id='juice' className='products container section'>
+          <div className='products__con'>
+            <h1 className="shop__header">E-Juice</h1>
+            <RButton displayText='View All'/>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Juice01} alt="Vape Juice" />
+            </div>
+          </div>
+          <div className='products__con'>
+            <h1 className="shop__header">Mods & Kits</h1>
+            <RButton displayText='View All'/>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Device01} alt="Vape Juice" />
+            </div>
+          </div>
+          <div className='products__con'>
+            <h1 className="shop__header">Pod Systems</h1>
+            <RButton displayText='View All'/>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Pod15} alt="Vape Juice" />
+            </div>
+          </div>
+          <div className='products__con'>
+            <h1 className="shop__header">Atomizers</h1>
+            <RButton displayText='View All'/>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Atomizer19} alt="Vape Juice" />
+            </div>
+          </div>
+          <div className='products__con'>
+            <h1 className="shop__header">Accessories</h1>
+            <RButton displayText='View All'/>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Access06} alt="Vape Juice" />
+            </div>
+          </div>
+        </section>
         <section className='header__shop container section'>
           <hr className='line'></hr>
           <ul className='shop__menu'>
             <li>
-              <a className='header__link' href='#home'> Home </a>
+              <a className='header__link' href='#home'>Home</a>
             </li>
             <li>
-              <a className='header__link' href='#products'> Products </a>
+              <a className='header__link' href='#products'>Products</a>
             </li>
             <li>
-              <a className='header__link' href='#contact'> Contact Us </a>
+              <a className='header__link' href='#contact'>Contact Us</a>
             </li>
           </ul>
           <hr className='line'></hr>

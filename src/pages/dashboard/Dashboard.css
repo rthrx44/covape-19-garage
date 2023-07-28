@@ -13,12 +13,56 @@
   height: 53.13rem;
 }
 
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.products__con {
+  /* outline: 1px solid red; */
+  margin: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 16rem;
+  background-color: var(--clr-lightdark);
+}
+
+.shop__header {
+  font-size: var(--size-xl);
+  color: var(--clr-slate);
+  margin-bottom: 0.3rem;
+}
+
+.juice__con {
+  height: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.juice_pic {
+  height: 12rem;
+  transform: rotate(25deg);
+  transition: ease-in-out 0.5s;
+}
+
+.juice_pic:hover {
+  height: 12.5rem;
+  transform: rotate(28deg);
+}
+
 .header__shop{
   display: none;
 }
 
 .swiper__dashboard-con {
-  height: 18rem;
+  height: 100%;
+}
+
+.products {
+  text-align: center;
 }
 
 .contact {
