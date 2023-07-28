@@ -96,8 +96,8 @@ html::-webkit-scrollbar-thumb {
 /*? Swiper */
 .swiper-pagination .swiper-pagination-bullet {
   background: rgb(163, 230, 53);
-  height: 0.2rem;
-  width: 0.2rem;
+  height: 0.25rem;
+  width: 0.25rem;
 }
 
 .swiper-button-next {

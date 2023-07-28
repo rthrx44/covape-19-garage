@@ -10,19 +10,12 @@
 }
 
 .swiper__con {
-  height: 10rem;
+  height: 100%;
+  padding-bottom: 2rem;
 }
 
-.product__description-con {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.product__brand,
-.product__price {
-  color: var(--clr-slate);
-  font-family: var(--font-secondary);
-  font-size: var(--size-base);
+.swiper__products-con {
+  outline: 1px solid red;
 }
 
 .selections {
@@ -70,8 +63,20 @@
 }
 
 .product__info {
-  padding-left: 0.5rem;
+  padding-top: 1rem;
   font-size: var(--size-sm);
 }
 
+.other__products {
+  margin-bottom: 4rem;
+}
+
+.grid__products {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.products__con {
+  text-align: center;
+}
 

@@ -86,9 +86,7 @@ function Landing() {
           <Link to='/login'><RButton displayText='Shop Now'/></Link>
         </section>
         <footer className='landing__footer container section'>
-          <div className='landing__social'>
-            <BiLogoFacebook/>
-          </div>
+          <div className='landing__social'><BiLogoFacebook/></div>
           <h6 className='landing__footer-text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
         </footer>
       </main>
