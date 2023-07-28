@@ -37,27 +37,6 @@ export default function Putingusok ({endpoint: {productData, productJPrice}}) {
               <ProductBigImg {...item}/>
             </SwiperSlide>))}
         </Swiper>
-        <Swiper
-          onClick={setActiveThumb}
-          slidesPerView={3}
-          slidesPerGroup={2}
-          navigation
-          pagination= {{ clickable: false }}
-          modules={[Pagination, Navigation, Thumbs]}
-          breakpoints={{
-            768: {slidesPerView: 4},
-            1024: {slidesPerView: 4},
-            1280: {slidesPerView: 4}
-            }}
-          className="swiper__con"
-        >
-          {productData?.map((item, i) => (
-            <SwiperSlide key={i}>
-              <div className="small__img-con">
-                <ProductSmallImg {...item}/>
-              </div>
-            </SwiperSlide>))}
-        </Swiper>
         <div className="product__description-con">
           <h4 className="product__brand">Espesyal Vapors</h4>
           <h2 className="product__name"> Almond RY4 </h2>
