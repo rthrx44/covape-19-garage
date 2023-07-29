@@ -8,7 +8,11 @@ import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Landing from './pages/landing/Landing';
 import Putingusok from './components/products/Putingusok';
-import Products from './components/products/Products';
+import Juice from './components/products/Juice';
+import Mods from './components/products/Mods';
+import Pods from './components/products/Pods';
+import Atomizer from './components/products/Atomizer';
+import Accessories from './components/products/Accessories';
 
 function App() {
   return (
@@ -18,9 +22,14 @@ function App() {
         <Route path='/' element={<Landing/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
-        <Route path='/dashboard' element={<Dashboard endpoint={topProducts}/>}/>
-        <Route path='/products' element={<Products endpoint={products}/>}/>
-        <Route path='/putingusok' element={<Putingusok endpoint={products}/>}/>      </Routes>
+        <Route path='/dashboard' element={<Dashboard topProducts={topProducts}/>}/>
+        <Route path='/juice' element={<Juice products={products}/>}/>
+        <Route path='/mods' element={<Mods products={products}/>}/>
+        <Route path='/pods' element={<Pods products={products}/>}/>
+        <Route path='/atomizer' element={<Atomizer products={products}/>}/>
+        <Route path='/accessories' element={<Accessories products={products}/>}/>
+        <Route path='/putingusok' element={<Putingusok products={products}/>}/>
+      </Routes>
     </BrowserRouter>
     </>
   );

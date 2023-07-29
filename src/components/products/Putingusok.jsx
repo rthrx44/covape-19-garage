@@ -1,11 +1,11 @@
 import React from "react";
-import "./Products.css";
+import "./Index.css";
 import { BiLogoFacebook } from "react-icons/bi";
 import { useNavigate } from 'react-router-dom';
 import { RButton } from "../buttons/Button";
 import { ProductInfo } from "../utils/item/Item";
 
-export default function Putingusok ({endpoint: {productJPrice}}) {
+export default function Putingusok ({products: {juice, productJPrice}}) {
   
   const navigate = useNavigate(); 
   const handleBack = () => {navigate('/products')}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Products.css";
+import "./Index.css";
 import { Item } from "../utils/item/Item";
 import { useNavigate } from "react-router-dom";
 import { RButton } from "../buttons/Button";
@@ -15,7 +15,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/grid";
 
-export default function Products({ endpoint: { juice } }) {
+export default function Juice({ products: { juice } }) {
   const navigate = useNavigate();
   const handleBack = () => {
     navigate("/dashboard");
@@ -27,12 +27,12 @@ export default function Products({ endpoint: { juice } }) {
         <RButton displayText="Back" buttonClick={handleBack} />
       </section>
       <section className="product__info container section">
-        <h1 className="shop__header">E-Juice</h1>
+        <h1 id="juice" className="shop__header">E-Juice</h1>
         <Swiper
           modules={[Pagination, Grid]}
           slidesPerView={1}
           grid={{
-            rows: 3,
+            rows: 2,
             fill: "row",
           }}
           pagination={{ clickable: true }}
@@ -58,14 +58,14 @@ export default function Products({ endpoint: { juice } }) {
             <h1 id="device" className="shop__header">
               Mods & Kits
             </h1>
-            <RButton displayText="View All" />
+            <a href='/mods'><RButton displayText='View All'/></a>
             <div className="juice__con">
               <img className="juice_pic" src={Device01} alt="Vape Juice" />
             </div>
           </div>
           <div className="products__con">
             <h1 className="shop__header">Pod Systems</h1>
-            <RButton displayText="View All" />
+            <a href='/pods'><RButton displayText='View All'/></a>
             <div className="juice__con">
               <img className="juice_pic" src={Pod15} alt="Vape Juice" />
             </div>
@@ -74,7 +74,7 @@ export default function Products({ endpoint: { juice } }) {
             <h1 id="atomizer" className="shop__header">
               Atomizers
             </h1>
-            <RButton displayText="View All" />
+            <a href='/atomizer'><RButton displayText='View All'/></a>
             <div className="juice__con">
               <img className="juice_pic" src={Atomizer19} alt="Vape Juice" />
             </div>
@@ -83,7 +83,7 @@ export default function Products({ endpoint: { juice } }) {
             <h1 id="accessories" className="shop__header">
               Accessories
             </h1>
-            <RButton displayText="View All" />
+            <a href='/accessories'><RButton displayText='View All'/></a>
             <div className="juice__con">
               <img className="juice_pic" src={Access06} alt="Vape Juice" />
             </div>

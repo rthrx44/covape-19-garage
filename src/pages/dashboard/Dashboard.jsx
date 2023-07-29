@@ -21,7 +21,7 @@ import "swiper/css/grid"
 
 
 
-function Dashboard({endpoint: {items}}) {
+function Dashboard({topProducts: {items}}) {
   
   const [showLoading, setShowLoading] = useState(true);
 
@@ -76,35 +76,35 @@ function Dashboard({endpoint: {items}}) {
         <section className='products container section'>
           <div className='products__con'>
             <h1 id='juice' className="shop__header">E-Juice</h1>
-            <a href='/products'><RButton displayText='View All'/></a>
+            <a href='/juice'><RButton displayText='View All'/></a>
             <div className='juice__con'>
                 <img className='juice_pic' src={Juice01} alt="Vape Juice" />
             </div>
           </div>
           <div className='products__con'>
             <h1 id='device' className="shop__header">Mods & Kits</h1>
-            <RButton displayText='View All'/>
+            <a href='/mods'><RButton displayText='View All'/></a>
             <div className='juice__con'>
                 <img className='juice_pic' src={Device01} alt="Vape Juice" />
             </div>
           </div>
           <div className='products__con'>
             <h1 className="shop__header">Pod Systems</h1>
-            <RButton displayText='View All'/>
+            <a href='/pods'><RButton displayText='View All'/></a>
             <div className='juice__con'>
                 <img className='juice_pic' src={Pod15} alt="Vape Juice" />
             </div>
           </div>
           <div className='products__con'>
             <h1 id='atomizer' className="shop__header">Atomizers</h1>
-            <RButton displayText='View All'/>
+            <a href='/atomizer'><RButton displayText='View All'/></a>
             <div className='juice__con'>
                 <img className='juice_pic' src={Atomizer19} alt="Vape Juice" />
             </div>
           </div>
           <div className='products__con'>
             <h1 id='accessories' className="shop__header">Accessories</h1>
-            <RButton displayText='View All'/>
+            <a href='/accessories'><RButton displayText='View All'/></a>
             <div className='juice__con'>
                 <img className='juice_pic' src={Access06} alt="Vape Juice" />
             </div>
