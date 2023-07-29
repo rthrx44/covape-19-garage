@@ -19,7 +19,7 @@ export const Item = (props) => {
 }
 
 export const ProductInfo = (props) => {
-  const { id, img, brand, name, price } = props
+  const  { id, img, brand, name, price } = props
   return (
     <>
       <img className="item__img-main" src={img} alt={id} />
