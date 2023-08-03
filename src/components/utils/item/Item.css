@@ -72,12 +72,8 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.product__selection {
-  outline: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.product__description-con {
+  text-align: center;
 }
 
 .product__brand,
