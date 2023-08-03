@@ -7,7 +7,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Landing from './pages/landing/Landing';
-import Putingusok from './components/products/Putingusok';
+import ItemInfo from './components/products/ItemInfo';
 import Juice from './components/products/Juice';
 import Mods from './components/products/Mods';
 import Pods from './components/products/Pods';
@@ -28,7 +28,7 @@ function App() {
         <Route path='/pods' element={<Pods products={products}/>}/>
         <Route path='/atomizer' element={<Atomizer products={products}/>}/>
         <Route path='/accessories' element={<Accessories products={products}/>}/>
-        <Route path='/putingusok' element={<Putingusok products={products}/>}/>
+        <Route path='/item' element={<ItemInfo products={products}/>}/>
       </Routes>
     </BrowserRouter>
     </>

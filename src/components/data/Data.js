@@ -98,6 +98,7 @@ const products = {
   accessories : [
     {
       id: 'PAC01',
+      type: 'accessories',
       img: Access05,
       brand: 'XTAR',
       name: 'MC4',
@@ -105,6 +106,7 @@ const products = {
     },
     {
       id: 'PAC02',
+      type: 'accessories',
       img: Access07,
       brand: 'XTAR',
       name: 'MC2',
@@ -112,6 +114,7 @@ const products = {
     },
     {
       id: 'PAC03',
+      type: 'accessories',
       img: Access08,
       brand: 'XTAR',
       name: 'MC1',
@@ -119,6 +122,7 @@ const products = {
     },
     {
       id: 'PAC04',
+      type: 'accessories',
       img: Access06,
       brand: 'Black Smith',
       name: 'Vape Toolkit',
@@ -126,6 +130,7 @@ const products = {
     },
     {
       id: 'PAC05',
+      type: 'accessories',
       img: Access01,
       brand: 'Dovpo',
       name: 'Vipers Cotton',
@@ -133,6 +138,7 @@ const products = {
     },
     {
       id: 'PAC06',
+      type: 'accessories',
       img: Access02,
       brand: "Wick 'N' Vape",
       name: 'Cotton Bacon',
@@ -140,6 +146,7 @@ const products = {
     },
     {
       id: 'PAC07',
+      type: 'accessories',
       img: Access03,
       brand: 'Geekvape',
       name: 'Feather Cotton',
@@ -147,6 +154,7 @@ const products = {
     },
     {
       id: 'PAC08',
+      type: 'accessories',
       img: Access04,
       brand: 'Vapefly',
       name: 'Firebolt Cotton',
@@ -154,6 +162,7 @@ const products = {
     },
     {
       id: 'PAC09',
+      type: 'accessories',
       img: Access09,
       brand: 'Molicel',
       name: 'Battery',
@@ -161,6 +170,7 @@ const products = {
     },
     {
       id: 'PAC010',
+      type: 'accessories',
       img: Access10,
       brand: 'VTC 4',
       name: 'Battery',
@@ -170,6 +180,7 @@ const products = {
   atomizer : [
     {
       id: 'PAT01',
+      type: 'atomizer',
       img: Atomizer01,
       brand: 'Geekvape',
       name: 'Digiflavor Drop RDA V2',
@@ -177,6 +188,7 @@ const products = {
     },
     {
       id: 'PAT02',
+      type: 'atomizer',
       img: Atomizer02,
       brand: 'Geekvape',
       name: 'Digiflavor Drop RDA V2',
@@ -184,6 +196,7 @@ const products = {
     },
     {
       id: 'PAT03',
+      type: 'atomizer',
       img: Atomizer03,
       brand: 'Geekvape',
       name: 'Digiflavor Drop RDA V2',
@@ -191,6 +204,7 @@ const products = {
     },
     {
       id: 'PAT04',
+      type: 'atomizer',
       img: Atomizer04,
       brand: 'Geekvape',
       name: 'Digiflavor Drop RDA V2',
@@ -198,6 +212,7 @@ const products = {
     },
     {
       id: 'PAT05',
+      type: 'atomizer',
       img: Atomizer05,
       brand: 'Geekvape',
       name: 'Digiflavor Drop RDA V2',
@@ -205,6 +220,7 @@ const products = {
     },
     {
       id: 'PAT06',
+      type: 'atomizer',
       img: Atomizer06,
       brand: 'Geekvape',
       name: 'Digiflavor Drop RDA V2',
@@ -212,6 +228,7 @@ const products = {
     },
     {
       id: 'PAT07',
+      type: 'atomizer',
       img: Atomizer07,
       brand: 'Hellvape',
       name: 'Fat Rabbit RDA',
@@ -219,6 +236,7 @@ const products = {
     },
     {
       id: 'PAT08',
+      type: 'atomizer',
       img: Atomizer08,
       brand: 'Hellvape',
       name: 'Fat Rabbit RDA',
@@ -226,6 +244,7 @@ const products = {
     },
     {
       id: 'PAT09',
+      type: 'atomizer',
       img: Atomizer09,
       brand: 'Hellvape',
       name: 'Fat Rabbit RDA',
@@ -233,6 +252,7 @@ const products = {
     },
     {
       id: 'PAT010',
+      type: 'atomizer',
       img: Atomizer10,
       brand: 'Hellvape',
       name: 'Fat Rabbit RDA',
@@ -240,6 +260,7 @@ const products = {
     },
     {
       id: 'PAT011',
+      type: 'atomizer',
       img: Atomizer11,
       brand: 'Hellvape',
       name: 'Fat Rabbit RDA',
@@ -247,6 +268,7 @@ const products = {
     },
     {
       id: 'PAT012',
+      type: 'atomizer',
       img: Atomizer12,
       brand: 'Hellvape',
       name: 'Fat Rabbit RDA',
@@ -254,6 +276,7 @@ const products = {
     },
     {
       id: 'PAT013',
+      type: 'atomizer',
       img: Atomizer13,
       brand: 'Hellvape',
       name: 'Fat Rabbit RDA',
@@ -261,6 +284,7 @@ const products = {
     },
     {
       id: 'PAT014',
+      type: 'atomizer',
       img: Atomizer14,
       brand: 'Geekvape',
       name: 'Zues X RTA',
@@ -268,6 +292,7 @@ const products = {
     },
     {
       id: 'PAT015',
+      type: 'atomizer',
       img: Atomizer15,
       brand: 'Geekvape',
       name: 'Zues X RTA',
@@ -275,6 +300,7 @@ const products = {
     },
     {
       id: 'PAT016',
+      type: 'atomizer',
       img: Atomizer16,
       brand: 'Geekvape',
       name: 'Zues X RTA',
@@ -282,6 +308,7 @@ const products = {
     },
     {
       id: 'PAT017',
+      type: 'atomizer',
       img: Atomizer17,
       brand: 'Geekvape',
       name: 'Zues X RTA',
@@ -289,6 +316,7 @@ const products = {
     },
     {
       id: 'PAT018',
+      type: 'atomizer',
       img: Atomizer18,
       brand: 'Geekvape',
       name: 'Zues X RTA',
@@ -296,6 +324,7 @@ const products = {
     },
     {
       id: 'PAT019',
+      type: 'atomizer',
       img: Atomizer19,
       brand: 'OXVA',
       name: 'Arbiter RTA',
@@ -303,6 +332,7 @@ const products = {
     },
     {
       id: 'PAT020',
+      type: 'atomizer',
       img: Atomizer20,
       brand: 'OXVA',
       name: 'Arbiter RTA',
@@ -310,6 +340,7 @@ const products = {
     },
     {
       id: 'PAT021',
+      type: 'atomizer',
       img: Atomizer21,
       brand: 'OXVA',
       name: 'Arbiter RTA',
@@ -317,6 +348,7 @@ const products = {
     },
     {
       id: 'PAT022',
+      type: 'atomizer',
       img: Atomizer22,
       brand: 'OXVA',
       name: 'Arbiter RTA',
@@ -324,6 +356,7 @@ const products = {
     },
     {
       id: 'PAT023',
+      type: 'atomizer',
       img: Atomizer23,
       brand: 'OXVA',
       name: 'Arbiter RTA',
@@ -331,6 +364,7 @@ const products = {
     },
     {
       id: 'PAT024',
+      type: 'atomizer',
       img: Atomizer24,
       brand: 'OXVA',
       name: 'Arbiter RTA',
@@ -340,6 +374,7 @@ const products = {
   device : [
     {
       id: 'PD01',
+      type: 'device',
       img: Device01,
       brand: 'Geekvape',
       name: 'Aegis Legend 2',
@@ -347,6 +382,7 @@ const products = {
     },
     {
       id: 'PD02',
+      type: 'device',
       img: Device02,
       brand: 'Geekvape',
       name: 'Aegis Legend 2',
@@ -354,6 +390,7 @@ const products = {
     },
     {
       id: 'PD03',
+      type: 'device',
       img: Device03,
       brand: 'Geekvape',
       name: 'Aegis Legend 2',
@@ -361,6 +398,7 @@ const products = {
     },
     {
       id: 'PD04',
+      type: 'device',
       img: Device04,
       brand: 'Geekvape',
       name: 'Aegis Legend 2',
@@ -368,6 +406,7 @@ const products = {
     },
     {
       id: 'PD05',
+      type: 'device',
       img: Device05,
       brand: 'Geekvape',
       name: 'Aegis Legend 2',
@@ -375,6 +414,7 @@ const products = {
     },
     {
       id: 'PD06',
+      type: 'device',
       img: Device06,
       brand: 'Geekvape',
       name: 'Aegis Legend 2',
@@ -382,6 +422,7 @@ const products = {
     },
     {
       id: 'PD07',
+      type: 'device',
       img: Device07,
       brand: 'Geekvape',
       name: 'Aegis Legend 2',
@@ -389,6 +430,7 @@ const products = {
     },
     {
       id: 'PD08',
+      type: 'device',
       img: Device08,
       brand: 'Geekvape',
       name: 'Aegis Legend 2 (New Color)',
@@ -396,6 +438,7 @@ const products = {
     },
     {
       id: 'PD09',
+      type: 'device',
       img: Device09,
       brand: 'Geekvape',
       name: 'Aegis Legend 2 (New Color)',
@@ -403,6 +446,7 @@ const products = {
     },
     {
       id: 'PD010',
+      type: 'device',
       img: Device10,
       brand: 'Geekvape',
       name: 'Aegis Legend 2 (New Color)',
@@ -410,6 +454,7 @@ const products = {
     },
     {
       id: 'PD011',
+      type: 'device',
       img: Device11,
       brand: 'Geekvape',
       name: 'Aegis Legend 2 (New Color)',
@@ -417,6 +462,7 @@ const products = {
     },
     {
       id: 'PD012',
+      type: 'device',
       img: Device12,
       brand: 'Rincoe',
       name: 'Manto Beast',
@@ -424,6 +470,7 @@ const products = {
     },
     {
       id: 'PD013',
+      type: 'device',
       img: Device13,
       brand: 'Rincoe',
       name: 'Manto Beast',
@@ -431,6 +478,7 @@ const products = {
     },
     {
       id: 'PD014',
+      type: 'device',
       img: Device14,
       brand: 'Rincoe',
       name: 'Manto Beast',
@@ -438,6 +486,7 @@ const products = {
     },
     {
       id: 'PD015',
+      type: 'device',
       img: Device15,
       brand: 'Dovpo',
       name: 'MVP',
@@ -445,6 +494,7 @@ const products = {
     },
     {
       id: 'PD016',
+      type: 'device',
       img: Device16,
       brand: 'Dovpo',
       name: 'MVP',
@@ -452,6 +502,7 @@ const products = {
     },
     {
       id: 'PD017',
+      type: 'device',
       img: Device17,
       brand: 'Dovpo',
       name: 'MVP',
@@ -459,6 +510,7 @@ const products = {
     },
     {
       id: 'PD018',
+      type: 'device',
       img: Device18,
       brand: 'Rincoe',
       name: 'Jellybox Kit',
@@ -466,6 +518,7 @@ const products = {
     },
     {
       id: 'PD019',
+      type: 'device',
       img: Device19,
       brand: 'Rincoe',
       name: 'Jellybox Kit',
@@ -473,6 +526,7 @@ const products = {
     },
     {
       id: 'PD020',
+      type: 'device',
       img: Device20,
       brand: 'Rincoe',
       name: 'Jellybox Kit',
@@ -482,6 +536,7 @@ const products = {
   juice : [
     {
       id: 'PJ01',
+      type: 'juice',
       img: Juice01,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Almond RY4',
@@ -489,6 +544,7 @@ const products = {
     },
     {
       id: 'PJ02',
+      type: 'juice',
       img: Juice02,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Avocado Melon',
@@ -496,6 +552,7 @@ const products = {
     },
     {
       id: 'PJ03',
+      type: 'juice',
       img: Juice04,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'New York Cheesecake',
@@ -503,6 +560,7 @@ const products = {
     },
     {
       id: 'PJ04',
+      type: 'juice',
       img: Juice06,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Coffee',
@@ -510,6 +568,7 @@ const products = {
     },
     {
       id: 'PJ05',
+      type: 'juice',
       img: Juice08,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Melon Yogurt',
@@ -517,6 +576,7 @@ const products = {
     },
     {
       id: 'PJ06',
+      type: 'juice',
       img: Juice10,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Pistachio Nuts',
@@ -524,6 +584,7 @@ const products = {
     },
     {
       id: 'PJ07',
+      type: 'juice',
       img: Juice13,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Turon',
@@ -531,6 +592,7 @@ const products = {
     },
     {
       id: 'PJ08',
+      type: 'juice',
       img: Juice15,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Ube Cheesecake',
@@ -538,6 +600,7 @@ const products = {
     },
     {
       id: 'PJ09',
+      type: 'juice',
       img: Juice17,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Xocolate',
@@ -545,6 +608,7 @@ const products = {
     },
     {
       id: 'PJ010',
+      type: 'juice',
       img: Juice18,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Yakult',
@@ -552,6 +616,7 @@ const products = {
     },
     {
       id: 'PJ011',
+      type: 'juice',
       img: Juice03,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Bubble Bomb',
@@ -559,6 +624,7 @@ const products = {
     },
     {
       id: 'PJ012',
+      type: 'juice',
       img: Juice05,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Chilled Yakult',
@@ -566,6 +632,7 @@ const products = {
     },
     {
       id: 'PJ013',
+      type: 'juice',
       img: Juice07,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Iced Coffee',
@@ -573,6 +640,7 @@ const products = {
     },
     {
       id: 'PJ014',
+      type: 'juice',
       img: Juice09,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Peach Mango Shake',
@@ -580,6 +648,7 @@ const products = {
     },
     {
       id: 'PJ015',
+      type: 'juice',
       img: Juice11,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Strawberry Apple',
@@ -587,6 +656,7 @@ const products = {
     },
     {
       id: 'PJ016',
+      type: 'juice',
       img: Juice12,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Strawberry Bingsu',
@@ -594,6 +664,7 @@ const products = {
     },
     {
       id: 'PJ017',
+      type: 'juice',
       img: Juice14,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Ubas',
@@ -601,6 +672,7 @@ const products = {
     },
     {
       id: 'PJ018',
+      type: 'juice',
       img: Juice16,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Watermelon',
@@ -610,6 +682,7 @@ const products = {
   pods : [
     {
       id: 'PP01',
+      type: 'pods',
       img: Pod01,
       brand: 'OXVA',
       name: 'XLIM Limited Edition',
@@ -617,6 +690,7 @@ const products = {
     },
     {
       id: 'PP02',
+      type: 'pods',
       img: Pod02,
       brand: 'OXVA',
       name: 'XLIM Limited Edition',
@@ -624,6 +698,7 @@ const products = {
     },
     {
       id: 'PP03',
+      type: 'pods',
       img: Pod03,
       brand: 'OXVA',
       name: 'XLIM',
@@ -631,6 +706,7 @@ const products = {
     },
     {
       id: 'PP04',
+      type: 'pods',
       img: Pod04,
       brand: 'OXVA',
       name: 'XLIM',
@@ -638,6 +714,7 @@ const products = {
     },
     {
       id: 'PP05',
+      type: 'pods',
       img: Pod05,
       brand: 'OXVA',
       name: 'XLIM',
@@ -645,6 +722,7 @@ const products = {
     },
     {
       id: 'PP06',
+      type: 'pods',
       img: Pod06,
       brand: 'OXVA',
       name: 'XLIM',
@@ -652,6 +730,7 @@ const products = {
     },
     {
       id: 'PP07',
+      type: 'pods',
       img: Pod07,
       brand: 'OXVA',
       name: 'XLIM',
@@ -659,6 +738,7 @@ const products = {
     },
     {
       id: 'PP08',
+      type: 'pods',
       img: Pod08,
       brand: 'OXVA',
       name: 'XLIM',
@@ -666,6 +746,7 @@ const products = {
     },
     {
       id: 'PP09',
+      type: 'pods',
       img: Pod09,
       brand: 'OXVA',
       name: 'XLIM',
@@ -673,6 +754,7 @@ const products = {
     },
     {
       id: 'PP010',
+      type: 'pods',
       img: Pod10,
       brand: 'OXVA',
       name: 'XLIM',
@@ -680,6 +762,7 @@ const products = {
     },
     {
       id: 'PP011',
+      type: 'pods',
       img: Pod11,
       brand: 'OXVA',
       name: 'XLIM',
@@ -687,6 +770,7 @@ const products = {
     },
     {
       id: 'PP012',
+      type: 'pods',
       img: Pod12,
       brand: 'OXVA',
       name: 'XLIM',
@@ -694,6 +778,7 @@ const products = {
     },
     {
       id: 'PP013',
+      type: 'pods',
       img: Pod13,
       brand: 'OXVA',
       name: 'XLIM',
@@ -701,6 +786,7 @@ const products = {
     },
     {
       id: 'PP014',
+      type: 'pods',
       img: Pod14,
       brand: 'OXVA',
       name: 'XLIM',
@@ -708,6 +794,7 @@ const products = {
     },
     {
       id: 'PP015',
+      type: 'pods',
       img: Pod15,
       brand: 'OXVA',
       name: 'XLIM',
@@ -715,6 +802,7 @@ const products = {
     },
     {
       id: 'PP016',
+      type: 'pods',
       img: Pod16,
       brand: 'OXVA',
       name: 'XLIM',
@@ -722,6 +810,7 @@ const products = {
     },
     {
       id: 'PP017',
+      type: 'pods',
       img: Pod17,
       brand: 'OXVA',
       name: 'XLIM',
@@ -729,6 +818,7 @@ const products = {
     },
     {
       id: 'PP018',
+      type: 'pods',
       img: Pod18,
       brand: 'OXVA',
       name: 'XLIM',
@@ -741,6 +831,7 @@ const topProducts = {
   items : [
     {
       id: 'PD01',
+      type: 'device',
       img: Device01,
       brand: 'Geekvape',
       name: 'Aegis Legend 2',
@@ -749,12 +840,14 @@ const topProducts = {
     {
       id: 'PD08',
       img: Device08,
+      type: 'device',
       brand: 'Geekvape',
       name: 'Aegis Legend 2 (New Color)',
       price: '2,200',
     },
     {
       id: 'PD014',
+      type: 'device',
       img: Device14,
       brand: 'Rincoe',
       name: 'Manto Beast',
@@ -762,6 +855,7 @@ const topProducts = {
     },
     {
       id: 'PD020',
+      type: 'device',
       img: Device20,
       brand: 'Rincoe',
       name: 'Jellybox Kit',
@@ -769,6 +863,7 @@ const topProducts = {
     },
     {
       id: 'PD016',
+      type: 'device',
       img: Device16,
       brand: 'Dovpo',
       name: 'MVP',
@@ -776,6 +871,7 @@ const topProducts = {
     },
     {
       id: 'PAT02',
+      type: 'atomizer',
       img: Atomizer02,
       brand: 'Geekvape',
       name: 'Digiflavor Drop RDA V2',
@@ -783,6 +879,7 @@ const topProducts = {
     },
     {
       id: 'PAT09',
+      type: 'atomizer',
       img: Atomizer09,
       brand: 'Hellvape',
       name: 'Fat Rabbit RDA',
@@ -790,6 +887,7 @@ const topProducts = {
     },
     {
       id: 'PAT015',
+      type: 'atomizer',
       img: Atomizer15,
       brand: 'Geekvape',
       name: 'Zues X RTA',
@@ -797,6 +895,7 @@ const topProducts = {
     },
     {
       id: 'PAT024',
+      type: 'atomizer',
       img: Atomizer24,
       brand: 'OXVA',
       name: 'Arbiter RTA',
@@ -804,6 +903,7 @@ const topProducts = {
     },
     {
       id: 'PP01',
+      type: 'pods',
       img: Pod01,
       brand: 'OXVA',
       name: 'XLIM Limited Edition',
@@ -811,6 +911,7 @@ const topProducts = {
     },
     {
       id: 'PP014',
+      type: 'pods',
       img: Pod14,
       brand: 'OXVA',
       name: 'XLIM',
@@ -818,6 +919,7 @@ const topProducts = {
     },
     {
       id: 'PJ011',
+      type: 'juice',
       img: Juice03,
       brand: 'Espesyal Vapors (Menthol)',
       name: 'Bubble Bomb',
@@ -825,6 +927,7 @@ const topProducts = {
     },
     {
       id: 'PJ07',
+      type: 'juice',
       img: Juice13,
       brand: 'Espesyal Vapors (Pastry)',
       name: 'Turon',
@@ -832,6 +935,7 @@ const topProducts = {
     },
     {
       id: 'PAC06',
+      type: 'accessories',
       img: Access02,
       brand: "Wick 'N' Vape",
       name: 'Cotton Bacon',
@@ -839,6 +943,7 @@ const topProducts = {
     },
     {
       id: 'PAC02',
+      type: 'accessories',
       img: Access07,
       brand: 'XTAR',
       name: 'MC2',
@@ -846,6 +951,7 @@ const topProducts = {
     },
     {
       id: 'PAC09',
+      type: 'accessories',
       img: Access09,
       brand: 'Molicel',
       name: 'Battery',
@@ -853,6 +959,7 @@ const topProducts = {
     },
     {
       id: 'PAC010',
+      type: 'accessories',
       img: Access10,
       brand: 'VTC 4',
       name: 'Battery',
@@ -860,6 +967,7 @@ const topProducts = {
     },
     {
       id: 'PAC04',
+      type: 'accessories',
       img: Access06,
       brand: 'Black Smith',
       name: 'Vape Toolkit',

@@ -50,7 +50,7 @@
   transition: all 0.5s;
 }
 
-.juice_pic:hover {
+.products__con:hover .juice_pic {
   height: 12.5rem;
   transform: rotate(28deg);
 }

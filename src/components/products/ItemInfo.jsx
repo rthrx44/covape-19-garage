@@ -3,12 +3,11 @@ import "./Index.css";
 import { BiLogoFacebook } from "react-icons/bi";
 import { useNavigate } from 'react-router-dom';
 import { RButton } from "../buttons/Button";
-import { ProductInfo } from "../utils/item/Item";
 
-export default function Putingusok ({products: {juice, productJPrice}}) {
-  
+export default function ItemInfo () {
   const navigate = useNavigate(); 
-  const handleBack = () => {navigate('/products')}
+  const handleBack = () => {navigate('/dashboard')}
+  const itemInfo = JSON.parse(localStorage.getItem('clickItem'))
 
   return (
     <div>
@@ -16,8 +15,13 @@ export default function Putingusok ({products: {juice, productJPrice}}) {
         <RButton displayText="Back" buttonClick={handleBack}/>
       </section>
       <section className="product__main-img container section">
-        <ProductInfo/>
         <form className="product__selection">
+          <img className="item__img-main" src={itemInfo.img} alt={itemInfo.id}/>
+          <div className="product__description-con">
+            <h4 className="product__brand">{itemInfo.brand}</h4>
+            <h2 className="product__name">{itemInfo.name}</h2>
+            <h3 className="product__price">&#8369; {itemInfo.price}</h3>
+          </div>
           <div className="selections">
             <label className="selection-header">Options</label>
             <select className="select" name='ejuice' size='1' required>
