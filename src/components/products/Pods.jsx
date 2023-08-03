@@ -1,6 +1,6 @@
 import React from "react";
 import "./Index.css";
-import { Item } from "../utils/item/Item";
+import { Items } from "../utils/item/Item";
 import { useNavigate } from "react-router-dom";
 import { RButton } from "../buttons/Button";
 import { BiLogoFacebook } from "react-icons/bi";
@@ -46,7 +46,7 @@ export default function Pods({ products: { pods } }) {
         >
           {pods?.map((item, i) => (
             <SwiperSlide key={i}>
-              <Item {...item} />
+              <Items {...item} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -60,7 +60,7 @@ export default function Pods({ products: { pods } }) {
             </h1>
             <a href='/atomizer'><RButton displayText='View All'/></a>
             <div className="juice__con">
-              <img className="juice_pic" src={Atomizer19} alt="Vape Juice" />
+              <img className="juice_pic" src={Atomizer19} alt="atomizer" />
             </div>
           </div>
           <div className="products__con">
@@ -69,7 +69,7 @@ export default function Pods({ products: { pods } }) {
             </h1>
             <a href='/accessories'><RButton displayText='View All'/></a>
             <div className="juice__con">
-              <img className="juice_pic" src={Access06} alt="Vape Juice" />
+              <img className="juice_pic" src={Access06} alt="accessories" />
             </div>
           </div>
           <div className="products__con">
@@ -78,7 +78,7 @@ export default function Pods({ products: { pods } }) {
             </h1>
             <a href='/juice'><RButton displayText='View All'/></a>
             <div className="juice__con">
-              <img className="juice_pic" src={Juice01} alt="Vape Juice" />
+              <img className="juice_pic" src={Juice01} alt="juice" />
             </div>
           </div>
           <div className="products__con">
@@ -87,7 +87,7 @@ export default function Pods({ products: { pods } }) {
             </h1>
             <a href='/mods'><RButton displayText='View All'/></a>
             <div className="juice__con">
-              <img className="juice_pic" src={Device01} alt="Vape Juice" />
+              <img className="juice_pic" src={Device01} alt="device" />
             </div>
           </div>
         </div>

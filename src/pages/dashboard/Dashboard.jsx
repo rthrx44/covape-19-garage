@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Dashboard.css';
 import { BiLogoFacebook } from "react-icons/bi";
-import { Item } from '../../components/utils/item/Item';
+import { Items } from '../../components/utils/item/Item';
 import { RButton } from '../../components/buttons/Button';
 import Navbar from '../../components/navbar/Navbar';
 import Loading from '../../components/loading/Loading';
@@ -69,7 +69,7 @@ function Dashboard({topProducts: {items}}) {
           >
             {items?.map((item, i) => (
               <SwiperSlide key={i}>
-                <Item {...item}/>
+                <Items {...item}/>
               </SwiperSlide>))}
           </Swiper>
         </section>

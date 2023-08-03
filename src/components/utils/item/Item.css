@@ -67,15 +67,17 @@
 }
 
 .item__img-main {
-  height: 13rem;
-  width: 6rem;
+  height: 14rem;
+  padding-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-.product__description-con {
-  margin-top: 2rem;
-  text-align: center;
+.product__selection {
+  outline: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product__brand,
