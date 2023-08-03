@@ -65,7 +65,7 @@ function Dashboard({topProducts: {items}}) {
               1280: {slidesPerView: 5,
                     grid: {rows:2, fill:"row"}}
               }}
-            className="swiper__dashboard-con"
+            className="swiper__con"
           >
             {items?.map((item, i) => (
               <SwiperSlide key={i}>
