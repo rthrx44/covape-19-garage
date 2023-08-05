@@ -37,10 +37,11 @@ export default function Pods({ products: { pods } }) {
           }}
           pagination={{ clickable: true }}
           breakpoints={{
-            640: { slidesPerView: 2, grid: { rows: 3, fill: "row" } },
-            768: { slidesPerView: 3, grid: { rows: 3, fill: "row" } },
-            1024: { slidesPerView: 4, grid: { rows: 3, fill: "row" } },
-            1280: { slidesPerView: 5, grid: { rows: 3, fill: "row" } },
+            425: { slidesPerView: 2, grid: { rows: 2, fill: "row" } },
+            640: { slidesPerView: 3, grid: { rows: 2, fill: "row" } },
+            768: { slidesPerView: 3, grid: { rows: 2, fill: "row" } },
+            1024: { slidesPerView: 4, grid: { rows: 2, fill: "row" } },
+            1280: { slidesPerView: 5, grid: { rows: 2, fill: "row" } },
           }}
           className="swiper__con"
         >
