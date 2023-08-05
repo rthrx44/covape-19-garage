@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Index.css";
 import { BiLogoFacebook } from "react-icons/bi";
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +8,7 @@ export default function ItemInfo () {
   const navigate = useNavigate(); 
   const handleBack = () => {navigate('/dashboard')}
   const itemInfo = JSON.parse(localStorage.getItem('clickItem'))
+  const [itemPrice, setItemPrice] = useState(itemInfo.price)
 
   return (
     <div>
@@ -22,17 +23,16 @@ export default function ItemInfo () {
           <div className="product__description-con">
             <h4 className="product__brand">{itemInfo.brand}</h4>
             <h2 className="product__name">{itemInfo.name}</h2>
-            <h3 className="product__price">&#8369; {itemInfo.price}</h3>
+            <h3 className="product__price">&#8369; {itemPrice}</h3>
           </div>
           <div className="selections__con">
             <div className="selections">
               <label className="selection-header">Options</label>
-              <select className="select" name='ejuice' size='1' required>
-                <option value='' selected disabled >Select Nicotine</option>
-                <option value=''>3 MG</option>
-                <option value=''>6 MG</option>
-                <option value=''>9 MG</option>
-                <option value=''>12 MG</option>
+              <select className="select" name='ejuice' size='1' required value={itemPrice} onChange={e=>setItemPrice(e.target.value)}>
+                <option value={itemInfo.price}>{itemInfo.low}</option>
+                <option value={itemInfo.price2}>{itemInfo.mid}</option>
+                <option value={itemInfo.price3}>{itemInfo.high}</option>
+                <option value={itemInfo.price4}>{itemInfo.high12}</option>
               </select>
             </div>
             <div className="selections">
