@@ -1,14 +1,36 @@
 import React, { useState } from "react";
 import "./Index.css";
-import { BiLogoFacebook } from "react-icons/bi";
+import { BiLogoFacebook, BiMinus, BiPlus } from "react-icons/bi";
 import { useNavigate } from 'react-router-dom';
 import { RButton } from "../buttons/Button";
 
-export default function ItemInfo () {
+function ItemInfo () {
   const navigate = useNavigate(); 
   const handleBack = () => {navigate('/dashboard')}
   const itemInfo = JSON.parse(localStorage.getItem('clickItem'))
   const [itemPrice, setItemPrice] = useState(itemInfo.price)
+  const [count, setCount] = useState(1)
+  
+
+  const adjustCountMinus = (e) => {
+    e.preventDefault()
+    if (count > 0 ) {
+      setCount(count - 1)
+    } else {
+      setCount(0)
+    } 
+  }
+
+  const adjustCountPlus = (e) => {
+    e.preventDefault()
+    setCount(count + 1)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const cartItemInfo = {itemInfo, itemPrice, count};
+    localStorage.setItem('cartItems', JSON.stringify(cartItemInfo))
+  }
 
   return (
     <div>
@@ -16,7 +38,7 @@ export default function ItemInfo () {
         <RButton displayText="Back" buttonClick={handleBack}/>
       </section>
       <section className="product__main-img container section">
-        <form className="product__selection">
+        <form className="product__selection" onSubmit={handleSubmit}>
           <div className="img__con">
             <img className="item__img-main" src={itemInfo.img} alt={itemInfo.id}/>
           </div>
@@ -28,7 +50,7 @@ export default function ItemInfo () {
           <div className="selections__con">
             <div className="selections">
               <label className="selection-header">Options</label>
-              <select className="select" name='ejuice' size='1' required value={itemPrice} onChange={e=>setItemPrice(e.target.value)}>
+              <select className="select" name='ejuice' size='1' value={itemPrice} onChange={(e)=>setItemPrice(e.target.value)}>
                 <option value={itemInfo.price}>{itemInfo.low}</option>
                 <option value={itemInfo.price2}>{itemInfo.mid}</option>
                 <option value={itemInfo.price3}>{itemInfo.high}</option>
@@ -37,10 +59,14 @@ export default function ItemInfo () {
             </div>
             <div className="selections">
               <label className="selection-header">Quantity</label>
-              <input className="input" type="number" min={1} max={100} required/>
+              <div className="qty_con">
+                <input className="input" type="number" value={count} min="1" max="100" required onChange={(e)=>setCount(e.target.value)}/>
+                <button className="minus_btn adjust_btn" onClick={adjustCountMinus}><BiMinus/></button>
+                <button className="plus_btn adjust_btn" onClick={adjustCountPlus}><BiPlus/></button>
+              </div>
             </div>
-            <RButton displayText="Add to cart"/>
           </div>
+          <RButton displayText="Add to cart"/>
         </form>
       </section>
       <section className="product__details container section">
@@ -77,3 +103,5 @@ export default function ItemInfo () {
     </div>
   );
 }
+
+export default ItemInfo;
