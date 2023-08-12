@@ -10,7 +10,7 @@
   color: var(--clr-lime);
   padding: 0.5em 1em;
   border: 1px solid var(--clr-lime);
-  border-radius: 6px;
+  border-radius: 4px;
   transition: background-color 0.3s;
 }
 
