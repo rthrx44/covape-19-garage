@@ -9,27 +9,26 @@ function ItemInfo () {
   const handleBack = () => {navigate('/dashboard')}
   const itemInfo = JSON.parse(localStorage.getItem('clickItem'))
   const [itemPrice, setItemPrice] = useState(itemInfo.price)
-  const [count, setCount] = useState(1)
-  
+  const [quantity, setQuantity] = useState(1)  
 
   const adjustCountMinus = (e) => {
     e.preventDefault()
-    if (count > 0 ) {
-      setCount(count - 1)
+    if (quantity > 1 ) {
+      setQuantity(quantity - 1)
     } else {
-      setCount(0)
+      setQuantity(1)
     } 
   }
 
   const adjustCountPlus = (e) => {
     e.preventDefault()
-    setCount(count + 1)
+    setQuantity(quantity + 1)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const cartItemInfo = {itemInfo, itemPrice, count};
-    localStorage.setItem('cartItems', JSON.stringify(cartItemInfo))
+    const cartItemInfo = {itemInfo, itemPrice, quantity};
+    localStorage.setItem('cartItems', JSON.stringify([cartItemInfo]))
   }
 
   return (
@@ -60,7 +59,7 @@ function ItemInfo () {
             <div className="selections">
               <label className="selection-header">Quantity</label>
               <div className="qty_con">
-                <input className="input" type="number" value={count} min="1" max="100" required onChange={(e)=>setCount(e.target.value)}/>
+                <input className="input" type="number" value={quantity} min="1" max="100" required onChange={(e)=>setQuantity(e.target.value)}/>
                 <button className="minus_btn adjust_btn" onClick={adjustCountMinus}><BiMinus/></button>
                 <button className="plus_btn adjust_btn" onClick={adjustCountPlus}><BiPlus/></button>
               </div>

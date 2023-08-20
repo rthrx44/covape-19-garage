@@ -4,7 +4,6 @@
 }
 
 .product__selection {
-  outline: 1px solid red;
   display: grid;
   grid-template-columns: auto;
 }

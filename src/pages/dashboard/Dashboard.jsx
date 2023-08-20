@@ -21,7 +21,7 @@ import "swiper/css/grid"
 
 
 
-function Dashboard({topProducts: {items}}) {
+function Dashboard({products: {topProducts}}) {
   
   const [showLoading, setShowLoading] = useState(true);
 
@@ -67,7 +67,7 @@ function Dashboard({topProducts: {items}}) {
               }}
             className="swiper__con"
           >
-            {items?.map((item, i) => (
+            {topProducts?.map((item, i) => (
               <SwiperSlide key={i}>
                 <Items {...item}/>
               </SwiperSlide>))}

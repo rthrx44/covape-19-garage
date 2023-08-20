@@ -42,9 +42,9 @@ export default function Juice({ products: { juice } }) {
           }}
           className="swiper__con"
         >
-          {juice?.map((type, i) => (
+          {juice?.map((item, i) => (
             <SwiperSlide key={i}>
-              <Items {...type} />
+              <Items {...item} />
             </SwiperSlide>
           ))}
         </Swiper>
