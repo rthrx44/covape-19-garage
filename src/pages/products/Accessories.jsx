@@ -1,13 +1,7 @@
 import React from "react";
 import "./Index.css";
-import { Items } from "../utils/item/Item";
 import { useNavigate } from "react-router-dom";
-import { RButton } from "../buttons/Button";
 import { BiLogoFacebook } from "react-icons/bi";
-import Device01 from "../../components/assets/Image/Device01.png";
-import Pod15 from "../../components/assets/Image/Pod15.png";
-import Atomizer19 from "../../components/assets/Image/Atomizer19.png";
-import Access06 from "../../components/assets/Image/Access06.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid } from "swiper/modules";
@@ -15,21 +9,32 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/grid";
 
-export default function Juice({ products: { juice } }) {
+import { Items } from "../../components/utils/item/Item";
+import { RButton } from "../../components/buttons/Button";
+import Device01 from "../../components/assets/Image/Device01.png";
+import Pod15 from "../../components/assets/Image/Pod15.png";
+import Atomizer19 from "../../components/assets/Image/Atomizer19.png";
+import Juice01 from "../../components/assets/Image/Juice01.png";
+import { accessoriesData } from '../../components/data/Data'
+
+export default function Accessories() {
   const navigate = useNavigate();
-  const handleBack = () => {navigate("/dashboard")};
+  const handleBack = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div>
       <section className="back__btn container section">
         <RButton displayText="Back" buttonClick={handleBack} />
       </section>
       <section className="product__info container section">
-        <h1 id="juice" className="shop__header">E-Juice</h1>
+        <h1 id="accessories" className="shop__header">Accessories</h1>
         <Swiper
           modules={[Pagination, Grid]}
           slidesPerView={1}
           grid={{
-            rows: 2,
+            rows: 2, 
             fill: "row",
           }}
           pagination={{ clickable: true }}
@@ -42,9 +47,9 @@ export default function Juice({ products: { juice } }) {
           }}
           className="swiper__con"
         >
-          {juice?.map((item, i) => (
-            <SwiperSlide key={i}>
-              <Items {...item} />
+          {accessoriesData.map((products, index) => (
+            <SwiperSlide key={index}>
+              <Items data={products}/>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -52,6 +57,15 @@ export default function Juice({ products: { juice } }) {
       <section className="other__products container section">
         <h1 className="shop__header">Other Products</h1>
         <div className="grid__products">
+          <div className="products__con">
+            <h1 id="juice" className="shop__header">
+              E-Juice
+            </h1>
+            <a href='/juice'><RButton displayText='View All'/></a>
+            <div className="juice__con">
+              <img className="juice_pic" src={Juice01} alt="juice" />
+            </div>
+          </div>
           <div className="products__con">
             <h1 id="device" className="shop__header">
               Mods & Kits
@@ -65,7 +79,7 @@ export default function Juice({ products: { juice } }) {
             <h1 className="shop__header">Pod Systems</h1>
             <a href='/pods'><RButton displayText='View All'/></a>
             <div className="juice__con">
-              <img className="juice_pic" src={Pod15} alt="pods" />
+              <img className="juice_pic" src={Pod15} alt="device" />
             </div>
           </div>
           <div className="products__con">
@@ -75,15 +89,6 @@ export default function Juice({ products: { juice } }) {
             <a href='/atomizer'><RButton displayText='View All'/></a>
             <div className="juice__con">
               <img className="juice_pic" src={Atomizer19} alt="atomizer" />
-            </div>
-          </div>
-          <div className="products__con">
-            <h1 id="accessories" className="shop__header">
-              Accessories
-            </h1>
-            <a href='/accessories'><RButton displayText='View All'/></a>
-            <div className="juice__con">
-              <img className="juice_pic" src={Access06} alt="accessories" />
             </div>
           </div>
         </div>

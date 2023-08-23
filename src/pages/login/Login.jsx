@@ -62,7 +62,6 @@ function Login() {
         localStorage.setItem("loggedUser", JSON.stringify(filteredUser));
         setTimeout(3000, navigate('/dashboard'));
     }
-    
   };
 
   return (

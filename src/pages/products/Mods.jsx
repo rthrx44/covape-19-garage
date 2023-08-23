@@ -1,13 +1,7 @@
 import React from "react";
 import "./Index.css";
-import { Items } from "../utils/item/Item";
 import { useNavigate } from "react-router-dom";
-import { RButton } from "../buttons/Button";
 import { BiLogoFacebook } from "react-icons/bi";
-import Atomizer19 from "../../components/assets/Image/Atomizer19.png";
-import Pod15 from "../../components/assets/Image/Pod15.png";
-import Access06 from "../../components/assets/Image/Access06.png";
-import Juice01 from "../../components/assets/Image/Juice01.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid } from "swiper/modules";
@@ -15,7 +9,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/grid";
 
-export default function Mods({ products: { device } }) {
+import { Items } from "../../components/utils/item/Item";
+import { RButton } from "../../components/buttons/Button";
+import Atomizer19 from "../../components/assets/Image/Atomizer19.png";
+import Pod15 from "../../components/assets/Image/Pod15.png";
+import Access06 from "../../components/assets/Image/Access06.png";
+import Juice01 from "../../components/assets/Image/Juice01.png";
+import { deviceData } from '../../components/data/Data'
+
+export default function Mods() {
   const navigate = useNavigate();
   const handleBack = () => {
     navigate("/dashboard");
@@ -45,9 +47,9 @@ export default function Mods({ products: { device } }) {
           }}
           className="swiper__con"
         >
-          {device?.map((item, i) => (
-            <SwiperSlide key={i}>
-              <Items {...item} />
+          {deviceData.map((products, index) => (
+            <SwiperSlide key={index}>
+              <Items data={products}/>
             </SwiperSlide>
           ))}
         </Swiper>

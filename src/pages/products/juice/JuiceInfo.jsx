@@ -1,35 +1,17 @@
 import React, { useState } from "react";
-import "./Index.css";
+import "../Index.css";
 import { BiLogoFacebook, BiMinus, BiPlus } from "react-icons/bi";
 import { useNavigate } from 'react-router-dom';
-import { RButton } from "../buttons/Button";
+import { RButton } from "../../../components/buttons/Button"; 
 
 function ItemInfo () {
   const navigate = useNavigate(); 
   const handleBack = () => {navigate('/dashboard')}
   const itemInfo = JSON.parse(localStorage.getItem('clickItem'))
   const [itemPrice, setItemPrice] = useState(itemInfo.price)
-  const [quantity, setQuantity] = useState(1)  
+  const [quantity, setQuantity] = useState(1)
 
-  const adjustCountMinus = (e) => {
-    e.preventDefault()
-    if (quantity > 1 ) {
-      setQuantity(quantity - 1)
-    } else {
-      setQuantity(1)
-    } 
-  }
-
-  const adjustCountPlus = (e) => {
-    e.preventDefault()
-    setQuantity(quantity + 1)
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const cartItemInfo = {itemInfo, itemPrice, quantity};
-    localStorage.setItem('cartItems', JSON.stringify([cartItemInfo]))
-  }
+  console.log(itemInfo);
 
   return (
     <div>
@@ -37,7 +19,7 @@ function ItemInfo () {
         <RButton displayText="Back" buttonClick={handleBack}/>
       </section>
       <section className="product__main-img container section">
-        <form className="product__selection" onSubmit={handleSubmit}>
+        <form className="product__selection">
           <div className="img__con">
             <img className="item__img-main" src={itemInfo.img} alt={itemInfo.id}/>
           </div>
@@ -50,18 +32,18 @@ function ItemInfo () {
             <div className="selections">
               <label className="selection-header">Options</label>
               <select className="select" name='ejuice' size='1' value={itemPrice} onChange={(e)=>setItemPrice(e.target.value)}>
-                <option value={itemInfo.price}>{itemInfo.low}</option>
-                <option value={itemInfo.price2}>{itemInfo.mid}</option>
-                <option value={itemInfo.price3}>{itemInfo.high}</option>
-                <option value={itemInfo.price4}>{itemInfo.high12}</option>
+                <option value={itemInfo.price}>3MG</option>
+                <option value={itemInfo.price2}>6MG</option>
+                <option value={itemInfo.price3}>9MG</option>
+                <option value={itemInfo.price4}>12MG</option>
               </select>
             </div>
             <div className="selections">
               <label className="selection-header">Quantity</label>
               <div className="qty_con">
                 <input className="input" type="number" value={quantity} min="1" max="100" required onChange={(e)=>setQuantity(e.target.value)}/>
-                <button className="minus_btn adjust_btn" onClick={adjustCountMinus}><BiMinus/></button>
-                <button className="plus_btn adjust_btn" onClick={adjustCountPlus}><BiPlus/></button>
+                <button className="minus_btn adjust_btn"><BiMinus/></button>
+                <button className="plus_btn adjust_btn"><BiPlus/></button>
               </div>
             </div>
           </div>

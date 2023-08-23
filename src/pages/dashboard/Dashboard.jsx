@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import './Dashboard.css';
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay, Grid } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import "swiper/css/autoplay"
+import "swiper/css/grid"
+
 import { BiLogoFacebook } from "react-icons/bi";
 import { Items } from '../../components/utils/item/Item';
 import { RButton } from '../../components/buttons/Button';
@@ -10,18 +19,9 @@ import Device01 from '../../components/assets/Image/Device01.png'
 import Pod15 from '../../components/assets/Image/Pod15.png'
 import Atomizer19 from '../../components/assets/Image/Atomizer19.png'
 import Access06 from '../../components/assets/Image/Access06.png'
+import { topProductsData } from '../../components/data/Data'
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay, Grid } from 'swiper/modules';
-import "swiper/css";
-import "swiper/css/pagination"
-import "swiper/css/navigation"
-import "swiper/css/autoplay"
-import "swiper/css/grid"
-
-
-
-function Dashboard({products: {topProducts}}) {
+function Dashboard() {
   
   const [showLoading, setShowLoading] = useState(true);
 
@@ -67,9 +67,9 @@ function Dashboard({products: {topProducts}}) {
               }}
             className="swiper__con"
           >
-            {topProducts?.map((item, i) => (
-              <SwiperSlide key={i}>
-                <Items {...item}/>
+            {topProductsData.map((products, index) => (
+              <SwiperSlide key={index}>
+                <Items data={products}/>
               </SwiperSlide>))}
           </Swiper>
         </section>

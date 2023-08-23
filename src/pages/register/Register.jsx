@@ -55,7 +55,6 @@ function Register() {
         user.push(formValues);
         localStorage.setItem("registeredUsers", JSON.stringify(user));
         navigate('/login');
-
     }
   }
 
