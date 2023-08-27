@@ -19,9 +19,8 @@ import Device01 from '../../components/assets/Image/Device01.png'
 import Pod15 from '../../components/assets/Image/Pod15.png'
 import Atomizer19 from '../../components/assets/Image/Atomizer19.png'
 import Access06 from '../../components/assets/Image/Access06.png'
-import { topProductsData } from '../../components/data/Data'
 
-function Dashboard() {
+function Dashboard({topProducts}) {
   
   const [showLoading, setShowLoading] = useState(true);
 
@@ -63,11 +62,13 @@ function Dashboard() {
               1024: {slidesPerView: 4,
                     grid: {rows:2, fill:"row"}},
               1280: {slidesPerView: 5,
+                    grid: {rows:2, fill:"row"}},
+              1440: {slidesPerView: 6,
                     grid: {rows:2, fill:"row"}}
               }}
             className="swiper__con"
           >
-            {topProductsData.map((products, index) => (
+            {topProducts.map((products, index) => (
               <SwiperSlide key={index}>
                 <Items data={products}/>
               </SwiperSlide>))}

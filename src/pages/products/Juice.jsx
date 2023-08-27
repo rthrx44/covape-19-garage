@@ -1,7 +1,8 @@
 import React from "react";
-import "../Index.css";
-import { useNavigate } from "react-router-dom";
-import { BiLogoFacebook } from "react-icons/bi";
+import "./Index.css";
+import { Link, useNavigate } from "react-router-dom";
+import { BiLogoFacebook, BiHeart } from "react-icons/bi";
+import { BsCart4 } from "react-icons/bs";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid } from "swiper/modules";
@@ -9,24 +10,27 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/grid";
 
-import { Items } from "../../../components/utils/item/Item";
-import { RButton } from "../../../components/buttons/Button";
-import Device01 from "../../../components/assets/Image/Device01.png";
-import Pod15 from "../../../components/assets/Image/Pod15.png";
-import Atomizer19 from "../../../components/assets/Image/Atomizer19.png";
-import Access06 from "../../../components/assets/Image/Access06.png";
-import { juiceData } from '../../../components/data/Data'
+import { Items } from "../../components/utils/item/Item";
+import { RButton } from "../../components/buttons/Button";
+import Device01 from "../../components/assets/Image/Device01.png";
+import Pod15 from "../../components/assets/Image/Pod15.png";
+import Atomizer19 from "../../components/assets/Image/Atomizer19.png";
+import Access06 from "../../components/assets/Image/Access06.png";
 
-export default function Juice() {
+export default function Juice({ products: { juice } }) {
   const navigate = useNavigate();
   const handleBack = () => {navigate("/dashboard")};
   return (
     <div>
       <section className="back__btn container section">
         <RButton displayText="Back" buttonClick={handleBack} />
+        <div className="btn__con">
+          <button className="cartBtn"><BiHeart/></button>
+          <Link to={'/cart'} className="cartBtn"><BsCart4/></Link>
+        </div>
       </section>
       <section className="product__info container section">
-        <h1 id="juice" className="shop__header">E-Juice</h1>
+        <h1 id="juice" className="shop__header product__header">E-Juice</h1>
         <Swiper
           modules={[Pagination, Grid]}
           slidesPerView={1}
@@ -44,7 +48,7 @@ export default function Juice() {
           }}
           className="swiper__con"
         >
-          {juiceData.map((products, index) => (
+          {juice.map((products, index) => (
             <SwiperSlide key={index}>
               <Items data={products}/>
             </SwiperSlide>
@@ -52,7 +56,7 @@ export default function Juice() {
         </Swiper>
       </section>
       <section className="other__products container section">
-        <h1 className="shop__header">Other Products</h1>
+        <h1 className="shop__header product__header">Other Products</h1>
         <div className="grid__products">
           <div className="products__con">
             <h1 id="device" className="shop__header">

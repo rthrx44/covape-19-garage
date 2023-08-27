@@ -1,7 +1,8 @@
 import React from "react";
 import "./Index.css";
-import { useNavigate } from "react-router-dom";
-import { BiLogoFacebook } from "react-icons/bi";
+import { Link, useNavigate } from "react-router-dom";
+import { BiHeart, BiLogoFacebook } from "react-icons/bi";
+import { BsCart4 } from "react-icons/bs";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid } from "swiper/modules";
@@ -15,9 +16,8 @@ import Device01 from "../../components/assets/Image/Device01.png";
 import Pod15 from "../../components/assets/Image/Pod15.png";
 import Access06 from "../../components/assets/Image/Access06.png";
 import Juice01 from "../../components/assets/Image/Juice01.png";
-import { atomizerData } from '../../components/data/Data'
 
-export default function Atomizer() {
+export default function Atomizer({ products: { atomizer } }) {
   const navigate = useNavigate();
   const handleBack = () => {
     navigate("/dashboard");
@@ -27,6 +27,10 @@ export default function Atomizer() {
     <div>
       <section className="back__btn container section">
         <RButton displayText="Back" buttonClick={handleBack} />
+        <div className="btn__con">
+          <button className="cartBtn"><BiHeart/></button>
+          <Link to={'/cart'} className="cartBtn"><BsCart4/></Link>
+        </div>
       </section>
       <section className="product__info container section">
         <h1 id="atomizer" className="shop__header">Atomizers</h1>
@@ -47,7 +51,7 @@ export default function Atomizer() {
           }}
           className="swiper__con"
         >
-          {atomizerData.map((products, index) => (
+          {atomizer.map((products, index) => (
             <SwiperSlide key={index}>
               <Items data={products}/>
             </SwiperSlide>
