@@ -24,10 +24,10 @@
   border: none;
   border-radius: 4px;
   color: #000000;
-  height: 1.5rem;
+  height: 1.8rem;
   font-family: 'Golos Text', sans-serif;
   font-size: var(--size-xs);
-  font-weight: 800;
+  font-weight: 600;
   margin-top: 0.5rem;
   margin-bottom: 5px;
   transition: ease-in-out .2s;

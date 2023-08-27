@@ -1,0 +1,7 @@
+.cart__header {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-secondary);
+  color: var(--clr-slate);
+}

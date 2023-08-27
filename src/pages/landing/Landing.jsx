@@ -65,17 +65,17 @@ function Landing() {
         </section>
         <section className='landing__customer container section'>
           <div className='landing__customer-wrapper'>
-            <BsCart4 className='langing__svg'/>
+            <BsCart4 className='landing__svg'/>
             <h1 className='landing__customer-header'>400+</h1>
             <p className='landing__description'>Exclusive Product</p>
           </div>
           <div className='landing__customer-wrapper'>
-            <BsEmojiHeartEyes className='langing__svg'/>
+            <BsEmojiHeartEyes className='landing__svg'/>
             <h1 className='landing__customer-header'>99%</h1>
             <p className='landing__description'>Satisfied Customers</p>
           </div>
           <div className='landing__customer-wrapper'>
-            <LuSunMoon className='langing__svg'/>
+            <LuSunMoon className='landing__svg'/>
             <h1 className='landing__customer-header'>24/7</h1>
             <p className='landing__description'>Online Support</p>
           </div>

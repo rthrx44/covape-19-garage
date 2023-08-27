@@ -1,7 +1,8 @@
 import React from "react";
 import "./Index.css";
-import { useNavigate } from "react-router-dom";
-import { BiLogoFacebook } from "react-icons/bi";
+import { Link, useNavigate } from "react-router-dom";
+import { BiHeart, BiLogoFacebook } from "react-icons/bi";
+import { BsCart4 } from "react-icons/bs";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid } from "swiper/modules";
@@ -15,9 +16,8 @@ import Device01 from "../../components/assets/Image/Device01.png";
 import Pod15 from "../../components/assets/Image/Pod15.png";
 import Atomizer19 from "../../components/assets/Image/Atomizer19.png";
 import Juice01 from "../../components/assets/Image/Juice01.png";
-import { accessoriesData } from '../../components/data/Data'
 
-export default function Accessories() {
+export default function Accessories({ products: { accessories } }) {
   const navigate = useNavigate();
   const handleBack = () => {
     navigate("/dashboard");
@@ -27,6 +27,10 @@ export default function Accessories() {
     <div>
       <section className="back__btn container section">
         <RButton displayText="Back" buttonClick={handleBack} />
+        <div className="btn__con">
+          <button className="cartBtn"><BiHeart/></button>
+          <Link to={'/cart'} className="cartBtn"><BsCart4/></Link>
+        </div>
       </section>
       <section className="product__info container section">
         <h1 id="accessories" className="shop__header">Accessories</h1>
@@ -47,7 +51,7 @@ export default function Accessories() {
           }}
           className="swiper__con"
         >
-          {accessoriesData.map((products, index) => (
+          {accessories.map((products, index) => (
             <SwiperSlide key={index}>
               <Items data={products}/>
             </SwiperSlide>
