@@ -13,29 +13,26 @@ import Pods from './pages/products/Pods';
 import Atomizer from './pages/products/Atomizer';
 import Accessories from './pages/products/Accessories';
 import Cart from './pages/cart/Cart';
-import {allProducts, products, topProducts} from './components/data/Data';
-import { ProductContextProvider } from './context/ProductContext';
+import { products, topProducts } from './components/data/Data';
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <ProductContextProvider>
+      <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Landing/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>}/>
-          <Route path='/dashboard' element={<Dashboard topProducts={topProducts}/>}/>
-          <Route path='/juice' element={<Juice products={products}/>}/>
-          <Route path='/mods' element={<Mods products={products}/>}/>
-          <Route path='/pods' element={<Pods products={products}/>}/>
-          <Route path='/atomizer' element={<Atomizer products={products}/>}/>
-          <Route path='/accessories' element={<Accessories products={products}/>}/>
-          <Route path='/item' element={<ItemInfo products={products}/>}/>
-          <Route path='/cart' element={<Cart allProducts={allProducts}/>}/>
+          <Route path='/' element={<Landing />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/dashboard' element={<Dashboard topProducts={topProducts} />} />
+          <Route path='/juice' element={<Juice products={products} />} />
+          <Route path='/mods' element={<Mods products={products} />} />
+          <Route path='/pods' element={<Pods products={products} />} />
+          <Route path='/atomizer' element={<Atomizer products={products} />} />
+          <Route path='/accessories' element={<Accessories products={products} />} />
+          <Route path='/item' element={<ItemInfo products={products} />} />
+          <Route path='/cart' element={<Cart/>} />
         </Routes>
-      </ProductContextProvider>
-    </BrowserRouter>
+      </BrowserRouter>
     </>
   );
 }

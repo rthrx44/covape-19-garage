@@ -55,7 +55,7 @@
 .wishlist .rbtn {
   grid-area: wishlist;
   width: 100%;
-  margin-top: 1.4rem;
+  margin-top: 1.35rem;
 }
 
 .input {
@@ -184,6 +184,10 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
+  .wishlist .rbtn {
+    margin-top: 1.4rem;
+  }
 }
 
 /* sm */
@@ -226,8 +230,6 @@
   }
 
   .wishlist .rbtn {
-    grid-area: wishlist;
-    width: 100%;
     margin-top: 1.5rem;
   }
 
@@ -304,7 +306,7 @@
 
   .wishlist .rbtn {
     grid-area: wishlist;
-    margin-top: 1.6rem;
+    margin-top: 1.65rem;
   }
 
   .grid__products {
