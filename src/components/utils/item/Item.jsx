@@ -3,7 +3,6 @@ import './Item.css'
 
 export const Items = (props) => {
   const {id, img, brand, name, price} = props.data
-  console.log(props.data);
   const handleGetInfo = () => {localStorage.setItem('clickItem', JSON.stringify(props.data))}
   return (
     <div className='grid__item'>

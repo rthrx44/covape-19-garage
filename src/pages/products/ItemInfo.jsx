@@ -1,17 +1,25 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./Index.css";
 import { BiLogoFacebook, BiMinus, BiPlus, BiHeart } from "react-icons/bi";
 import { BsCart4 } from "react-icons/bs";
 import { Link, useNavigate } from 'react-router-dom';
 import { LButton, RButton } from "../../components/buttons/Button"; 
-import { ProductContext } from "../../context/ProductContext";
 
 function ItemInfo () {
   const navigate = useNavigate(); 
   const handleBack = () => {navigate('/dashboard')}
   const itemInfo = JSON.parse(localStorage.getItem('clickItem'))
   const [quantity, setQuantity] = useState(1)
-  const { addToCart } = useContext(ProductContext)
+
+  const handleAddtoCart = () => {
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]')
+    let cartItems = {
+      itemInfo: itemInfo,
+      quantity: 1
+    }
+    cart.push(cartItems)
+    localStorage.setItem('cart', JSON.stringify(cart)) 
+  }
 
   return (
     <div>
@@ -46,7 +54,7 @@ function ItemInfo () {
             </div>
           </div>
         </div>
-        <LButton displayText="Add to cart" buttonClick={() => addToCart(itemInfo.id)}/>
+        <LButton displayText="Add to cart" buttonClick={handleAddtoCart}/>
       </section>
       <section className="product__details container section">
             <h5 className="product__brand">Product Description</h5>

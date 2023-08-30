@@ -8,7 +8,7 @@
   text-decoration: none;
   letter-spacing: -0.05em;
   color: var(--clr-lime);
-  padding: 0.5em 1em;
+  padding: 0.4rem 1rem;
   border: 1px solid var(--clr-lime);
   border-radius: 4px;
   transition: background-color 0.3s;

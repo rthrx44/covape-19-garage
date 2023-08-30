@@ -5,3 +5,34 @@
   font-family: var(--font-secondary);
   color: var(--clr-slate);
 }
+
+.cartitem__con {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 25% auto 20%;
+  gap: 0.5rem;
+  background-color: var(--clr-lightdark);
+  border-radius: 0.3rem;
+}
+
+.cart__img {
+  height: 7rem;
+  margin: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.cart__brand {
+  font-size: var(--size-xs);
+  color: var(--clr-slate);
+}
+
+.cart__name {
+  font-size: var(--size-xs);
+}
+
+.cart__price {
+  font-size: var(--size-xs);
+}

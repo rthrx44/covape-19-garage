@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './Cart.css';
 import { useNavigate } from 'react-router-dom';
 import { RButton } from "../../components/buttons/Button"; 
-import { ProductContext } from "../../context/ProductContext";
 import { CartItem } from './CartItem';
 
-function Cart ({allProducts}) {
+
+function Cart () {
   const navigate = useNavigate(); 
-  const handleBack = () => {navigate('/item')}
-  const handleBacktoDB = () => {navigate('/dashboard')}
-  const { cartItems } = useContext(ProductContext)
+  const handleBack = () => {navigate('/item')};
+  const handleBacktoDB = () => {navigate('/dashboard')};
+  let cart = JSON.parse(localStorage.getItem('cart'));
 
 
   return (
@@ -18,14 +18,12 @@ function Cart ({allProducts}) {
         <RButton displayText="Back" buttonClick={handleBack}/>
         <RButton displayText="Continue Shopping" buttonClick={handleBacktoDB}/>
       </section>
-      <section>
+      <section className='container section'>
         <h1 className='cart__header'>Your Cart is Empty</h1>
         <div className='cart__items'>
-          {allProducts.map((product) => {
-            if (cartItems[product.id] !== 0) {
-              return <CartItem data={product}/>
-            }
-          })}
+            {cart.map((product, index) => {
+              return <CartItem key={index} product={product}/>
+            })}
         </div>
       </section>
     </>
