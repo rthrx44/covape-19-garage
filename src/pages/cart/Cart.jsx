@@ -3,11 +3,13 @@ import './Cart.css';
 import { useNavigate } from 'react-router-dom';
 import { RButton } from "../../components/buttons/Button"; 
 import { CartItem } from './CartItem';
+import { ToastContainer, toast } from "react-toastify";
 
 
 function Cart () {
   const navigate = useNavigate(); 
   const handleBacktoDB = () => {navigate('/dashboard')};
+  const itemInfo = JSON.parse(localStorage.getItem("clickItem"));
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
   const [cart, setCart] = useState(cartFromLocalStorage);
   const handleClearCart = () => {
@@ -20,7 +22,27 @@ function Cart () {
   };
 
   const getCartTotal = () => {
-    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
+    return cart.reduce((sum, {quantity}) => Number(sum + quantity), 0);
+  };
+
+  const handleQuantity = (product, amount) => {
+    const newCart = [...cart];
+    let quantityInCart = newCart.find(item => product.name === item.name).quantity = amount;
+    if (quantityInCart) {
+      toast.success(` ${itemInfo.name} Increase Quantity `, {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+        className: "success",
+      });
+    }
+    setCart(newCart);
+    localStorage.setItem('cart', JSON.stringify(cart));
   };
 
   const removeItemFromCart = (itemToRemove) => {
@@ -42,8 +64,9 @@ function Cart () {
         </div>
         <div className='cart__items'>
             {cart.map((product, index) => {
-              return <CartItem key={index} product={product} removeItemFromCart={removeItemFromCart}/>
+              return <CartItem key={index} product={product} removeItemFromCart={removeItemFromCart} handleQuantity={handleQuantity}/>
             })}
+        <ToastContainer limit={2} />
         </div>
       </section>
       <section className='container section'>
