@@ -13,7 +13,6 @@ import { BiLogoFacebook } from "react-icons/bi";
 import { Items } from '../../components/utils/item/Item';
 import { RButton } from '../../components/buttons/Button';
 import Navbar from '../../components/navbar/Navbar';
-import Loading from '../../components/loading/Loading';
 import Juice01 from '../../components/assets/Image/Juice01.png'
 import Device01 from '../../components/assets/Image/Device01.png'
 import Pod15 from '../../components/assets/Image/Pod15.png'
@@ -22,17 +21,15 @@ import Access06 from '../../components/assets/Image/Access06.png'
 
 function Dashboard({topProducts}) {
   
-  const [showLoading, setShowLoading] = useState(true);
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
+  const [cart] = useState(cartFromLocalStorage);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShowLoading(false);
-    }, 3000);
-  });
+    localStorage.setItem('cart', JSON.stringify(cart))
+  },[cart])
 
   return (
     <>
-      {showLoading && <Loading />}
       <Navbar/>
       <main>
         <section className='hero container section'>

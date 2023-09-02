@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './Navbar.css';
 import { RButton } from '../buttons/Button';
 import { FaBars } from "react-icons/fa";
+import { BiHeart } from "react-icons/bi";
+import { BsCart4 } from "react-icons/bs";
 import { useNavigate, Link } from 'react-router-dom';
 import Cvlogo from '../../components/assets/Image/Cvlogo.png'
 
@@ -65,6 +67,14 @@ export default function Navbar () {
       <header id='home' className='header container'>
         <nav className='header__wrapper'>
           <img className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' />
+          <div className="btn__con">
+            <button className="cartBtn">
+              <BiHeart />
+            </button>
+            <Link to={"/cart"} className="cartBtn">
+              <BsCart4 />
+            </Link>
+          </div>
           <ul className='header__menu'>
             <li>
               <a className='header__link' href='#home'> Home </a>

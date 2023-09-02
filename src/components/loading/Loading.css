@@ -16,8 +16,8 @@
 }
 
 #liquid-loading {
-  height: 6.25rem;
-  width: 6.25rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 .loading__text {
@@ -26,10 +26,6 @@
   font-size: var(--size-sm);
   font-weight: 700;
   color: var(--clr-slate);
-}
-
-svg {
-  animation-duration: 3000ms;
 }
 
 #liquid-loading-u-dark-wave_to {
@@ -88,12 +84,8 @@ svg {
 /* xs */
 @media (min-width: 475px) {
   #liquid-loading {
-    height: 7.5rem;
-    width: 7.5rem;
-  }
-
-  .loading__text {
-    font-size: var(--size-base);
+    height: 5rem;
+    width: 5rem;
   }
 }
 
@@ -104,12 +96,12 @@ svg {
 @media (min-width: 768px) {
     
   #liquid-loading {
-    height: 8.125rem;
-    width: 8.125rem;
+    height: 6rem;
+    width: 6rem;
   }
 
   .loading__text {
-    font-size: var(--size-lg);
+    font-size: var(--size-base);
   }
 }
 
