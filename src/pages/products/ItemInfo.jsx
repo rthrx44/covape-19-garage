@@ -20,7 +20,7 @@ function ItemInfo() {
   },[cart])
 
   const handleAddtoCart = () => {
-    let newCart = [...cart];
+    const newCart = [...cart];
     let itemInCart = newCart.find((item) => itemInfo.name === item.name);
     if (itemInCart) {
       itemInCart.quantity++;
