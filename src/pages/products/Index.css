@@ -46,10 +46,9 @@
 .selections__con {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: 30% auto;
-  gap: 0.5rem;
+  grid-template-columns: auto;
   grid-template-areas:
-  'input wishlist';
+  'wishlist';
 }
 
 .wishlist .rbtn {
@@ -65,59 +64,26 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
   font-family: var(--font-secondary);
   font-size: var(--size-xs);
   border: none;
+  border-radius: 2rem;
   outline: none;
 }
 
 .selections {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  font-size: var(--size-xs);
-}
-
-.qty_con {
-  position: relative;
-}
-
-.adjust_btn {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-  border: 1px solid var(--clr-lime);
-  background-color: var(--clr-dark);
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
-  color: var(--clr-lime);
-}
-
-.adjust_btn:hover {
-  background-color: var(--clr-lime);
-  color: var(--clr-dark);
-
-}
-
-.minus_btn {
-  left: 0;
-}
-
-.plus_btn {
-  right: 0;
+  font-size: var(--size-xs);
+  gap: 0.3rem;
 }
 
 .selection-header {
   padding-bottom: 0.2rem;
+  color: var(--clr-lime);
 }
 
 .item__img-main {
@@ -185,11 +151,6 @@
   .product__header {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .input {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
   }
 
   .wishlist .rbtn {

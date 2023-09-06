@@ -3,13 +3,11 @@ import './Cart.css';
 import { useNavigate } from 'react-router-dom';
 import { RButton } from "../../components/buttons/Button"; 
 import { CartItem } from './CartItem';
-import { ToastContainer, toast } from "react-toastify";
 
 
 function Cart () {
   const navigate = useNavigate(); 
   const handleBacktoDB = () => {navigate('/dashboard')};
-  const itemInfo = JSON.parse(localStorage.getItem("clickItem"));
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
   const [cart, setCart] = useState(cartFromLocalStorage);
   const handleClearCart = () => {
@@ -18,39 +16,26 @@ function Cart () {
   }
 
   const getTotalSum = () => {
-    return cart.reduce((sum, { price, quantity }) => sum + price * quantity, 0);
+    return cart.reduce((sum, { price, quantity }) => Number(sum + price * quantity), Number(0));
   };
 
   const getCartTotal = () => {
-    return cart.reduce((sum, {quantity}) => Number(sum + quantity), 0);
+    return cart.reduce((sum, {quantity}) => Number(sum + quantity), Number(0));
   };
 
   const handleQuantity = (product, amount) => {
     const newCart = [...cart];
-    let quantityInCart = newCart.find(item => product.name === item.name).quantity = amount;
-    if (quantityInCart) {
-      toast.success(` ${itemInfo.name} Increase Quantity `, {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-        theme: "light",
-        className: "success",
-      });
-    }
+    newCart.find(item => product.name === item.name).quantity = amount;  
     setCart(newCart);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(newCart));
   };
 
   const removeItemFromCart = (itemToRemove) => {
     let removeItem = cart.filter((product) => product !== itemToRemove)
     localStorage.setItem('cart', JSON.stringify(removeItem))
-    setCart(cart.filter((product) => product !== itemToRemove))
-  } 
- 
+    setCart(removeItem)
+  }
+
   return (
     <>
       <section className="back__btn container section">
@@ -64,13 +49,32 @@ function Cart () {
         </div>
         <div className='cart__items'>
             {cart.map((product, index) => {
-              return <CartItem key={index} product={product} removeItemFromCart={removeItemFromCart} handleQuantity={handleQuantity}/>
+              return <CartItem 
+                key={index} 
+                product={product} 
+                removeItemFromCart={removeItemFromCart} 
+                handleQuantity={handleQuantity}/>
             })}
-        <ToastContainer limit={2} />
         </div>
       </section>
       <section className='container section'>
-        <div> Total Cost : &#8369; {getTotalSum()}</div>
+        <div>
+          <div className='totalprice-con'>
+            <p className='total__amount'>Subotal Amount :</p> 
+            <p className='totalAmount_price'>&#8369; {getTotalSum()}</p>
+          </div>
+          <div className='totalprice-con'>
+            <p className='total__amount'>Shipping Fee :</p> 
+            <p className='totalAmount_price'>Calculate shipping fee...</p>
+          </div>
+          <div className='totalprice-con'>
+            <p className='total__amount'>Total Amount :</p> 
+            <p className='totalAmount_price'>&#8369; {getTotalSum()}</p>
+          </div>
+        </div>
+        <div className="wishlist">
+          <RButton displayText="Proceed to Checkout" />
+        </div>
       </section>
     </>
   )

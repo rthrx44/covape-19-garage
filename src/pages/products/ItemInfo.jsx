@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Index.css";
-import { BiLogoFacebook, BiMinus, BiPlus, BiHeart } from "react-icons/bi";
+import { BiLogoFacebook, BiHeart } from "react-icons/bi";
 import { BsCart4 } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import { LButton, RButton } from "../../components/buttons/Button";
@@ -84,28 +84,8 @@ function ItemInfo() {
           <h3 className="product__price">&#8369; {itemInfo.price}</h3>
         </div>
         <div className="selections__con">
-          <div className="selections">
-            <label className="selection-header">Quantity</label>
-            <div className="qty_con">
-              <input
-                className="input"
-                type="number"
-                min="1"
-                max="100"
-                required
-              />
-              <button className="minus_btn adjust_btn">
-                <BiMinus />
-              </button>
-              <button className="plus_btn adjust_btn">
-                <BiPlus />
-              </button>
-            </div>
-          </div>
-          <div className="selections">
-            <div className="wishlist">
-              <RButton displayText="Add to Wishlist" />
-            </div>
+          <div className="wishlist">
+            <RButton displayText="Add to Wishlist" />
           </div>
         </div>
         <LButton displayText="Add to cart" buttonClick={handleAddtoCart} />
