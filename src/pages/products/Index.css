@@ -81,11 +81,6 @@
   gap: 0.3rem;
 }
 
-.selection-header {
-  padding-bottom: 0.2rem;
-  color: var(--clr-lime);
-}
-
 .item__img-main {
   height: 14rem;
   margin-left: auto;
@@ -189,10 +184,6 @@
     grid-area: added;
   }
 
-  .item__img-main {
-    height: 14.5rem;
-  }
-
   .selections {
     font-size: var(--size-sm);
   }
@@ -219,7 +210,7 @@
   }
 
   .item__img-main {
-    height: 15rem;
+    height: 14.5rem;
   }
 
   .product__brand,
@@ -230,10 +221,6 @@
   .product__name {
     position: relative;
     font-size: var(--size-3xl);
-  }
-
-  .product__info {
-    font-size: var(--size-base);
   }
 
   .wishlist .rbtn {
@@ -253,10 +240,6 @@
   .product__main-img {
     padding-left: 7rem;
     padding-right: 7rem;
-  }
-
-  .item__img-main {
-    height: 16rem;
   }
 
   .product__header {
@@ -295,7 +278,7 @@
   }
 
   .item__img-main {
-    height: 16.5rem;
+    height: 15rem;
   }
 
   .grid__products {

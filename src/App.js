@@ -13,7 +13,7 @@ import Pods from './pages/products/Pods';
 import Atomizer from './pages/products/Atomizer';
 import Accessories from './pages/products/Accessories';
 import Cart from './pages/cart/Cart';
-import { products, topProducts } from './components/data/Data';
+import { products, topProducts, brands } from './components/data/Data';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path='/' element={<Landing />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/dashboard' element={<Dashboard topProducts={topProducts} />} />
+          <Route path='/dashboard' element={<Dashboard topProducts={topProducts} brands={brands} />} />
           <Route path='/juice' element={<Juice products={products} />} />
           <Route path='/mods' element={<Mods products={products} />} />
           <Route path='/pods' element={<Pods products={products} />} />

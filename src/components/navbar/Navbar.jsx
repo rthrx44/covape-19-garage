@@ -54,10 +54,22 @@ export default function Navbar () {
               <a className='mobile__link' href='#home' onClick={handleClick}> Home </a>
             </li>
             <li>
-              <a className='mobile__link' href='#products' onClick={handleClick}> Products </a>
+              <Link className='mobile__link' to='/juice' onClick={handleClick}> E-Juice </Link>
             </li>
             <li>
-              <a className='mobile__link' href='#contact' onClick={handleClick}> Contact Us </a>
+              <Link className='mobile__link' to='/mods' onClick={handleClick}> Mods & Kits </Link>
+            </li>
+            <li>
+              <Link className='mobile__link' to='/pods' onClick={handleClick}> Pod System </Link>
+            </li>
+            <li>
+              <Link className='mobile__link' to='/atomizer' onClick={handleClick}> Atomizer </Link>
+            </li>
+            <li>
+              <Link className='mobile__link' to='/accessories' onClick={handleClick}> Accessories </Link>
+            </li>
+            <li>
+              <a className='mobile__link' href='#contact' onClick={handleClick}> Contact </a>
             </li>
             <li className='mobile__link-line'></li>
             <Link className='mobile__login' to='/'> <RButton buttonClick={handleLogout} displayText = 'Logout'/></Link>
@@ -66,7 +78,7 @@ export default function Navbar () {
       }
       <header id='home' className='header container'>
         <nav className='header__wrapper'>
-          <img className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' />
+          <img className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Covape-19 Grage'/>
           <div className="btn__con">
             <button className="cartBtn">
               <BiHeart />
@@ -77,13 +89,25 @@ export default function Navbar () {
           </div>
           <ul className='header__menu'>
             <li>
-              <a className='header__link' href='#home'> Home </a>
+              <a className='mobile__link' href='#home' onClick={handleClick}> Home </a>
             </li>
             <li>
-              <a className='header__link' href='#products'> Products </a>
+              <Link className='mobile__link' to='/juice' onClick={handleClick}> E-Juice </Link>
             </li>
             <li>
-              <a className='header__link' href='#contact'> Contact Us </a>
+              <Link className='mobile__link' to='/mods' onClick={handleClick}> Mods & Kits </Link>
+            </li>
+            <li>
+              <Link className='mobile__link' to='/pods' onClick={handleClick}> Pod System </Link>
+            </li>
+            <li>
+              <Link className='mobile__link' to='/atomizer' onClick={handleClick}> Atomizer </Link>
+            </li>
+            <li>
+              <Link className='mobile__link' to='/accessories' onClick={handleClick}> Accessories </Link>
+            </li>
+            <li>
+              <a className='mobile__link' href='#contact' onClick={handleClick}> Contact </a>
             </li>
           </ul>
           <ul className='header__btns'>

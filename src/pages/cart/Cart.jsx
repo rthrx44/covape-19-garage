@@ -43,37 +43,39 @@ function Cart () {
         <RButton displayText="Clear Cart" buttonClick={handleClearCart}/>
       </section>
       <section className='container section'>
-        <div className='total_con'>
-          <h1 className='total__cartItem'>Cart Total Items : </h1>
-          <h1 className='cartItem__count'>{getCartTotal()}</h1>
-        </div>
-        <div className='cart__items'>
-            {cart.map((product, index) => {
-              return <CartItem 
-                key={index} 
-                product={product} 
-                removeItemFromCart={removeItemFromCart} 
-                handleQuantity={handleQuantity}/>
-            })}
-        </div>
-      </section>
-      <section className='container section'>
-        <div>
-          <div className='totalprice-con'>
-            <p className='total__amount'>Subotal Amount :</p> 
-            <p className='totalAmount_price'>&#8369; {getTotalSum()}</p>
+        <div className='grid__cart'>
+          <div>
+            <div className='total_con'>
+              <h1 className='total__cartItem'>Cart Total Items : </h1>
+              <h1 className='cartItem__count'>{getCartTotal()}</h1>
+            </div>
+            <div className='cart__items'>
+                {cart.map((product, index) => {
+                  return <CartItem 
+                    key={index} 
+                    product={product} 
+                    removeItemFromCart={removeItemFromCart} 
+                    handleQuantity={handleQuantity}/>
+                })}
+            </div>
           </div>
-          <div className='totalprice-con'>
-            <p className='total__amount'>Shipping Fee :</p> 
-            <p className='totalAmount_price'>Calculate shipping fee...</p>
+          <div className='amount__cart'>
+            <div className='totalprice-con'>
+              <p className='total__amount'>Subotal Amount :</p> 
+              <p className='totalAmount_price'>&#8369; {getTotalSum()}</p>
+            </div>
+            <div className='totalprice-con'>
+              <p className='total__amount'>Shipping Fee :</p> 
+              <p className='totalAmount_price'>Calculate shipping fee...</p>
+            </div>
+            <div className='totalprice-con'>
+              <p className='total__amount'>Total Amount :</p> 
+              <p className='totalAmount_price'>&#8369; {getTotalSum()}</p>
+            </div>
+            <div className="wishlist">
+              <RButton displayText="Proceed to Checkout" />
+            </div>
           </div>
-          <div className='totalprice-con'>
-            <p className='total__amount'>Total Amount :</p> 
-            <p className='totalAmount_price'>&#8369; {getTotalSum()}</p>
-          </div>
-        </div>
-        <div className="wishlist">
-          <RButton displayText="Proceed to Checkout" />
         </div>
       </section>
     </>

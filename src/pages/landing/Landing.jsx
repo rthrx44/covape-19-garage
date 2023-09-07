@@ -3,13 +3,20 @@ import './Landing.css'
 import { Link } from 'react-router-dom'
 import { RButton } from '../../components/buttons/Button'
 import { BsCart4, BsEmojiHeartEyes } from "react-icons/bs";
-import { BiLogoFacebook } from "react-icons/bi";
+import { BiLogoInstagramAlt, BiLogoTiktok } from "react-icons/bi";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { FaFacebookSquare } from "react-icons/fa";
+import { SiShopee } from "react-icons/si";
 import { LuSunMoon } from "react-icons/lu";
 import Cvlogo from '../../components/assets/Image/Cvlogo.png'
+import VapeWarning from '../../components/assets/Image/VapeWarning.png'
+import Access09 from '../../components/assets/Image/Access09.png'
 import Device01 from '../../components/assets/Image/Device01.png';
-import Device02 from '../../components/assets/Image/Device02.png';
+import Device08 from '../../components/assets/Image/Device08.png';
+import juice07 from '../../components/assets/Image/Juice07.png'
 import Pod01 from '../../components/assets/Image/Pod01.png';
-import Pod02 from '../../components/assets/Image/Pod02.png';
+import Pod03 from '../../components/assets/Image/Pod03.png';
+import Atomizer16 from '../../components/assets/Image/Atomizer16.png';
 import Shop from '../../components/assets/Image/Shop.png';
 import Loading from "../../components/loading/Loading";
 
@@ -28,24 +35,36 @@ function Landing() {
       {showLoading && <Loading />}
       <main>
         <section className='landing container'>
-          <img className='landing__logo' src={Cvlogo} alt='Covape-19 Garage Logo' />
+          <img className='landing__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Covape-19 Grage'/>
           <h1 className='landing__hero'>Welcome to <br></br>Covape-19 Garage</h1>
           <Link to='/login'><RButton displayText='Shop Now'/></Link>
+        </section>
+        <section className='warning container section'>
+          <img className='vapeWarning' src={VapeWarning} alt='Vape Warning 18+' title='Warning Sign'/>
         </section>
         <section className='landing__products container section'>
           <h1 className='landing__title'>Top Products</h1>
           <div className='landing__product-wrapper'>
             <div className='img__wrapper img1'>
-              <img className='landing__product-pic1' src={Pod01} alt='Vape Devices' />
+              <img className='landing__product-pic' src={Device01} alt='Vape Device' title='Aegis Legend V2'/>
             </div>
             <div className='img__wrapper img2'>
-              <img className='landing__product-pic' src={Device01} alt='Vape Juice' />
+              <img className='landing__product-pic' src={Device08} alt='Vape Device' title='Aegis Legend V2'/>
             </div>
             <div className='img__wrapper img3'>
-              <img className='landing__product-pic' src={Device02} alt='Candies' />
+              <img className='landing__product-pic1' src={Access09} alt='Vape Accessories' title='Molicel Battery'/>
             </div>
             <div className='img__wrapper img4'>
-              <img className='landing__product-pic1' src={Pod02} alt='Pastries' />
+              <img className='landing__product-pic1' src={Pod01} alt='Vape Device' title='OXVA XLIM Limited Edition'/>
+            </div>
+            <div className='img__wrapper img5'>
+              <img className='landing__product-pic1' src={Pod03} alt='Vape Device' title='OXVA XLIM'/>
+            </div>
+            <div className='img__wrapper img6'>
+              <img className='landing__product-pic' src={juice07} alt='Vape Juice' title='Espesyal Vapors Iced Coffee'/>
+            </div>
+            <div className='img__wrapper img7'>
+              <img className='landing__product-pic1' src={Atomizer16} alt='CVape Atomizer' title='Geekvape Zues X RTA'/>
             </div>
           </div>
         </section>
@@ -85,9 +104,15 @@ function Landing() {
           <p className='landing__description'>Don’t waste another moment – elevate your vaping game today! <br></br>Join us and experience the ultimate in premium vaping bliss.</p>
           <Link to='/login'><RButton displayText='Shop Now'/></Link>
         </section>
-        <footer className='landing__footer container section'>
-          <div className='landing__social'><BiLogoFacebook/></div>
-          <h6 className='landing__footer-text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
+        <footer className='footer container section'>
+          <div className='footer__social'>
+            <FaFacebookSquare/>
+            <AiOutlineTwitter/>
+            <BiLogoInstagramAlt/>
+            <BiLogoTiktok/>
+            <SiShopee/>
+          </div>
+          <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
         </footer>
       </main>
     </>
