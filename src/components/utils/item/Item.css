@@ -20,7 +20,7 @@
 }
 
 .item__brand {
-  font-size: var(--size-sm);
+  font-size: var(--size-xs);
 }
 
 .item__name {
@@ -30,7 +30,7 @@
 }
 
 .item__price {
-  font-size: var(--size-sm);
+  font-size: var(--size-xs);
   padding-bottom: 1.5rem;
 }
 
@@ -76,18 +76,6 @@
   .item__img {
     height: 8.5rem;
   }
-  
-  .item__brand {
-    font-size: var(--size-base);
-  }
-  
-  .item__name {
-    font-size: var(--size-sm);
-  }
-  
-  .item__price {
-    font-size: var(--size-base);
-  }
 }
 
 /* sm */
@@ -119,15 +107,15 @@
   }
   
   .item__brand {
-    font-size: var(--size-lg);
+    font-size: var(--size-sm);
   }
   
   .item__name {
-    font-size: var(--size-base);
+    font-size: var(--size-sm);
   }
   
   .item__price {
-    font-size: var(--size-lg);
+    font-size: var(--size-sm);
   }
 }
 
@@ -138,18 +126,6 @@
     margin-bottom:1.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  
-  .item__brand {
-    font-size: var(--size-lg);
-  }
-  
-  .item__name {
-    font-size: var(--size-base);
-  }
-  
-  .item__price {
-    font-size: var(--size-lg);
   }
 }
 

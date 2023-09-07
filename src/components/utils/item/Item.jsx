@@ -18,3 +18,14 @@ export const Items = (props) => {
     </div>
   )
 }
+
+export const Brands = (props) => {
+  const {id, img} = props.data
+  return (
+    <>
+      <div className='brands__con'>
+        <img src={img} alt={id} />
+      </div>
+    </>
+  )
+}

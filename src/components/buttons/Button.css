@@ -54,11 +54,7 @@
 }
 
 /* xs */
-@media (min-width: 475px) {
-  .rbtn {
-    font-size: var(--size-sm);
-  }
-}
+/* @media (min-width: 475px) {} */
 
 /* sm */
 /* @media (min-width: 640px) {} */

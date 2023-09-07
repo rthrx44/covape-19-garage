@@ -15,7 +15,7 @@ export const CartItem = ({ product, removeItemFromCart, handleQuantity}) => {
             <h2 className="cart__name">{name}</h2>
           </div>
           <div className="selections">
-            <label className="selection-header">Quantity</label>
+            <label className="cart__name">Quantity</label>
             <input 
               className="input"
               value={quantity}
