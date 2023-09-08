@@ -29,7 +29,7 @@ function App() {
           <Route path='/pods' element={<Pods products={products} />} />
           <Route path='/atomizer' element={<Atomizer products={products} />} />
           <Route path='/accessories' element={<Accessories products={products} />} />
-          <Route path='/item' element={<ItemInfo products={products} />} />
+          <Route path='/item' element={<ItemInfo/>} />
           <Route path='/cart' element={<Cart/>} />
         </Routes>
       </BrowserRouter>

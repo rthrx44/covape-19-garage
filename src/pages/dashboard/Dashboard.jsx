@@ -88,6 +88,7 @@ function Dashboard({topProducts, brands}) {
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true
               }}
+              loop={true}
               slidesPerView={2}
               breakpoints={{
                 425: {slidesPerView: 3},
