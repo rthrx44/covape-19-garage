@@ -15,6 +15,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { SiShopee } from "react-icons/si";
 import { Items, Brands } from '../../components/utils/item/Item';
 import { RButton } from '../../components/buttons/Button';
+import Cvlogo from '../../components/assets/Image/Cvlogo.png'
 import Navbar from '../../components/navbar/Navbar';
 import VapeWarning from '../../components/assets/Image/VapeWarning.png'
 import Juice01 from '../../components/assets/Image/Juice01.png'
@@ -177,6 +178,7 @@ function Dashboard({topProducts, brands}) {
             <SiShopee/>
           </div>
           <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
+          <a href="#home" className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></a>
         </footer>
       </main>
     </>

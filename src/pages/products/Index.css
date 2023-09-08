@@ -9,7 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  text-align: center;
+  gap: 0.3rem;
 }
 
 .cartBtn {
@@ -155,10 +156,6 @@
 
 /* sm */
 @media (min-width: 640px) {
-  .cartBtn {
-    font-size: var(--size-2xl);
-  }
-
   .product__main-img {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
