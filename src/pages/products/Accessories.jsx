@@ -6,6 +6,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
 import { SiShopee } from "react-icons/si";
 import { BsCart4 } from "react-icons/bs";
+import Cvlogo from '../../components/assets/Image/Cvlogo.png'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid } from "swiper/modules";
@@ -23,12 +24,12 @@ import Juice01 from "../../components/assets/Image/Juice01.png";
 export default function Accessories({ products: { accessories } }) {
   const navigate = useNavigate();
   const handleBack = () => {
-    navigate("/dashboard");
+    navigate(-1);
   };
 
   return (
     <div>
-      <section className="back__btn container section">
+      <section id="home" className="back__btn container section">
         <RButton displayText="Back" buttonClick={handleBack} />
         <div className="btn__con">
           <button className="cartBtn"><BiHeart/></button>
@@ -135,6 +136,7 @@ export default function Accessories({ products: { accessories } }) {
             <SiShopee/>
           </div>
           <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
+          <a href="#home" className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></a>
         </footer>
     </div>
   );

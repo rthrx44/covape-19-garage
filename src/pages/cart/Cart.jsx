@@ -7,7 +7,7 @@ import { CartItem } from './CartItem';
 
 function Cart () {
   const navigate = useNavigate(); 
-  const handleBacktoDB = () => {navigate('/dashboard')};
+  const handleBacktoDB = () => {navigate(-1)};
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
   const [cart, setCart] = useState(cartFromLocalStorage);
   const handleClearCart = () => {

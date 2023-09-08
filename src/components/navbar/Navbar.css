@@ -185,10 +185,6 @@
     height: 4rem;
   }
 
-  .header__link {
-    font-size: var(--size-base);
-  }
-
   .header__login {
     font-size: var(--size-base);
   }

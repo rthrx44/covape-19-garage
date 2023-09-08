@@ -1,8 +1,13 @@
 import React from "react";
 import "./Index.css";
 import { Link, useNavigate } from "react-router-dom";
-import { BiHeart, BiLogoFacebook } from "react-icons/bi";
+import { BiLogoInstagramAlt, BiLogoTiktok, BiHeart } from "react-icons/bi";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { FaFacebookSquare } from "react-icons/fa";
+import { SiShopee } from "react-icons/si";
 import { BsCart4 } from "react-icons/bs";
+import Cvlogo from '../../components/assets/Image/Cvlogo.png'
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid } from "swiper/modules";
@@ -20,12 +25,12 @@ import Juice01 from "../../components/assets/Image/Juice01.png";
 export default function Atomizer({ products: { atomizer } }) {
   const navigate = useNavigate();
   const handleBack = () => {
-    navigate("/dashboard");
+    navigate(-1);
   };
 
   return (
     <div>
-      <section className="back__btn container section">
+      <section id="home" className="back__btn container section">
         <RButton displayText="Back" buttonClick={handleBack} />
         <div className="btn__con">
           <button className="cartBtn"><BiHeart/></button>
@@ -97,28 +102,43 @@ export default function Atomizer({ products: { atomizer } }) {
           </div>
         </div>
       </section>
-      <section id="contact" className="contact container section">
-        <div className="contact__wrapper">
-          <h5 className="contact__title">Support</h5>
-          <a className="contact__link" href="#faqs">FAQs</a>
-          <a className="contact__link" href="#contact">Contact</a>
-        </div>
-        <div className="contact__wrapper">
-          <h5 className="contact__title">Products</h5>
-          <a className="contact__link" href="#juice">E-Juice</a>
-          <a className="contact__link" href="#device">Devices</a>
-          <a className="contact__link" href="#atomizer">Atomizer</a>
-          <a className="contact__link" href="#accessories">Accessories</a>
-        </div>
-        <div className="contact__wrapper">
-          <h5 className="contact__title">Social</h5>
-          <a className="contact__link" href="#facebook">Facebook</a>
-        </div>
-      </section>
-      <footer className="footer container section">
-        <div className="footer__social"><BiLogoFacebook /></div>
-        <h6 className="footer__text">© 2023 Covape-19 Garage. All rights reserved.</h6>
-      </footer>
+      <section id='contact' className='contact container section'>
+          <div className='contact__wrapper'>
+            <h5 className='contact__title'> Contacts </h5>
+            <a className='contact__link' href="#faqs">FAQs</a>
+            <a className='contact__link' href="#contact">Contact Us</a>
+            <a className='contact__link' href="#contact">About Us</a>
+            <a className='contact__link' href="#contact">Terms of Service</a>
+            <a className='contact__link' href="#contact">Refund Policy</a>
+          </div>
+          <div className='contact__wrapper'>
+            <h5 className='contact__title'>Products</h5>
+            <a className='contact__link' href="#juice">E-Juice</a>
+            <a className='contact__link' href="#device">Mods & Kits</a>
+            <a className='contact__link' href="#pods">Pod System</a>
+            <a className='contact__link' href="#atomizer">Atomizer</a>
+            <a className='contact__link' href="#accessories">Accessories</a>
+          </div>
+          <div className='contact__wrapper'>
+            <h5 className='contact__title'>Platforms</h5>
+            <a className='contact__link' href="#facebook">Facebook</a>
+            <a className='contact__link' href="#twitter">Twitter</a>
+            <a className='contact__link' href="#instagram">Instagram</a>
+            <a className='contact__link' href="#tiktok">Tiktok</a>
+            <a className='contact__link' href="#shopee">Shopee</a>
+          </div>
+        </section>
+        <footer className='footer container section'>
+          <div className='footer__social'>
+            <FaFacebookSquare/>
+            <AiOutlineTwitter/>
+            <BiLogoInstagramAlt/>
+            <BiLogoTiktok/>
+            <SiShopee/>
+          </div>
+          <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
+          <a href="#home" className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></a>
+        </footer>
     </div>
   );
 }
