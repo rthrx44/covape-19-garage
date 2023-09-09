@@ -27,7 +27,6 @@ import Atomizer19 from '../../components/assets/Image/Atomizer19.png'
 import Access06 from '../../components/assets/Image/Access06.png'
 
 function Dashboard({topProducts, brands}) {
-  
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
   const [cart] = useState(cartFromLocalStorage);
 
