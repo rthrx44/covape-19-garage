@@ -6,7 +6,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { SiShopee } from "react-icons/si";
 import { BsCart4 } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
-import { LButton, RButton } from "../../components/buttons/Button";
+import { LButton, RButton, BButton } from "../../components/buttons/Button";
 import { ToastContainer, toast } from "react-toastify";
 import { Items } from '../../components/utils/item/Item';
 import Cvlogo from '../../components/assets/Image/Cvlogo.png'
@@ -24,6 +24,7 @@ import "swiper/css/navigation"
 function ItemInfo({topProducts}) {
   const navigate = useNavigate();
   const handleBack = () => {navigate(-1)};
+  const handleBackToDashboard = () => {navigate("/dashboard")}
   const itemInfo = JSON.parse(localStorage.getItem("clickItem"));
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
   const [cart, setCart] = useState(cartFromLocalStorage);
@@ -72,7 +73,7 @@ function ItemInfo({topProducts}) {
 
   return (
     <div>
-      <section className="back__btn container section">
+      <section id="home" className="back__btn container section">
         <RButton displayText="Back" buttonClick={handleBack} />
         <div className="btn__con">
           <button className="cartBtn">
@@ -103,19 +104,24 @@ function ItemInfo({topProducts}) {
         </div>
         <LButton displayText="Add to cart" buttonClick={handleAddtoCart} />
         <ToastContainer limit={2} />
+        <div  className="product__details">
+          <h5 className="product__brand">Product Description</h5>
+          <p className="product__info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br></br>
+            Error voluptates, <br></br>sit quibusdam cupiditate deleniti beatae
+            dolores soluta officia, <br></br>itaque consequatur odit veniam
+            assumenda voluptatum dicta? <br></br>Fugit quo laboriosam modi
+            laborum!
+          </p>
+        </div>
       </section>
-      <section className="product__details container section">
-        <h5 className="product__brand">Product Description</h5>
-        <p className="product__info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br></br>
-          Error voluptates, <br></br>sit quibusdam cupiditate deleniti beatae
-          dolores soluta officia, <br></br>itaque consequatur odit veniam
-          assumenda voluptatum dicta? <br></br>Fugit quo laboriosam modi
-          laborum!
-        </p>
+      <section className="btDashboard container section">
+        <div className="bdash_con">
+          <BButton displayText="Back to Dashboard" buttonClick={handleBackToDashboard}/>
+        </div>
       </section>
       <section id='products' className='shop container section'>
-        <h1 className="shop__header">Top Products</h1>
+        <h1 className="shop__header product__header">Top Products</h1>
         <Swiper
           modules={[Pagination]}
           loop={true}
@@ -127,7 +133,6 @@ function ItemInfo({topProducts}) {
             768: {slidesPerView: 4},
             1024: {slidesPerView: 5},
             1280: {slidesPerView: 6},
-            1440: {slidesPerView: 7}
             }}
           className="swiper__con"
         >
@@ -138,7 +143,7 @@ function ItemInfo({topProducts}) {
         </Swiper>
       </section>
       <section className='other__products container section'>
-        <h1 className="shop__header">Other Products</h1>
+        <h1 className="shop__header product__header">Other Products</h1>
         <div className="products">
           <div className='products__con'>
             <h1 id='juice' className="shop__header">E-Juice</h1>
@@ -212,7 +217,7 @@ function ItemInfo({topProducts}) {
           <SiShopee/>
         </div>
         <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
-        <a href="#home" className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></a>
+        <div className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></div>
       </footer>
     </div>
   );

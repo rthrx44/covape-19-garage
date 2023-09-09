@@ -38,7 +38,7 @@
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   gap: 1rem;
 }
 
@@ -78,6 +78,7 @@
 
 .img {
   place-items: center;
+  margin-bottom: 1rem;
 }
 
 .landing__choose-pic {
@@ -104,11 +105,13 @@
   align-items: center;
   text-align: center;
 }
+
 .landing__svg{
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: var(--size-4xl);
 }
+
 .landing__customer-header {
   margin-bottom: 0.5rem;
   font-size: var(--size-2xl);
@@ -306,10 +309,6 @@
 
   .landing__subtitle {
     font-size: var(--size-lg);
-  }
-  
-  .landing__description {
-    font-size: var(--size-sm);
   }
 
   .landing__customer {
