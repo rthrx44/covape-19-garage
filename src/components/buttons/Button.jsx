@@ -1,5 +1,6 @@
 import React from 'react';
 import './Button.css';
+import { FaArrowLeft } from "react-icons/fa6";
 
 
 //* Round Button
@@ -25,11 +26,23 @@ export const LButton = ({buttonClick, displayText = 'Submit'}) => {
 }
 
 //* Normal Button
-export const NButton = ({buttonClick, displayText = 'Submit'}) => {
+export const NButton = ({buttonClick, displayText = 'Switch'}) => {
   return (
     <button 
       className='nbtn'
       onClick={buttonClick}>
+        {displayText}
+    </button>
+  )
+}
+
+//* Back Button
+export const BButton = ({buttonClick, displayText = 'Back'}) => {
+  return (
+    <button 
+      className='bbtn'
+      onClick={buttonClick}>
+        <FaArrowLeft/> 
         {displayText}
     </button>
   )

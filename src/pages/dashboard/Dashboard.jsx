@@ -10,9 +10,11 @@ import "swiper/css/autoplay"
 import "swiper/css/grid"
 
 import { BiLogoInstagramAlt, BiLogoTiktok } from "react-icons/bi";
-import { AiOutlineTwitter } from "react-icons/ai";
+import { AiOutlineTwitter, AiOutlineStar } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
 import { SiShopee } from "react-icons/si";
+import { BsBoxSeam } from "react-icons/bs";
+import { RiTruckLine, RiSecurePaymentLine } from "react-icons/ri";
 import { Items, Brands } from '../../components/utils/item/Item';
 import { RButton } from '../../components/buttons/Button';
 import Cvlogo from '../../components/assets/Image/Cvlogo.png'
@@ -141,6 +143,30 @@ function Dashboard({topProducts, brands}) {
             <a href='/accessories'><RButton displayText='View All'/></a>
             <div className='juice__con'>
                 <img className='juice_pic' src={Access06} alt="Vape Juice" />
+            </div>
+          </div>
+        </section>
+        <section className='offer container section'>
+          <div className='offer__con'>
+            <div className='dashboard__offer'>
+              <RiTruckLine className='dashboard__svg'/>
+              <h1 className='dashboard__customer-header'>Fast Shipping</h1>
+              <p className='dashboard__description'><strong>Same-Day Delivery</strong> available for Bulacan Orders</p>
+            </div>
+            <div className='dashboard__offer'>
+              <RiSecurePaymentLine className='dashboard__svg'/>
+              <h1 className='dashboard__customer-header'>Payments</h1>
+              <p className='dashboard__description'>Debit & Credit Card, Bank Tranfer, GCash, and COD accepted.</p>
+            </div>
+            <div className='dashboard__offer'>
+              <BsBoxSeam className='dashboard__svg'/>
+              <h1 className='dashboard__customer-header'>Nationwide Delivery</h1>
+              <p className='dashboard__description'>We ship to anywhere in the Philippines!<br></br>(3-7 Days)</p>
+            </div>
+            <div className='dashboard__offer'>
+              <AiOutlineStar className='dashboard__svg'/>
+              <h1 className='dashboard__customer-header'>100% Authentic</h1>
+              <p className='dashboard__description'>all our products are sourced direct from factories and are <strong>guaranteed original.</strong></p>
             </div>
           </div>
         </section>

@@ -53,6 +53,29 @@
   text-decoration: underline;
 }
 
+.bbtn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  font-family: var(--font-secondary);
+  font-size: var(--size-xs);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.05em;
+  color: var(--clr-lime);
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--clr-lime);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.bbtn:hover {
+  background-color: var(--clr-lime);
+  color: var(--clr-dark);
+}
+
 /* xs */
 /* @media (min-width: 475px) {} */
 
@@ -67,10 +90,6 @@
 
 /* xl */
 @media (min-width: 1280px) {
-  .lbtn {
-  font-size: var(--size-sm);
-  }
-
   .nbtn {
     font-size: var(--size-xs);
   }

@@ -15,7 +15,7 @@ import "swiper/css/pagination";
 import "swiper/css/grid";
 
 import { Items } from "../../components/utils/item/Item";
-import { RButton } from "../../components/buttons/Button";
+import { BButton, RButton } from "../../components/buttons/Button";
 import Atomizer19 from "../../components/assets/Image/Atomizer19.png";
 import Pod15 from "../../components/assets/Image/Pod15.png";
 import Access06 from "../../components/assets/Image/Access06.png";
@@ -23,14 +23,13 @@ import Juice01 from "../../components/assets/Image/Juice01.png";
 
 export default function Mods({ products: { device } }) {
   const navigate = useNavigate();
-  const handleBack = () => {
-    navigate(-1);
-  };
+  const handleBack = () => {navigate(-1)};
+  const handleBackToDashboard = () => {navigate("/dashboard")}
 
   return (
     <div>
       <section id="home" className="back__btn container section">
-        <RButton displayText="Back" buttonClick={handleBack} />
+        <BButton displayText="Back" buttonClick={handleBack} />
         <div className="btn__con">
           <button className="cartBtn"><BiHeart/></button>
           <Link to={'/cart'} className="cartBtn"><BsCart4/></Link>
@@ -61,6 +60,11 @@ export default function Mods({ products: { device } }) {
             </SwiperSlide>
           ))}
         </Swiper>
+      </section>
+      <section className="btDashboard container section">
+        <div className="bdash_con">
+          <BButton displayText="Back to Dashboard" buttonClick={handleBackToDashboard}/>
+        </div>
       </section>
       <section className="other__products container section">
         <h1 className="shop__header">Other Products</h1>
