@@ -38,7 +38,7 @@ export default function Atomizer({ products: { atomizer } }) {
         </div>
       </section>
       <section className="product__info container section">
-        <h1 id="atomizer" className="shop__header">Atomizers</h1>
+        <h1 id="atomizer" className="shop__header product__header">Atomizers</h1>
         <Swiper
           modules={[Pagination, Grid]}
           slidesPerView={1}

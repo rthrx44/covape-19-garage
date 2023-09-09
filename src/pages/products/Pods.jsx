@@ -37,7 +37,7 @@ export default function Pods({ products: { pods } }) {
         </div>      
       </section>
       <section className="product__info container section">
-        <h1 id="device" className="shop__header">Pod Systems</h1>
+        <h1 id="device" className="shop__header product__header">Pod Systems</h1>
         <Swiper
           modules={[Pagination, Grid]}
           slidesPerView={1}

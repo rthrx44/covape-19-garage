@@ -37,7 +37,7 @@ export default function Accessories({ products: { accessories } }) {
         </div>
       </section>
       <section className="product__info container section">
-        <h1 id="accessories" className="shop__header">Accessories</h1>
+        <h1 id="accessories" className="shop__header product__header">Accessories</h1>
         <Swiper
           modules={[Pagination, Grid]}
           slidesPerView={1}
