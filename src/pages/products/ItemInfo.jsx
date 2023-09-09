@@ -74,14 +74,10 @@ function ItemInfo({topProducts}) {
   return (
     <div>
       <section id="home" className="back__btn container section">
-        <RButton displayText="Back" buttonClick={handleBack} />
+        <BButton displayText="Back" buttonClick={handleBack} />
         <div className="btn__con">
-          <button className="cartBtn">
-            <BiHeart />
-          </button>
-          <Link to={"/cart"} className="cartBtn">
-            <BsCart4 />
-          </Link>
+          <button className="cartBtn"><BiHeart /></button>
+          <Link to={"/cart"} className="cartBtn"><BsCart4 /></Link>
         </div>
       </section>
       <section className="product__main-img container section">

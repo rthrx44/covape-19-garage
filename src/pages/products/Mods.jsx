@@ -28,7 +28,7 @@ export default function Mods({ products: { device } }) {
 
   return (
     <div>
-      <section id="home" className="back__btn container section">
+      <section className="back__btn container section">
         <BButton displayText="Back" buttonClick={handleBack} />
         <div className="btn__con">
           <button className="cartBtn"><BiHeart/></button>
@@ -140,7 +140,7 @@ export default function Mods({ products: { device } }) {
             <SiShopee/>
           </div>
           <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
-          <a href="#home" className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></a>
+          <div className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></div>
         </footer>
     </div>
   );
