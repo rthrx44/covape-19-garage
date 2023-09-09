@@ -8,6 +8,7 @@ import { BsCart4 } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import { LButton, RButton } from "../../components/buttons/Button";
 import { ToastContainer, toast } from "react-toastify";
+import { Items } from '../../components/utils/item/Item';
 import Cvlogo from '../../components/assets/Image/Cvlogo.png'
 import Juice01 from '../../components/assets/Image/Juice01.png'
 import Device01 from '../../components/assets/Image/Device01.png'
@@ -15,11 +16,14 @@ import Pod15 from '../../components/assets/Image/Pod15.png'
 import Atomizer19 from '../../components/assets/Image/Atomizer19.png'
 import Access06 from '../../components/assets/Image/Access06.png'
 
-function ItemInfo() {
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/navigation"
+
+function ItemInfo({topProducts}) {
   const navigate = useNavigate();
-  const handleBack = () => {
-    navigate(-1);
-  };
+  const handleBack = () => {navigate(-1)};
   const itemInfo = JSON.parse(localStorage.getItem("clickItem"));
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
   const [cart, setCart] = useState(cartFromLocalStorage);
@@ -110,45 +114,68 @@ function ItemInfo() {
           laborum!
         </p>
       </section>
-      <section className="container section">
-        <h1 className="shop__header">Related Products</h1>
-        <div className="grid__products">
+      <section id='products' className='shop container section'>
+        <h1 className="shop__header">Top Products</h1>
+        <Swiper
+          modules={[Pagination]}
+          loop={true}
+          slidesPerView={1}
+          pagination= {{ clickable: false }}
+          breakpoints={{
+            425: {slidesPerView: 2},
+            640: {slidesPerView:3},
+            768: {slidesPerView: 4},
+            1024: {slidesPerView: 5},
+            1280: {slidesPerView: 6},
+            1440: {slidesPerView: 7}
+            }}
+          className="swiper__con"
+        >
+          {topProducts.map((products, index) => (
+            <SwiperSlide key={index}>
+              <Items data={products}/>
+            </SwiperSlide>))}
+        </Swiper>
+      </section>
+      <section className='other__products container section'>
+        <h1 className="shop__header">Other Products</h1>
+        <div className="products">
           <div className='products__con'>
-              <h1 id='juice' className="shop__header">E-Juice</h1>
-              <a href='/juice'><RButton displayText='View All'/></a>
-              <div className='juice__con'>
-                  <img className='juice_pic' src={Juice01} alt="Vape Juice" />
-              </div>
-            </div>
-            <div className='products__con'>
-              <h1 id='device' className="shop__header">Mods & Kits</h1>
-              <a href='/mods'><RButton displayText='View All'/></a>
-              <div className='juice__con'>
-                  <img className='juice_pic' src={Device01} alt="Vape Juice" />
-              </div>
-            </div>
-            <div className='products__con'>
-              <h1 id='pods' className="shop__header">Pod Systems</h1>
-              <a href='/pods'><RButton displayText='View All'/></a>
-              <div className='juice__con'>
-                  <img className='juice_pic' src={Pod15} alt="Vape Juice" />
-              </div>
-            </div>
-            <div className='products__con'>
-              <h1 id='atomizer' className="shop__header">Atomizers</h1>
-              <a href='/atomizer'><RButton displayText='View All'/></a>
-              <div className='juice__con'>
-                  <img className='juice_pic' src={Atomizer19} alt="Vape Juice" />
-              </div>
-            </div>
-            <div className='products__con'>
-              <h1 id='accessories' className="shop__header">Accessories</h1>
-              <a href='/accessories'><RButton displayText='View All'/></a>
-              <div className='juice__con'>
-                  <img className='juice_pic' src={Access06} alt="Vape Juice" />
-              </div>
+            <h1 id='juice' className="shop__header">E-Juice</h1>
+            <a href='/juice'><RButton displayText='View All'/></a>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Juice01} alt="Vape Juice" />
             </div>
           </div>
+          <div className='products__con'>
+            <h1 id='device' className="shop__header">Mods & Kits</h1>
+            <a href='/mods'><RButton displayText='View All'/></a>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Device01} alt="Vape Juice" />
+            </div>
+          </div>
+          <div className='products__con'>
+            <h1 id='pods' className="shop__header">Pod Systems</h1>
+            <a href='/pods'><RButton displayText='View All'/></a>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Pod15} alt="Vape Juice" />
+            </div>
+          </div>
+          <div className='products__con'>
+            <h1 id='atomizer' className="shop__header">Atomizers</h1>
+            <a href='/atomizer'><RButton displayText='View All'/></a>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Atomizer19} alt="Vape Juice" />
+            </div>
+          </div>
+          <div className='products__con'>
+            <h1 id='accessories' className="shop__header">Accessories</h1>
+            <a href='/accessories'><RButton displayText='View All'/></a>
+            <div className='juice__con'>
+                <img className='juice_pic' src={Access06} alt="Vape Juice" />
+            </div>
+          </div>
+        </div>
       </section>
       <section id='contact' className='contact container section'>
           <div className='contact__wrapper'>
@@ -175,18 +202,18 @@ function ItemInfo() {
             <a className='contact__link' href="#tiktok">Tiktok</a>
             <a className='contact__link' href="#shopee">Shopee</a>
           </div>
-        </section>
-        <footer className='footer container section'>
-          <div className='footer__social'>
-            <FaFacebookSquare/>
-            <AiOutlineTwitter/>
-            <BiLogoInstagramAlt/>
-            <BiLogoTiktok/>
-            <SiShopee/>
-          </div>
-          <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
-          <a href="#home" className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></a>
-        </footer>
+      </section>
+      <footer className='footer container section'>
+        <div className='footer__social'>
+          <FaFacebookSquare/>
+          <AiOutlineTwitter/>
+          <BiLogoInstagramAlt/>
+          <BiLogoTiktok/>
+          <SiShopee/>
+        </div>
+        <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
+        <a href="#home" className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></a>
+      </footer>
     </div>
   );
 }

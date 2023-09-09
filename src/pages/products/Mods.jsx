@@ -37,7 +37,7 @@ export default function Mods({ products: { device } }) {
         </div>
       </section>
       <section className="product__info container section">
-        <h1 id="devide" className="shop__header">Mods & Kits</h1>
+        <h1 id="devide" className="shop__header product__header">Mods & Kits</h1>
         <Swiper
           modules={[Pagination, Grid]}
           slidesPerView={1}
