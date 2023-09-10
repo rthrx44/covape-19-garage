@@ -6,12 +6,12 @@
 
 👉 Live Demo: <a href='https://covape-19-garage.vercel.app/'>Live Demo</a>
 
-<h3>Build with:</h3>
+<h3>Build with :</h3>
 
-» CSS <br>
-» HTML <br>
-» React JS <br>
-» Swiper JS
+- CSS <br>
+- HTML <br>
+- React JS <br>
+- Swiper JS
 
 <h2>Screenshots of the Project 📸</h2>
 <br>
