@@ -93,7 +93,7 @@
 .dashboard__svg{
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: var(--size-2xl);
+  font-size: var(--size-3xl);
 }
 
 .dashboard__customer-header {
@@ -151,9 +151,17 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 0.5rem;
-  font-size: var(--size-2xl);
+  font-size: var(--size-xl);
   color: var(--clr-lime600);
   gap: 1rem;
+}
+
+.footer__link:hover {
+  color: var(--clr-lime);
+}
+
+.footer__link:active {
+  color: var(--clr-lime600);
 }
 
 .footer__text {
