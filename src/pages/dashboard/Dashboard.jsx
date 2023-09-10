@@ -48,11 +48,6 @@ function Dashboard({topProducts, brands}) {
           <h1 className="shop__header">Top Products</h1>
           <Swiper
             modules={[Pagination, Navigation, Grid]}
-            autoplay= {{
-              delay: 2000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true
-            }}
             slidesPerView={1}
             navigation
             pagination= {{ clickable: false }}
@@ -85,7 +80,7 @@ function Dashboard({topProducts, brands}) {
             <Swiper
               modules={[Autoplay]}
               autoplay= {{
-                delay: 2000,
+                delay: 1000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true
               }}

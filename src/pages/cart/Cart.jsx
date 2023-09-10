@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import './Cart.css';
 import { useNavigate } from 'react-router-dom';
-import { RButton } from "../../components/buttons/Button"; 
+import { BButton, LButton } from "../../components/buttons/Button"; 
 import { CartItem } from './CartItem';
-
+import { FaTimes } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 function Cart () {
   const navigate = useNavigate(); 
   const handleBacktoDB = () => {navigate(-1)};
+  const handleBackToDashboard = () => {navigate("/dashboard")}
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || '[]');
   const [cart, setCart] = useState(cartFromLocalStorage);
   const handleClearCart = () => {
@@ -39,8 +41,8 @@ function Cart () {
   return (
     <>
       <section className="back__btn container section">
-        <RButton displayText="Continue Shopping" buttonClick={handleBacktoDB}/>
-        <RButton displayText="Clear Cart" buttonClick={handleClearCart}/>
+        <BButton displayText="Continue Shopping" buttonClick={handleBacktoDB} icon={<FaArrowLeft/>} />
+        <BButton displayText="Clear Cart" buttonClick={handleClearCart} icon={<FaTimes/>}/>
       </section>
       <section className='container section'>
         <div className='grid__cart'>
@@ -73,7 +75,8 @@ function Cart () {
               <p className='totalAmount_price'>&#8369; {getTotalSum()}</p>
             </div>
             <div className="wishlist">
-              <RButton displayText="Proceed to Checkout" />
+              <LButton displayText="Proceed to Checkout" icon={<FaArrowRight/>} />
+              <BButton displayText="Back to Dashboard" buttonClick={handleBackToDashboard} icon={<FaArrowLeft/>} />
             </div>
           </div>
         </div>
