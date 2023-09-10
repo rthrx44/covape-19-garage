@@ -113,7 +113,7 @@ function Landing() {
             <BiLogoTiktok/>
             <SiShopee/>
           </div>
-          <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
+          <h6 className='footer__text'>© 2023 Ruther R. Dio. All rights reserved.</h6>
         </footer>
       </main>
     </>
