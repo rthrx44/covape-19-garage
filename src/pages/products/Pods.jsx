@@ -142,7 +142,7 @@ export default function Pods({ products: { pods } }) {
             <BiLogoTiktok/>
             <SiShopee/>
           </div>
-          <h6 className='footer__text'>© 2023 Covape-19 Garage. All rights reserved.</h6>
+          <h6 className='footer__text'>© 2023 Ruther R. Dio. All rights reserved.</h6>
           <div className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></div>
         </footer>
     </div>
