@@ -134,13 +134,23 @@ export default function Juice({ products: { juice } }) {
         </section>
         <footer className='footer container section'>
           <div className='footer__social'>
-            <FaFacebookSquare/>
-            <AiOutlineTwitter/>
-            <BiLogoInstagramAlt/>
-            <BiLogoTiktok/>
-            <SiShopee/>
+            <div className="footer__link">
+              <FaFacebookSquare/>
+            </div>
+            <div className="footer__link">
+              <AiOutlineTwitter/>
+            </div>
+            <div className="footer__link">
+              <BiLogoInstagramAlt/>
+            </div>
+            <div className="footer__link">
+              <BiLogoTiktok/>
+            </div>
+            <div className="footer__link">
+              <SiShopee/>
+            </div>
           </div>
-          <h6 className='footer__text'>© 2023 Ruther R. Dio. All rights reserved.</h6>
+          <h6 className='footer__text'>Copyright 2023. Designed and built by Ruther R. Dio. All rights reserved.</h6>
           <div className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></div>
         </footer>
     </div>
