@@ -200,7 +200,7 @@
   }
 
   .landing__hero {
-    font-size: var(--size-3xl);
+    font-size: var(--size-4xl);
     margin-bottom: 1rem;
   }
 
@@ -224,7 +224,7 @@
   }
 
   .landing__hero {
-    font-size: var(--size-4xl);
+    font-size: var(--size-5xl);
     margin-bottom: 1rem;
   }
 
