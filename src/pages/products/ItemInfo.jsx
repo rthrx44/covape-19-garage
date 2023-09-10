@@ -4,7 +4,8 @@ import { BiLogoInstagramAlt, BiLogoTiktok, BiHeart } from "react-icons/bi";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
 import { SiShopee } from "react-icons/si";
-import { BsCart4 } from "react-icons/bs";
+import { TfiShoppingCart } from "react-icons/tfi";
+import { FaArrowLeft } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { LButton, RButton, BButton } from "../../components/buttons/Button";
 import { ToastContainer, toast } from "react-toastify";
@@ -74,10 +75,10 @@ function ItemInfo({topProducts}) {
   return (
     <div>
       <section id="home" className="back__btn container section">
-        <BButton displayText="Back" buttonClick={handleBack} />
+        <BButton displayText="Back" buttonClick={handleBack} icon={<FaArrowLeft/>}/>
         <div className="btn__con">
           <button className="cartBtn"><BiHeart /></button>
-          <Link to={"/cart"} className="cartBtn"><BsCart4 /></Link>
+          <Link to={"/cart"} className="cartBtn"><TfiShoppingCart /></Link>
         </div>
       </section>
       <section className="product__main-img container section">
@@ -113,7 +114,7 @@ function ItemInfo({topProducts}) {
       </section>
       <section className="btDashboard container section">
         <div className="bdash_con">
-          <BButton displayText="Back to Dashboard" buttonClick={handleBackToDashboard}/>
+          <BButton displayText="Back to Dashboard" buttonClick={handleBackToDashboard} icon={<FaArrowLeft/>}/>
         </div>
       </section>
       <section id='products' className='shop container section'>

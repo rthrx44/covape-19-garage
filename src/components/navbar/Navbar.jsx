@@ -4,7 +4,7 @@ import { RButton } from '../buttons/Button';
 import { HiMiniBars3 } from "react-icons/hi2";
 import { MdClose } from "react-icons/md";
 import { BiHeart } from "react-icons/bi";
-import { BsCart4 } from "react-icons/bs";
+import { TfiShoppingCart } from "react-icons/tfi";
 import { useNavigate, Link } from 'react-router-dom';
 import Cvlogo from '../../components/assets/Image/Cvlogo.png'
 
@@ -89,7 +89,7 @@ export default function Navbar () {
               <div className='upper__btn btnOne'>
                 <div className="btn__con">
                   <button className="cartBtn"><BiHeart /></button>
-                  <Link to={"/cart"} className="cartBtn"><BsCart4 /></Link>
+                  <Link to={"/cart"} className="cartBtn"><TfiShoppingCart /></Link>
                 </div>
                 <div className='header__btns'>
                     <Link className='header__login' to='/'> <RButton buttonClick={handleLogout} displayText = 'Logout'/></Link>

@@ -52,10 +52,17 @@
   'wishlist';
 }
 
-.wishlist .rbtn {
+.wishlist .lbtn {
   grid-area: wishlist;
   width: 100%;
   margin-top: 1.35rem;
+}
+
+.wishlist .bbtn {
+  grid-area: wishlist;
+  width: 100%;
+  margin-top: 0.5rem;
+  place-content: center;
 }
 
 .input {
@@ -149,6 +156,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 /* xs */

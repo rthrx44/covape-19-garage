@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './Landing.css'
 import { Link } from 'react-router-dom'
 import { RButton } from '../../components/buttons/Button'
-import { BsCart4, BsEmojiHeartEyes } from "react-icons/bs";
+import { BsEmojiHeartEyes } from "react-icons/bs";
 import { BiLogoInstagramAlt, BiLogoTiktok } from "react-icons/bi";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
 import { SiShopee } from "react-icons/si";
 import { LuSunMoon } from "react-icons/lu";
+import { TfiShoppingCart } from "react-icons/tfi";
 import Cvlogo from '../../components/assets/Image/Cvlogo.png'
 import VapeWarning from '../../components/assets/Image/VapeWarning.png'
 import Access09 from '../../components/assets/Image/Access09.png'
@@ -84,7 +85,7 @@ function Landing() {
         </section>
         <section className='landing__customer container section'>
           <div className='landing__customer-wrapper'>
-            <BsCart4 className='landing__svg'/>
+            <TfiShoppingCart className='landing__svg'/>
             <h1 className='landing__customer-header'>400+</h1>
             <p className='landing__description'>Exclusive Product</p>
           </div>
