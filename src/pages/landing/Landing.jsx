@@ -124,6 +124,7 @@ function Landing() {
             </div>
           </div>
           <h6 className='footer__text'>Copyright 2023. Designed and built by Ruther R. Dio. All rights reserved.</h6>
+          <a href="#home" className='footer__logo'><img id='home' className='header__logo' src={Cvlogo} alt='Covape-19 Garage Logo' title='Back to Top'/></a>
         </footer>
       </main>
     </>
