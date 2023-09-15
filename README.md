@@ -4,11 +4,11 @@
 
   <p>A <b>Vape Shop</b> website is an online platform that allows users to buy a electronic device ( Vape ) used for inhaling vapor containing nicotine and flavoring ( E-juice ). The website provides with easy-to-use navigation and a simple shopping experience that puts the focus on the products.</p>
 
-👉 Live Demo: <a href='https://covape-19-garage.vercel.app/'>Live Demo</a>
+👉 Live Demo: <a href='https://covape-19-garage-rthrx44.vercel.app/'>Live Demo</a>
 
 <h3>Build with</h3> 
 
-[![My Skills](https://skillicons.dev/icons?i=js,css,html,react,figma,photoshop)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,figma,photoshop)](https://skillicons.dev)
 
 <h2>Screenshots of the Project 📸</h2>
 <br>
