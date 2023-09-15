@@ -8,7 +8,7 @@
 
 <h3>Build with</h3> 
 
-[![My Skills](https://skillicons.dev/icons?i=js,css,html,react,figma,photoshop)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,figma,photoshop)](https://skillicons.dev)
 
 <h2>Screenshots of the Project 📸</h2>
 <br>
